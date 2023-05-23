@@ -10,11 +10,11 @@ from zlgcan import *
 import time
 import platform
 
-zcanlib = ZCAN()
+zcanlib = ZCan()
 
 
 def open_usbcan2():
-    device_handle = zcanlib.OpenDevice(ZCAN_USBCAN2, 0, 0)
+    device_handle = zcanlib.open_device(ZCAN_USBCAN2, 0, 0)
     if device_handle == INVALID_DEVICE_HANDLE:
         print("Open Device failed!")
         exit(0)
@@ -25,7 +25,7 @@ def open_usbcan2():
 
 
 def open_channel(device_handle, channel):
-    chn_init_cfg = ZCAN_CHANNEL_INIT_CONFIG()
+    chn_init_cfg = ZCanChannelInitConfig()
     chn_init_cfg.can_type = ZCAN_TYPE_CAN
     chn_init_cfg.config.can.acc_mode = 0
     chn_init_cfg.config.can.acc_mask = 0xFFFFFFFF
@@ -44,7 +44,7 @@ def open_channel(device_handle, channel):
 
 def transmit_can(chn_handle, stdorext, id, data, len):
     transmit_num = 1
-    msgs = (ZCAN_Transmit_Data * transmit_num)()
+    msgs = (ZCanTransmitData * transmit_num)()
     for i in range(transmit_num):
         msgs[i].transmit_type = 0  # Send Self
         msgs[i].frame.eff = 0
@@ -55,15 +55,15 @@ def transmit_can(chn_handle, stdorext, id, data, len):
         msgs[i].frame.can_dlc = len
         for j in range(msgs[i].frame.can_dlc):
             msgs[i].frame.data[j] = data[j]
-    ret = zcanlib.Transmit(chn_handle, msgs, transmit_num)
+    ret = zcanlib.transmit(chn_handle, msgs, transmit_num)
     # print("Tranmit Num: %d." % ret)ret
 
 
 def receive_can(chn_handle):
-    rcv_num = zcanlib.GetReceiveNum(chn_handle, ZCAN_TYPE_CAN)
+    rcv_num = zcanlib.get_receive_num(chn_handle, ZCAN_TYPE_CAN)
     if rcv_num:
         print("Receive CAN message number:%d" % rcv_num)
-        rcv_msg, rcv_num = zcanlib.Receive(chn_handle, rcv_num)
+        rcv_msg, rcv_num = zcanlib.receive(chn_handle, rcv_num)
         for i in range(rcv_num):
             print("[%d]:ts:%d, id:0x%x, dlc:%d, eff:%d, rtr:%d, data:%s" % (i, rcv_msg[i].timestamp,
                                                                             rcv_msg[i].frame.can_id,
@@ -75,6 +75,7 @@ def receive_can(chn_handle):
                                                                                 range(rcv_msg[i].frame.can_dlc))))
 
 
+"""
 if __name__ == "__main__":
 
     # dll support
@@ -101,14 +102,15 @@ if __name__ == "__main__":
         time.sleep(0.1)
 
     # receive can message
-    zcanlib.ClearBuffer(chn_handle)
+    zcanlib.clear_buffer(chn_handle)
     time.sleep(3)
     receive_can(chn_handle)
     receive_can(chn1_handle)
 
     # Close Channel
-    zcanlib.ResetCAN(chn_handle)
-    zcanlib.ResetCAN(chn1_handle)
+    zcanlib.reset_can(chn_handle)
+    zcanlib.reset_can(chn1_handle)
     # Close Device
-    zcanlib.CloseDevice(dev_handle)
+    zcanlib.close_device(dev_handle)
     print("Finished")
+"""

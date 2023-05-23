@@ -208,6 +208,18 @@ class BasePage:
         elif direction == 'right':
             return self.swipe_right()
 
+    def swipe_up_and_down(self, x1, y1, x2, y2, duration=200):
+        """
+        滑动屏幕操作
+        :param x1:
+        :param y1:
+        :param x2:
+        :param y2:
+        :param duration:
+        :return:
+        """
+        self.driver.swipe(start_x=x1, start_y=y1, end_x=x2, end_y=y2, duration=duration)
+
     def jiugongge(self, e, points):
         """
         九宫格绘制 [5,7,3,6,9].
@@ -306,6 +318,18 @@ class BasePage:
         """
         action = TouchAction(self.driver)
         return action.move_to(x, y).perform()
+
+    def press_and_move_to(self, x1, y1, x2, y2):
+        """
+        坐标滑动屏幕
+        :param x1:
+        :param y1:
+        :param x2:
+        :param y2:
+        :return:
+        """
+        action = TouchAction(self.driver)
+        return action.press(x=x1, y=y1).move_to(x=x2, y=y2).release().perform()
 
     def long_press(self, elem, wait=6000):
         """

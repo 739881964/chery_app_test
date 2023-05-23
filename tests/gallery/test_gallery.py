@@ -22,12 +22,15 @@ class TestGallery:
         """
         local_page, use_page = init_gallery
 
+        # 切换前获取本地/usb图库是否被选择属性
         # local_mark = local_page.local_elem.get_attribute('selected')  # true
         local_mark = local_page.get_elem_attribute(local_page.local_elem, 'selected')
         usb_mark = use_page.usb_elem.get_attribute('selected')  # false
 
+        # 切换图库来源
         use_page.usb_elem.click()
 
+        # 切换后获取本地/usb图库是否被选择属性
         new_local_mark = local_page.local_elem.get_attribute('selected')  # false
         new_usb_mark = use_page.usb_elem.get_attribute('selected')  # true
 
