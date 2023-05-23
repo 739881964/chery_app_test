@@ -11,11 +11,15 @@ import pytest
 import yaml
 
 from appium.webdriver import Remote
-from pages.car_settings_page import CarSettingPage
-from pages.menu_light_page import MenuLightPage
+from pages.car_settings.car_settings_page import CarSettingPage
+from pages.car_settings.menu_light_page import MenuLightPage
 from config import DEVICE_INFO
 from pages.btphone_page import BTPhonePage
-from pages.connect_page import ConnectPage
+from pages.car_settings.connect_page import ConnectPage
+from pages.gallery.local_page import LocalPage
+from pages.gallery.usb_page import UsbPage
+
+URL = 'http://127.0.0.1:4723/wd/hub'
 
 # 获取设备cap信息
 with open(DEVICE_INFO, 'r', encoding='utf8') as f:
@@ -23,12 +27,20 @@ with open(DEVICE_INFO, 'r', encoding='utf8') as f:
     print(caps)
 
 
-def base_driver(url='http://127.0.0.1:4723/wd/hub', **kwargs):
+def base_driver(url=URL, **kwargs):
     for k, v in kwargs.items():
         caps[k] = v
     driver = Remote(desired_capabilities=caps, command_executor=url)
 
     return driver
+
+
+@pytest.fixture()
+def init_gallery():
+    driver = base_driver()
+    local_page, usb_page = LocalPage(driver), UsbPage(driver)
+    yield local_page, usb_page
+    driver.quit()
 
 
 @pytest.fixture()
@@ -42,6 +54,7 @@ def init_app():
 def init_setting():
     driver = base_driver()
     page = CarSettingPage(driver)
+    print(driver.contexts)
     yield page
     driver.quit()
 

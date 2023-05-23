@@ -10,6 +10,7 @@
 from time import sleep
 from appium.webdriver.common.mobileby import MobileBy as By
 from pages.base_page import BasePage
+from appium.webdriver.webelement import WebElement
 
 
 class CarSettingPage(BasePage):
@@ -21,6 +22,17 @@ class CarSettingPage(BasePage):
     clear_button_locator = (By.XPATH, 'android.widget.FrameLayout')
     scroll_view_locator = (By.ID, 'com.mega.carsettings:id/scroll_View')
     drive_locator = (By.ID, 'com.mega.carsettings:id/menu_drive')
+    radio_group_locator = (By.ID, '	com.mega.carsettings:id/radio_group')
+    menu_light_locator = (By.ID, 'com.mega.carsettings:id/menu_light')
+    hud_locator = (By.ID, 'com.mega.carsettings:id/menu_hud')
+
+    @property
+    def radio_group_elem(self) -> WebElement:
+        """
+        功能滑动区域-left
+        :return:
+        """
+        return self.wait_presence_element(self.radio_group_locator)
 
     @property
     def drive_elem(self):
@@ -55,12 +67,14 @@ class CarSettingPage(BasePage):
         :return:
         """
         # 屏幕滑倒底部
-        self.switch_frame(locator=self.scroll_view_locator)
-        self.execute_js(js=True)
+        # self.switch_frame(locator=self.scroll_view_locator)
+        # self.execute_js(js=True)
         # self.swipe_down()
-        self.show_button_elem.click()
-        self.screen_clear_elem.click()
-        self.long_press(self.clear_button_locator)
+        self.scroll_view(self.scroll_view_locator)
+        print('enter scroll.view success')
+        # self.show_button_elem.click()
+        # self.screen_clear_elem.click()
+        # self.long_press(self.clear_button_locator)
 
 
 if __name__ == '__main__':

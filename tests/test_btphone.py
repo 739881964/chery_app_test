@@ -8,10 +8,6 @@
 
 
 import pytest
-import logging
-
-from pages.btphone_page import BTPhonePage
-from pages.connect_page import ConnectPage
 
 
 class TestBTPhone:
@@ -77,10 +73,6 @@ class TestBTPhone:
 
         if text == 'false':
             conn_page.bt_button_elem.click()
-        # if text == 'true':
-        #     bt_page.new_bt_name(new_name)
-        # else:
-        #     conn_page.bt_button_elem.click()
         bt_page.new_bt_name(new_name)
 
         name = bt_page.bt_name_elem.text
@@ -89,6 +81,31 @@ class TestBTPhone:
             print('修改蓝牙名称为：{} 成功'.format(new_name))
         except AssertionError as e:
             print('修改蓝牙名称为：{} 失败'.format(new_name))
+            raise e
+
+    @pytest.mark.cancel_edit
+    def test_cancel_edit(self, init_btphone):
+        """
+        取消重命名
+        :param init_btphone:
+        :return:
+        """
+        bt_page, conn_page = init_btphone
+        bt_page.conn_bt_elem.click()
+        text = conn_page.bt_button_elem.get_attribute('checked')
+
+        if text == 'false':
+            conn_page.bt_button_elem.click()
+        b_name = bt_page.bt_name_elem.text
+
+        bt_page.edit_bt_name_elem.click()
+        bt_page.back_elem.click()
+        a_name = bt_page.bt_name_elem.text
+
+        try:
+            assert b_name == a_name, '返回成功'
+        except AssertionError as e:
+            print('返回失败')
             raise e
 
 

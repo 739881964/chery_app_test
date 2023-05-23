@@ -21,6 +21,15 @@ class BTPhonePage(BasePage):
     bt_name_input_locator = (By.ID, 'com.mega.carsettings:id/et_content')
     save_locator = (By.ID, 'com.mega.carsettings:id/tv_sure')
     bt_name_locator = (By.ID, 'android:id/summary')
+    back_locator = (By.ID, 'com.mega.carsettings:id/iv_back')
+
+    @property
+    def back_elem(self) -> WebElement:
+        """
+        返回按钮
+        :return:
+        """
+        return self.wait_click_element(self.back_locator)
 
     @property
     def conn_bt_elem(self) -> WebElement:

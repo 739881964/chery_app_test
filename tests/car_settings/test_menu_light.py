@@ -8,7 +8,6 @@
 
 import logging
 import pytest
-from pages.menu_light_page import MenuLightPage
 
 from data.meun_light_data import light_value_data
 

@@ -34,6 +34,16 @@ class BasePage:
         """
         self.driver = driver
 
+    @staticmethod
+    def get_elem_attribute(locator, text):
+        """
+        获取元素属性值
+        :param locator:
+        :param text:
+        :return:
+        """
+        return locator.get_attribute(text)
+
     def wait_click_element(self, locator, timeout=10, poll=0.5) -> WebElement:
         """
         等待元素可点击
@@ -131,9 +141,9 @@ class BasePage:
             if ctx == context_name:
                 self.driver.switch_to.context(context_name)
 
-    def find_element(self, locator) -> WebElement:
-        # TODO: try...except
-        return self.driver.find_element(*locator)
+    # def find_element(self, locator) -> WebElement:
+    #     # TODO: try...except
+    #     return self.driver.find_element(*locator)
 
     @property
     def size(self) -> dict:
@@ -146,6 +156,13 @@ class BasePage:
     @property
     def height(self) -> (int, float):
         return self.size['height']
+
+    def scroll_view(self, locator):
+        """
+        滑动到指定元素
+        :return:
+        """
+        self.driver.execute_script("arguments[0].scrollIntoView();", locator)
 
     def swipe_left(self, duration=200):
         """

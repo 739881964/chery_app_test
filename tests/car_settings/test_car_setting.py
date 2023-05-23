@@ -7,7 +7,6 @@
 # 用于创建文件的IDE的名称: PyCharm
 
 import pytest
-from pages.car_settings_page import CarSettingPage
 
 
 # @pytest.mark.screen_clear
@@ -26,6 +25,7 @@ class TestCarSetting:
         """
         car_setting_page = init_setting
         # car_setting_page = CarSettingPage(driver)
+        print('')
         car_setting_page.clear_screen()
 
         assert car_setting_page.clear_button_elem.text == "清洁屏幕"
