@@ -37,6 +37,10 @@ def base_driver(url=URL, **kwargs):
 
 @pytest.fixture()
 def init_gallery():
+    """
+    初始化图库驱动
+    :return:
+    """
     driver = base_driver()
     local_page, usb_page = LocalPage(driver), UsbPage(driver)
     yield local_page, usb_page
@@ -45,6 +49,10 @@ def init_gallery():
 
 @pytest.fixture()
 def init_app():
+    """
+    初始化app驱动
+    :return:
+    """
     driver = base_driver()
     yield driver
     driver.quit()
@@ -52,6 +60,10 @@ def init_app():
 
 @pytest.fixture()
 def init_setting():
+    """
+    初始化车辆设置驱动
+    :return:
+    """
     driver = base_driver()
     page = CarSettingPage(driver)
     print(driver.contexts)
@@ -61,6 +73,10 @@ def init_setting():
 
 @pytest.fixture()
 def init_menu_light():
+    """
+    初始化灯光驱动
+    :return:
+    """
     driver = base_driver()
     page = MenuLightPage(driver)
     yield page
@@ -69,6 +85,10 @@ def init_menu_light():
 
 @pytest.fixture()
 def init_btphone():
+    """
+    初始化蓝牙电话驱动
+    :return:
+    """
     driver = base_driver()
     btphone_page, connect_page = BTPhonePage(driver), ConnectPage(driver)
     yield btphone_page, connect_page
