@@ -33,6 +33,7 @@ class BasePage:
         :param driver:
         """
         self.driver = driver
+        self.driver.implicitly_wait(10)
 
     @staticmethod
     def get_elem_attribute(locator, text):
@@ -299,15 +300,16 @@ class BasePage:
     def double_click(self):
         pass
 
-    def press(self, x, y):
+    def press(self, x, y, wait_time=6000, el=None):
         """
         按压, Element
+        :param wait_time:
         :param x:
         :param y:
         :return:
         """
         action = TouchAction(self.driver)
-        return action.press(x, y).perform()
+        return action.press(el=el, x=x, y=y).wait(wait_time).perform()
 
     def move_to(self, x, y):
         """
@@ -331,7 +333,7 @@ class BasePage:
         action = TouchAction(self.driver)
         return action.press(x=x1, y=y1).move_to(x=x2, y=y2).release().perform()
 
-    def long_press(self, elem, wait=6000):
+    def long_press(self, x, y, wait=8000, el=None):
         """
         长按某个元素
         :param elem:
@@ -339,7 +341,7 @@ class BasePage:
         :return:
         """
         action = TouchAction(self.driver)
-        return action.long_press(elem).wait(wait).release().perform()
+        return action.long_press(el=el, x=x, y=y).wait(wait).release().perform()
 
     def execute_js(self, js=True):
         # 喜欢ii选哪个javascript

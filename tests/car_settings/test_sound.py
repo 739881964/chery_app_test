@@ -17,22 +17,47 @@ class TestSound:
     测试声音功能
     """
 
-    @pytest.mark.media_mute
-    def test_media_mute(self, init_app):
+    @pytest.mark.open_media_mute
+    def test_open_media_mute(self, init_sound):
         """
-        媒体静音
+        打开媒体静音
         :param init_setting:
         :return:
         """
-        driver = init_app
-        sound_page = SoundPage(driver)
+        sound_page = init_sound
 
         # sound_page.press_and_move_to(329, 1080, 0, 480)
-        sound_page.swipe_up_and_down(329, 1080, 329, 380)
-        sleep(0.5)
-        sound_page.menu_sound_elem.click()
+        sound_page.scroll_to_mute()
+        checked = sound_page.media_mute_elem.get_attribute('checked')
+        if checked == 'true':
+            for i in range(2):
+                sound_page.media_mute_elem.click()
+        sound_page.media_mute_elem.click()
+
+        checked = sound_page.media_mute_elem.get_attribute('checked')
         try:
-            assert 1 == 1
+            assert checked == 'true', '打开媒体静音成功'
+        except AssertionError as e:
+            raise e
+
+    @pytest.mark.close_media_mute
+    def test_close_media_mute(self, init_sound):
+        """
+        关闭媒体静音
+        :param init_app:
+        :return:
+        """
+        sound_page = init_sound
+        sound_page.scroll_to_mute()
+        checked = sound_page.media_mute_elem.get_attribute('checked')
+        if checked == 'false':
+            for i in range(2):
+                sound_page.media_mute_elem.click()
+        sound_page.media_mute_elem.click()
+
+        checked = sound_page.media_mute_elem.get_attribute('checked')
+        try:
+            assert checked == 'false'
         except AssertionError as e:
             raise e
 

@@ -17,6 +17,7 @@ class CarSettingPage(BasePage):
     """
     车辆设置功能页面
     """
+
     show_button_locator = (By.ID, 'com.mega.carsettings:id/menu_display')
     screen_clear_locator = (By.XPATH, 'android.widget.RelativeLayout')
     clear_button_locator = (By.XPATH, 'android.widget.FrameLayout')
@@ -61,20 +62,20 @@ class CarSettingPage(BasePage):
         """
         self.drive_elem.click()
 
-    def clear_screen(self):
-        """
-        清洁屏幕操作
-        :return:
-        """
-        # 屏幕滑倒底部
-        # self.switch_frame(locator=self.scroll_view_locator)
-        # self.execute_js(js=True)
-        # self.swipe_down()
-        self.scroll_view(self.scroll_view_locator)
-        print('enter scroll.view success')
-        # self.show_button_elem.click()
-        # self.screen_clear_elem.click()
-        # self.long_press(self.clear_button_locator)
+    # def clear_screen(self):
+    #     """
+    #     清洁屏幕操作
+    #     :return:
+    #     """
+    #     # 屏幕滑倒底部
+    #     # self.switch_frame(locator=self.scroll_view_locator)
+    #     # self.execute_js(js=True)
+    #     # self.swipe_down()
+    #     self.scroll_view(self.scroll_view_locator)
+    #     print('enter scroll.view success')
+    #     # self.show_button_elem.click()
+    #     # self.screen_clear_elem.click()
+    #     # self.long_press(self.clear_button_locator)
 
 
 if __name__ == '__main__':

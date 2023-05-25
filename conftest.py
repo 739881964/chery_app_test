@@ -11,6 +11,8 @@ import pytest
 import yaml
 
 from appium.webdriver import Remote
+
+import pages.car_settings.sound_page
 from pages.car_settings.car_settings_page import CarSettingPage
 from pages.car_settings.menu_light_page import MenuLightPage
 from config import DEVICE_INFO
@@ -18,6 +20,8 @@ from pages.btphone_page import BTPhonePage
 from pages.car_settings.connect_page import ConnectPage
 from pages.gallery.local_page import LocalPage
 from pages.gallery.usb_page import UsbPage
+from pages.car_settings.sound_page import SoundPage
+from pages.car_settings.show_page import ShowPage
 
 URL = 'http://127.0.0.1:4723/wd/hub'
 
@@ -33,6 +37,30 @@ def base_driver(url=URL, **kwargs):
     driver = Remote(desired_capabilities=caps, command_executor=url)
 
     return driver
+
+
+@pytest.fixture()
+def init_sound():
+    """
+    初始化声音驱动
+    :return:
+    """
+    driver = base_driver()
+    sound_page = SoundPage(driver)
+    yield sound_page
+    driver.quit()
+
+
+@pytest.fixture()
+def init_show():
+    """
+    初始化车辆设置-显示驱动
+    :return:
+    """
+    driver = base_driver()
+    show_page = ShowPage(driver)
+    yield show_page
+    driver.quit()
 
 
 @pytest.fixture()

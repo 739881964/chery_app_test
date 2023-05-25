@@ -12,7 +12,7 @@
 
 platformName: Android
 automationName: UiAutomator2
-platformVersion: 11
+platformVersion: '11'
 deviceName: c543cf80 # b6820867
 appActivity: com.mega.carsettings.CarSettingActivity
 appPackage: com.mega.carsettings # 车辆设置功能

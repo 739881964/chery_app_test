@@ -17,6 +17,15 @@ class SoundPage(BasePage):
     """
 
     menu_sound_locator = (By.ID, 'com.mega.carsettings:id/menu_sound')
+    media_mute_locator = (By.ID, 'android:id/switch_widget')
+
+    @property
+    def media_mute_elem(self) -> WebElement:
+        """
+        媒体静音按钮
+        :return:
+        """
+        return self.wait_click_element(self.media_mute_locator)
 
     @property
     def menu_sound_elem(self) -> WebElement:
@@ -25,3 +34,11 @@ class SoundPage(BasePage):
         :return:
         """
         return self.wait_presence_element(self.menu_sound_locator)
+
+    def scroll_to_mute(self):
+        """
+        滑动并点击车辆设置-声音
+        :return:
+        """
+        self.swipe_up_and_down(329, 1080, 329, 380)
+        self.menu_sound_elem.click()
