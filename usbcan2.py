@@ -35,10 +35,10 @@ def open_channel(device_handle, channel):
     # 1M  : (0,20)
     chn_init_cfg.config.can.timing0 = 0
     chn_init_cfg.config.can.timing1 = 28
-    chn_handle = zcanlib.InitCAN(device_handle, channel, chn_init_cfg)
+    chn_handle = zcanlib.init_can(device_handle, channel, chn_init_cfg)
     if chn_handle is None:
         return None
-    zcanlib.StartCAN(chn_handle)
+    zcanlib.start_can(chn_handle)
     return chn_handle
 
 

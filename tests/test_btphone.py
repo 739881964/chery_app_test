@@ -9,6 +9,8 @@
 
 import pytest
 
+from scripts.logger import logger
+
 
 class TestBTPhone:
     """
@@ -24,17 +26,19 @@ class TestBTPhone:
         btphone_page, connect_page = init_btphone
         btphone_page.conn_bt_elem.click()
         text = connect_page.bt_button_elem.get_attribute('checked')
+        logger.info('蓝牙开关属性为: {}'.format(text))
+
         if text == 'true':
             assert text == 'true', '蓝牙已打开'
-            print('蓝牙已打开')
+            logger.info('蓝牙已打开')
         else:
             connect_page.bt_button_elem.click()
             result = connect_page.bt_button_elem.get_attribute('checked')
             try:
                 assert result == 'true'
-                print('蓝牙开启成功')
+                logger.info('蓝牙打开打开')
             except AssertionError as e:
-                print('打开蓝牙失败')
+                logger.error('打开蓝牙失败')
                 raise e
 
     @pytest.mark.test_close_bt
@@ -46,17 +50,21 @@ class TestBTPhone:
         btphone_page, connect_page = init_btphone
         btphone_page.conn_bt_elem.click()
         text = connect_page.bt_button_elem.get_attribute('checked')
+        logger.info('蓝牙开关属性为: {}'.format(text))
+
         if text == 'false':
             assert text == 'true', '蓝牙已关闭'
-            print('蓝牙已关闭')
+            logger.info('蓝牙已关闭')
         else:
             connect_page.bt_button_elem.click()
             result = connect_page.bt_button_elem.get_attribute('checked')
+            logger.info('蓝牙开关属性为: {}'.format(result))
+
             try:
                 assert result == 'false'
-                print('蓝牙关闭成功')
+                logger.info('蓝牙关闭成功')
             except AssertionError as e:
-                print('关闭蓝牙失败')
+                logger.error('关闭蓝牙失败')
                 raise e
 
     @pytest.mark.save_bt_name
@@ -70,17 +78,20 @@ class TestBTPhone:
         new_name = 'test_bt_name'
         bt_page.conn_bt_elem.click()
         text = conn_page.bt_button_elem.get_attribute('checked')
+        logger.info('蓝牙开关属性为: {}'.format(text))
 
         if text == 'false':
             conn_page.bt_button_elem.click()
         bt_page.new_bt_name(new_name)
 
         name = bt_page.bt_name_elem.text
+        logger.info('蓝牙名称为: {}'.format(name))
+
         try:
             assert new_name == name
-            print('修改蓝牙名称为：{} 成功'.format(new_name))
+            logger.info('修改蓝牙名称为：{} 成功'.format(new_name))
         except AssertionError as e:
-            print('修改蓝牙名称为：{} 失败'.format(new_name))
+            logger.error('修改蓝牙名称为：{} 失败'.format(new_name))
             raise e
 
     @pytest.mark.cancel_edit
@@ -93,6 +104,7 @@ class TestBTPhone:
         bt_page, conn_page = init_btphone
         bt_page.conn_bt_elem.click()
         text = conn_page.bt_button_elem.get_attribute('checked')
+        logger.info('蓝牙开关属性为: {}'.format(text))
 
         if text == 'false':
             conn_page.bt_button_elem.click()
@@ -101,11 +113,13 @@ class TestBTPhone:
         bt_page.edit_bt_name_elem.click()
         bt_page.back_elem.click()
         a_name = bt_page.bt_name_elem.text
+        logger.info('蓝牙名称为: {}'.format(a_name))
 
         try:
             assert b_name == a_name, '返回成功'
+            logger.info('取消编辑蓝牙名称成功')
         except AssertionError as e:
-            print('返回失败')
+            logger.error('取消编辑蓝牙名称成功')
             raise e
 
 

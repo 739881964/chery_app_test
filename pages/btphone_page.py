@@ -10,6 +10,7 @@ from time import sleep
 from appium.webdriver.common.mobileby import MobileBy as By
 from pages.base_page import BasePage
 from appium.webdriver.webelement import WebElement
+from scripts.logger import logger
 
 
 class BTPhonePage(BasePage):
@@ -70,6 +71,7 @@ class BTPhonePage(BasePage):
         """
         self.edit_bt_name_elem.click()
         e = self.bt_name_input_elem
+        logger.info(e)
         e.send_keys(new_name)
         self.save_elem.click()
 

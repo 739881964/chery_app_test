@@ -1,26 +1,33 @@
 # 获取app包名及对应的activity： adb shell "dumpsys window | grep mCurrentFocus"
 
 #gallery_caps:
-#  platformName: Android
-#  automationName: UiAutomator2
-#  platformVersion: 11
-#  deviceName: c543cf80
-#  appActivity: com.mega.chery.gallery.ui.ImageActivity
-#  appPackage: com.mega.chery.gallery  # 图库
-#  noReset: True
-#chromedriverExecutable: /Users/yuxiang/PycharmProjects/chery_app_test/configs/chromedriver_mac_arm64/chromedriver
-
 platformName: Android
 automationName: UiAutomator2
 platformVersion: '11'
-deviceName: c543cf80 # b6820867
-appActivity: com.mega.carsettings.CarSettingActivity
-appPackage: com.mega.carsettings # 车辆设置功能
+deviceName: c543cf80
 noReset: True
+appActivity:
+  gallery: com.mega.chery.gallery.ui.ImageActivity
+  car_settings: com.mega.carsettings.CarSettingActivity
+  bt_phone: com.mega.btphone.ui.BtPhoneActivity
+appPackage:
+  gallery: com.mega.chery.gallery  # 图库
+  car_settings: com.mega.carsettings  # 车辆设置
+  bt_phone: com.mega.btphone # 蓝牙电话
+
+#chromedriverExecutable: /Users/yuxiang/PycharmProjects/chery_app_test/configs/chromedriver_mac_arm64/chromedriver
 
 #platformName: Android
 #automationName: UiAutomator2
-#platformVersion: 11
+#platformVersion: '11'
+#deviceName: c543cf80 # b6820867
+#noReset: False
+#appActivity: com.mega.carsettings.CarSettingActivity
+#appPackage: com.mega.carsettings # 车辆设置功能
+
+#platformName: Android
+#automationName: UiAutomator2
+#platformVersion: '11'
 #deviceName: c543cf80 # b6820867
 #appActivity: com.mega.btphone.ui.BtPhoneActivity
 #appPackage: com.mega.btphone # 蓝牙电话

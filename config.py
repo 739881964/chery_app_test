@@ -22,6 +22,12 @@ if not os.path.exists(LOG_PATH):
     os.mkdir(LOG_PATH)
     # os.makedirs()
 
+# 日志等级配置文件
+CONFS_FILE_PATH = os.path.join(os.path.join(ROOT_PATH, 'configs'), 'test.cfg')
+
+# txt-log文件记录
+LOGS_FILE_PATH = os.path.join(LOG_PATH, 'log.txt')
+
 # 截图位置
 IMG_PATH = os.path.join(LOG_PATH, 'imgs')
 if not os.path.exists(LOG_PATH):

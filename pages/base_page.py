@@ -13,6 +13,7 @@ import logging
 
 from appium.webdriver.common.mobileby import MobileBy
 from appium.webdriver.common.touch_action import TouchAction
+# from appium.webdriver.common.multi_action import TouchAction
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from appium.webdriver import Remote
 from selenium.webdriver.common.keys import Keys
@@ -21,8 +22,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 
 from config import IMG_PATH
-
 from scripts.keys import KeyCode
+from scripts.logger import logger
 
 
 class BasePage:
@@ -33,6 +34,7 @@ class BasePage:
         :param driver:
         """
         self.driver = driver
+        logger.info('开始初始化驱动driver......')
         self.driver.implicitly_wait(10)
 
     @staticmethod
@@ -55,11 +57,12 @@ class BasePage:
         """
         try:
             wait = WebDriverWait(self.driver, timeout, poll)
+            logger.info('wait_locator: '.format(wait))
             return wait.until(ec.element_to_be_clickable(locator))
 
-        except (TimeoutException, NoSuchElementException):
+        except (TimeoutException, NoSuchElementException) as e:
             # 加 logger
-            logging.error('元素没有定位到')
+            logger.error('元素没有定位到: '.format(e))
             # 截图 screen_shot()
             self.screen_shot()
 
@@ -71,14 +74,14 @@ class BasePage:
         :param poll:
         :return:
         """
-
         try:
             wait = WebDriverWait(self.driver, timeout, poll)
-            return wait.until(ec.presence_of_element_located(locator))
+            logger.info('wait_locator: '.format(wait))
+            return wait.until(ec.element_to_be_clickable(locator))
 
-        except (TimeoutException, NoSuchElementException):
+        except (TimeoutException, NoSuchElementException) as e:
             # 加 logger
-            logging.error('元素没有定位到')
+            logger.error('元素没有定位到: '.format(e))
             # 截图 screen_shot()
             self.screen_shot()
 
@@ -92,10 +95,12 @@ class BasePage:
         """
         try:
             wait = WebDriverWait(self.driver, timeout, poll)
-            return wait.until(ec.visibility_of_element_located(locator))
+            logger.info('wait_locator: '.format(wait))
+            return wait.until(ec.element_to_be_clickable(locator))
 
-        except (TimeoutException, NoSuchElementException):
-            logging.error('元素没有被定位到')
+        except (TimeoutException, NoSuchElementException) as e:
+            logger.error('元素没有定位到: '.format(e))
+            # 截图 screen_shot()
             self.screen_shot()
 
     def screen_shot(self) -> object:
@@ -104,7 +109,10 @@ class BasePage:
         :return:
         """
         current_time_str = time.strftime('%Y-%m-%d-%H-%M-%S', time.localtime())
-        return self.driver.save_screenshot(os.path.join(IMG_PATH, current_time_str + '.png'))
+        png_name = os.path.join(IMG_PATH, current_time_str + '.png')
+
+        logger.info('错误截图为: {}'.format(png_name))
+        return self.driver.save_screenshot(png_name)
 
     def click(self, locator):
         """
@@ -294,8 +302,13 @@ class BasePage:
         :return:
         """
         # TODO: 要用 presence_locatored, visiblity
-        self.wait_presence_element((
-            MobileBy.XPATH, f"//*[contains(@text, {toast_text})]"), timeout=20, poll=0.2)
+        try:
+            self.wait_presence_element((
+                MobileBy.XPATH, f"//*[contains(@text, {toast_text})]"), timeout=20, poll=0.2)
+            logger.info('获取toast成功')
+        except (TimeoutException, NoSuchElementException) as e:
+            logger.error('获取toast失败: '.format(e))
+            raise e
 
     def double_click(self):
         pass
@@ -309,6 +322,8 @@ class BasePage:
         :return:
         """
         action = TouchAction(self.driver)
+
+        logger.info('action: '.format(action))
         return action.press(el=el, x=x, y=y).wait(wait_time).perform()
 
     def move_to(self, x, y):
@@ -318,8 +333,9 @@ class BasePage:
         :param y:
         :return:
         """
-        action = TouchAction(self.driver)
-        return action.move_to(x, y).perform()
+        action = TouchAction(self.driver).move_to(x, y).perform()
+        logger.info('action: '.format(action))
+        return action
 
     def press_and_move_to(self, x1, y1, x2, y2):
         """
@@ -331,16 +347,22 @@ class BasePage:
         :return:
         """
         action = TouchAction(self.driver)
+
+        logger.info('action: '.format(action))
         return action.press(x=x1, y=y1).move_to(x=x2, y=y2).release().perform()
 
     def long_press(self, x, y, wait=8000, el=None):
         """
         长按某个元素
-        :param elem:
+        :param x:
+        :param y:
         :param wait:
+        :param el:
         :return:
         """
         action = TouchAction(self.driver)
+
+        logger.info('action: '.format(action))
         return action.long_press(el=el, x=x, y=y).wait(wait).release().perform()
 
     def execute_js(self, js=True):
@@ -352,13 +374,6 @@ class BasePage:
         else:
             js = "var q=document.documentElement.scrollTop=100000"
         self.driver.execute_script(js)
-
-    def get_elem_property(self) -> str:
-        """
-        获取元素的属性值
-        :return:
-        """
-        pass
 
 
 class Element(object):

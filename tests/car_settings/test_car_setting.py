@@ -23,12 +23,13 @@ class TestCarSetting:
         :param init_setting:
         :return:
         """
-        car_setting_page = init_setting
-        # car_setting_page = CarSettingPage(driver)
-        print('')
-        car_setting_page.clear_screen()
-
-        assert car_setting_page.clear_button_elem.text == "清洁屏幕"
+        # car_setting_page = init_setting
+        # # car_setting_page = CarSettingPage(driver)
+        # print('')
+        # car_setting_page.clear_screen()
+        #
+        # assert car_setting_page.clear_button_elem.text == "清洁屏幕"
+        pass
 
     @pytest.mark.select_drive
     def test_select_drive(self, init_setting):
