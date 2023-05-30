@@ -1,0 +1,7 @@
+INFO     test_case:conftest.py:55 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'noReset': True, 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:124 
+    初始化车辆设置驱动
+     成功
+INFO     test_case:base_page.py:37 开始初始化驱动driver......
+INFO     test_case:conftest.py:128 正在关闭驱动
+INFO     test_case:conftest.py:130 关闭驱动成功！
