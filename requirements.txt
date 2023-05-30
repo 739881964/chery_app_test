@@ -1,6 +1,0 @@
-pytest
-allure-pytest
-selenium
-PyYAML
-Appium-Python-Client
-pytest-yaml
