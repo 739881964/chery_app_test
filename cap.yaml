@@ -4,7 +4,7 @@
 platformName: Android
 automationName: UiAutomator2
 platformVersion: '11'
-deviceName: c543cf80
+deviceName: c543cf80  # b9f38dc7
 noReset: True
 appActivity:
   gallery: com.mega.chery.gallery.ui.ImageActivity

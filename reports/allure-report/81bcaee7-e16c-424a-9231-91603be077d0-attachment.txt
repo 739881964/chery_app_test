@@ -1,0 +1,8 @@
+INFO     test_case:test_drive.py:31 选择的驾驶模式为: 越野
+INFO     test_case:base_page.py:60 wait_locator: 
+INFO     test_case:base_page.py:60 wait_locator: 
+INFO     test_case:base_page.py:60 wait_locator: 
+INFO     test_case:test_drive.py:37 选择的驾驶模式bool值是: false
+ERROR    test_case:test_drive.py:43 assert 'false' == 'true'
+  - true
+  + false

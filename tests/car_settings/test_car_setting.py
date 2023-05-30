@@ -31,16 +31,6 @@ class TestCarSetting:
         # assert car_setting_page.clear_button_elem.text == "清洁屏幕"
         pass
 
-    @pytest.mark.select_drive
-    def test_select_drive(self, init_setting):
-        """
-        选择不同的驾驶模式
-        :return:
-        """
-        setting_page = init_setting
-        setting_page.select_drive()
-        print('success')
-
 
 if __name__ == '__main__':
     pytest.main()

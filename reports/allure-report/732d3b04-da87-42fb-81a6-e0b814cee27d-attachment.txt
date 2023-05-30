@@ -1,0 +1,11 @@
+INFO     test_case:conftest.py:56 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'noReset': True, 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:83 
+    初始化声音驱动
+     成功
+INFO     test_case:base_page.py:37 开始初始化驱动driver......
+INFO     test_case:base_page.py:79 wait_locator: 
+INFO     test_case:base_page.py:60 wait_locator: 
+INFO     test_case:base_page.py:60 wait_locator: 
+INFO     test_case:base_page.py:60 wait_locator:
+INFO     test_case:conftest.py:86 正在关闭驱动
+INFO     test_case:conftest.py:88 关闭驱动成功！

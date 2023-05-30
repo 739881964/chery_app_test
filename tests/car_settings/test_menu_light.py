@@ -10,6 +10,7 @@ import logging
 import pytest
 
 from data.meun_light_data import light_value_data
+from scripts.logger import logger
 
 
 class TestMenuLight:
@@ -37,9 +38,9 @@ class TestMenuLight:
         result = menu_light_page.light_set_elem(mode_key).get_attribute('checked')
         try:
             assert result == bool_key, f'切换大灯-{mode_key}-模式成功'
-            logging.info(result, " = ", bool_key)
+            logger.info('result = {}'.format(bool_key))
         except AssertionError as e:
-            logging.error(result, ' != ', bool_key)
+            logger.error('result !=  {}'.format(bool_key))
             raise e
 
 

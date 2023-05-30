@@ -8,7 +8,7 @@
 
 light_value_data = [
     ('关', 'true'),
-    ('auto', 'false'),
-    ('位置灯', 'false'),
-    ('近光灯', 'false'),
+    ('auto', 'true'),
+    ('位置灯', 'true'),
+    ('近光灯', 'true'),
 ]

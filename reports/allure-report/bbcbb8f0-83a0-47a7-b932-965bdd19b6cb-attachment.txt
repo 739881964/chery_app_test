@@ -1,0 +1,11 @@
+INFO     test_case:conftest.py:56 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'noReset': True, 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:155 
+    初始化灯光驱动
+     成功
+INFO     test_case:base_page.py:37 开始初始化驱动driver......
+INFO     test_case:base_page.py:60 wait_locator: 
+INFO     test_case:base_page.py:60 wait_locator: 
+INFO     test_case:base_page.py:60 wait_locator: 
+ERROR    test_case:test_menu_light.py:43 result !=  true
+INFO     test_case:conftest.py:158 正在关闭驱动
+INFO     test_case:conftest.py:160 关闭驱动成功！

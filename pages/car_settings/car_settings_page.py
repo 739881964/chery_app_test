@@ -27,6 +27,14 @@ class CarSettingPage(BasePage):
     menu_light_locator = (By.ID, 'com.mega.carsettings:id/menu_light')
     hud_locator = (By.ID, 'com.mega.carsettings:id/menu_hud')
 
+    def drive_list_elem(self, value) -> WebElement:
+        """
+        不同的驾驶模式选择
+        :param value:
+        :return:
+        """
+        return self.wait_click_element((By.XPATH, f'//android.widget.RadioButton[@content-desc="{value}"]'))
+
     @property
     def radio_group_elem(self) -> WebElement:
         """
@@ -55,12 +63,13 @@ class CarSettingPage(BasePage):
     def clear_button_elem(self):
         return self.wait_click_element(self.clear_button_locator)
 
-    def select_drive(self):
+    def select_drive(self, value):
         """
         选择驾驶模式
         :return:
         """
         self.drive_elem.click()
+        self.drive_list_elem(value)
 
     # def clear_screen(self):
     #     """

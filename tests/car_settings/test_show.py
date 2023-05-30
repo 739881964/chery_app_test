@@ -46,6 +46,7 @@ class TestShow:
             logger.info('video limiter checked is: {}'.format(checked_result))
         except AssertionError as e:
             logger.info(e)
+            raise e
 
     @pytest.mark.on_video_limiter
     @allure.story('开启视频限制功能')
@@ -73,6 +74,7 @@ class TestShow:
             logger.info('video limiter checked is: {}'.format(checked_result))
         except AssertionError as e:
             logger.info(e)
+            raise e
 
     @pytest.mark.select_show_mode
     @allure.story('显示模式选择')
@@ -98,6 +100,7 @@ class TestShow:
             logger.info('切换显示模式为 [{}] 成功'.format(change_data))
         except AssertionError as e:
             logger.error(e)
+            raise e
 
     @allure.story('测试清洗屏幕功能')
     @pytest.mark.test_screen_clear
@@ -116,6 +119,7 @@ class TestShow:
             logger.info('清洁屏幕成功')
         except AssertionError as e:
             logger.error(e)
+            raise e
 
     @allure.story('测试更换主题功能')
     @pytest.mark.modify_theme

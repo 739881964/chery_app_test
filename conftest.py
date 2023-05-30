@@ -23,6 +23,7 @@ from pages.gallery.local_page import LocalPage
 from pages.gallery.usb_page import UsbPage
 from pages.car_settings.sound_page import SoundPage
 from pages.car_settings.show_page import ShowPage
+from pages.car_settings.drive_page import DrivePage
 
 URL = 'http://127.0.0.1:4723/wd/hub'
 
@@ -47,7 +48,7 @@ def get_device_caps(cap: str):
     return info
 
 
-def base_driver(app_name, url=URL, **kwargs):
+def base_driver(app_name='car_settings', url=URL, **kwargs):
     caps = get_device_caps(app_name)
     for k, v in kwargs.items():
         caps[k] = v
@@ -56,6 +57,21 @@ def base_driver(app_name, url=URL, **kwargs):
     driver = Remote(command_executor=url, desired_capabilities=caps)
 
     return driver
+
+
+@pytest.fixture(scope='class')
+def init_drive():
+    """
+    初始化驾驶驱动
+    :return:
+    """
+    driver = base_driver()
+    logger.info('{} 成功'.format(init_sound.__doc__))
+    drive_page = DrivePage(driver)
+    yield drive_page
+    logger.info('正在关闭驱动')
+    driver.quit()
+    logger.info('关闭驱动成功！')
 
 
 @pytest.fixture()

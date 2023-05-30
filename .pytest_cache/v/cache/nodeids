@@ -1,6 +1,11 @@
 [
   "tests/car_settings/test_car_setting.py::TestCarSetting::test_screen_clear",
-  "tests/car_settings/test_car_setting.py::TestCarSetting::test_select_drive",
+  "tests/car_settings/test_drive.py::TestDrive::test_select_drive[data0]",
+  "tests/car_settings/test_drive.py::TestDrive::test_select_drive[data1]",
+  "tests/car_settings/test_drive.py::TestDrive::test_select_drive[data2]",
+  "tests/car_settings/test_drive.py::TestDrive::test_select_drive[data3]",
+  "tests/car_settings/test_drive.py::TestDrive::test_select_drive[data4]",
+  "tests/car_settings/test_drive.py::TestDrive::test_select_drive[data5]",
   "tests/car_settings/test_menu_light.py::TestMenuLight::test_set_light[data0]",
   "tests/car_settings/test_menu_light.py::TestMenuLight::test_set_light[data1]",
   "tests/car_settings/test_menu_light.py::TestMenuLight::test_set_light[data2]",

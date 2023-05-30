@@ -8,7 +8,7 @@
 
 import pytest
 from pages.car_settings.sound_page import SoundPage
-
+from scripts.logger import logger
 from time import sleep
 
 
@@ -38,6 +38,7 @@ class TestSound:
         try:
             assert checked == 'true', '打开媒体静音成功'
         except AssertionError as e:
+            logger.error(e)
             raise e
 
     @pytest.mark.close_media_mute
@@ -59,6 +60,7 @@ class TestSound:
         try:
             assert checked == 'false'
         except AssertionError as e:
+            logger.error(e)
             raise e
 
 

@@ -1,0 +1,13 @@
+INFO     test_case:conftest.py:56 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'noReset': True, 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:97 
+    初始化车辆设置-显示驱动
+     成功
+INFO     test_case:base_page.py:37 开始初始化驱动driver......
+INFO     test_case:conftest.py:100 <pages.car_settings.show_page.ShowPage object at 0x104ac7100>
+INFO     test_case:base_page.py:60 wait_locator: 
+INFO     test_case:base_page.py:60 wait_locator: 
+INFO     test_case:base_page.py:60 wait_locator: 
+INFO     test_case:test_show.py:96 show mode checked is: true
+INFO     test_case:test_show.py:100 切换显示模式为 [黑夜] 成功
+INFO     test_case:conftest.py:102 正在关闭驱动
+INFO     test_case:conftest.py:104 关闭驱动成功！
