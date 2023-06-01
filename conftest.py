@@ -29,7 +29,7 @@ URL = 'http://127.0.0.1:4723/wd/hub'
 
 
 # 获取设备信息cap
-def get_device_caps(cap: str):
+def get_device_caps(cap: str) -> dict:
     """
     获取不同app对应的caps配置信息
     :param cap:

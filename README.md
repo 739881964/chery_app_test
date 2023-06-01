@@ -1,6 +1,6 @@
 # 基于pytest的自动化测试插件
 
-本项目为自动化测试模板项目，将以dawn和remote-vehicle两个服务的case为示例，进行演示
+本项目为APP自动化测试模板项目
 
 **将模板项目克隆到本地**
 
@@ -122,18 +122,10 @@ Pipfile: 默认的Pipfile文件 (多个项目共用)
 
 # 3.如何写测试用例
 
-## 3.1  config.ymal示例
 
-编写测试用例时，会使用到config.yaml里配置的公共参数，先介绍一下config.yaml的配置  
-**config.yaml参考下面的格式：**
+## 3. data目录下创建测试数据
 
-```yaml
-
-
-
-## 3.2 data目录下创建测试数据
-
-采用yaml格式 参考下面的格式：
+采用python格式 参考下面的格式：
 
 ```python
   # 驾驶模式测试数据用例
@@ -249,7 +241,7 @@ def init_drive():
 
 ```
 
-## 3.4 xxx_page.py页面元素封装
+## 3.4 pages-xxx_page.py页面元素封装
 
 1、定位出页面中的元素，使用(By.xx, locator)的形式当作类变量  
 2、针对每个元素定位进行二次封装成属性方法-webelement，方便调用  
@@ -290,7 +282,7 @@ class DrivePage(BasePage):
 1、测试类/方法文件执行  
 鼠标右击-run/run pytest
 
-2、命令行执行pytest
+2、命令行在当面项目根目录下执行 pytest
 
 ```bash
 pytest
@@ -345,4 +337,12 @@ class TestDrive:
 if __name__ == '__main__':
     pytest.main()
 
+```
+
+# 6.测试报告
+main.py运行的测试结果存放在reports/allure-report下
+
+切换到测试报告目录下，在命令行模式下执行
+```bash
+allure serve ./
 ```

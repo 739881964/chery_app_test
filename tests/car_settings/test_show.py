@@ -8,10 +8,11 @@
 
 import allure
 import pytest
-from data.kinds_of_theme import theme_data, show_mode_data
+from data.kinds_of_theme_data import theme_data, show_mode_data
 
 from scripts.logger import logger
 from time import sleep
+from scripts.execute_adb import adb
 
 
 @allure.feature('测试车辆设置-显示功能')
@@ -19,6 +20,37 @@ class TestShow:
     """
     车辆显示功能测试
     """
+
+    @pytest.mark.test_control
+    def test_control_bright(self, init_show):
+        """
+        控制中控亮度
+        :param init_show:
+        :return:
+        """
+        show_page = init_show
+        show_page.scroll_to_show()
+        show_page.scroll_to_last()
+        # 获取原始屏幕的亮度值
+        init_value = adb.get_device_bright
+        logger.info('获取原始屏幕的亮度值: {}'.format(init_value))
+        while True:
+            # 滑动控制条操作屏幕亮度-随机滑动
+            show_page.swipe_control()
+            sleep(1)
+            # 获取滑动后的屏幕亮度值
+            last_value = adb.get_device_bright
+            # 当屏幕亮度改变时，才停止滑动，否则，继续滑动操作，直到不一致
+            if init_value != last_value:
+                break
+        logger.info('获取滑动后的屏幕亮度值: {}'.format(last_value))
+
+        try:
+            assert init_value != last_value
+            logger.info('滑动屏幕亮度成功，从{} -> {}'.format(init_value, last_value))
+        except AssertionError as e:
+            logger.error(e)
+            raise e
 
     @pytest.mark.off_video_limiter
     @allure.story('关闭视频限制功能')
@@ -35,8 +67,7 @@ class TestShow:
         checked = show_page.video_limiter_elem.get_attribute('checked')
         if checked == 'false':
             logger.info('视频限制开关已关闭，正在重新开启-关闭')
-            for i in range(2):
-                show_page.video_limiter_elem.click()
+            show_page.video_limiter_elem.click()
         show_page.video_limiter_elem.click()
 
         checked_result = show_page.video_limiter_elem.get_attribute('checked')
@@ -63,8 +94,7 @@ class TestShow:
         checked = show_page.video_limiter_elem.get_attribute('checked')
         if checked == 'true':
             logger.info('视频限制开关已开启，正在重新关闭-开启')
-            for i in range(2):
-                show_page.video_limiter_elem.click()
+            show_page.video_limiter_elem.click()
         show_page.video_limiter_elem.click()
 
         checked_result = show_page.video_limiter_elem.get_attribute('checked')

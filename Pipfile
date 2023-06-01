@@ -10,6 +10,7 @@ selenium = "==4.9.0"
 PyYAML = "==6.0"
 Appium-Python-Client = "==2.8.0"
 pytest-yaml = "==1.2.1"
+adb = "=="
 
 [requires]
 python_version = "3.10"

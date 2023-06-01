@@ -1,0 +1,22 @@
+INFO     test_case:conftest.py:56 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'noReset': True, 'appActivity': 'com.mega.btphone.ui.BtPhoneActivity', 'appPackage': 'com.mega.btphone'}
+INFO     test_case:conftest.py:169 
+    初始化蓝牙电话驱动
+     成功
+INFO     test_case:base_page.py:37 开始初始化驱动driver......
+INFO     test_case:base_page.py:37 开始初始化驱动driver......
+INFO     test_case:base_page.py:60 display: 240
+INFO     test_case:base_page.py:64 wait_locator: 
+INFO     test_case:base_page.py:60 display: 240
+INFO     test_case:base_page.py:64 wait_locator: 
+INFO     test_case:test_btphone.py:139 蓝牙开关属性为: true
+INFO     test_case:base_page.py:60 display: 240
+INFO     test_case:base_page.py:64 wait_locator: 
+INFO     test_case:base_page.py:83 wait_locator: 
+INFO     test_case:btphone_page.py:85 <appium.webdriver.webelement.WebElement (session="4b338d85-2dae-4abc-80e3-47ccb586303d", element="8ac10f8d-681b-4016-9ab4-7ddee3e5c458")>
+INFO     test_case:base_page.py:60 display: 240
+INFO     test_case:base_page.py:64 wait_locator: 
+INFO     test_case:base_page.py:83 wait_locator: 
+INFO     test_case:test_btphone.py:152 蓝牙名称为: 123456789
+INFO     test_case:test_btphone.py:161 修改蓝牙名称为：123456789 成功
+INFO     test_case:conftest.py:172 正在关闭驱动
+INFO     test_case:conftest.py:174 关闭驱动成功！

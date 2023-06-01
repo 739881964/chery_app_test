@@ -11,6 +11,7 @@
   "tests/car_settings/test_menu_light.py::TestMenuLight::test_set_light[data2]",
   "tests/car_settings/test_menu_light.py::TestMenuLight::test_set_light[data3]",
   "tests/car_settings/test_show.py::TestShow::test_clear_screen",
+  "tests/car_settings/test_show.py::TestShow::test_control_bright",
   "tests/car_settings/test_show.py::TestShow::test_modify_theme[data0]",
   "tests/car_settings/test_show.py::TestShow::test_modify_theme[data1]",
   "tests/car_settings/test_show.py::TestShow::test_modify_theme[data2]",
@@ -25,5 +26,8 @@
   "tests/test_btphone.py::TestBTPhone::test_cancel_edit",
   "tests/test_btphone.py::TestBTPhone::test_close_bt",
   "tests/test_btphone.py::TestBTPhone::test_edit_bt_name",
-  "tests/test_btphone.py::TestBTPhone::test_open_bt"
+  "tests/test_btphone.py::TestBTPhone::test_error_name[bt_data0]",
+  "tests/test_btphone.py::TestBTPhone::test_error_name[bt_data1]",
+  "tests/test_btphone.py::TestBTPhone::test_open_bt",
+  "tests/test_btphone.py::TestBTPhone::test_reconnect_device"
 ]

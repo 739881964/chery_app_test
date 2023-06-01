@@ -22,6 +22,31 @@ class ShowPage(BasePage):
     theme_locator = (By.XPATH, '//android.widget.TextView[@content-desc="主题设置"]')
     return_button = (By.ID, 'com.mega.carsettings:id/iv_close')
     video_limiter_locator = (By.ID, 'android:id/switch_widget')
+    control_bright_locator = (By.ID, 'com.mega.carsettings:id/seekbar')
+
+    @property
+    def control_elem(self) -> WebElement:
+        """
+        中控亮度滑动条
+        :return:
+        """
+        return self.wait_presence_element(self.find_elements(self.control_bright_locator)[1])
+
+    @property
+    def get_value(self):
+        """
+        后去中控亮度条的厨师位置x, y
+        :return:
+        """
+        return self.get_location(self.control_elem)
+
+    def swipe_control(self):
+        """
+        滑动控制条
+        :return:
+        """
+        x = self.generate_random()
+        self.swipe_up_and_down(758, 664, x, 664)
 
     @property
     def video_limiter_elem(self) -> WebElement:

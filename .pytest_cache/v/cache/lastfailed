@@ -1,7 +1,4 @@
 {
-  "tests/test_btphone.py::TestBTPhone::test_close_bt": true,
-  "tests/test_btphone.py::TestBTPhone::test_edit_bt_name": true,
-  "tests/test_btphone.py::TestBTPhone::test_cancel_edit": true,
   "tests/car_settings/test_drive.py::TestDrive::test_select_drive[data0]": true,
   "tests/car_settings/test_drive.py::TestDrive::test_select_drive[data2]": true,
   "tests/car_settings/test_drive.py::TestDrive::test_select_drive[data3]": true,
@@ -9,5 +6,6 @@
   "tests/car_settings/test_drive.py::TestDrive::test_select_drive[data5]": true,
   "tests/car_settings/test_menu_light.py::TestMenuLight::test_set_light[data1]": true,
   "tests/car_settings/test_menu_light.py::TestMenuLight::test_set_light[data2]": true,
-  "tests/car_settings/test_menu_light.py::TestMenuLight::test_set_light[data3]": true
+  "tests/car_settings/test_menu_light.py::TestMenuLight::test_set_light[data3]": true,
+  "tests/car_settings/test_show.py": true
 }

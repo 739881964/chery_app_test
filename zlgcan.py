@@ -465,7 +465,6 @@ def can_start(zcanlib, device_handle, channel):
     return channel_handle
 
 
-"""
 if __name__ == "__main__":
     zcan_lib = ZCan()
     handle = zcan_lib.open_device(ZCAN_USBCANFD_MINI, 0, 0)
@@ -543,4 +542,4 @@ if __name__ == "__main__":
     # zcan_lib.reset_can(chn_handle)
     # # Close Device
     # zcan_lib.close_device(handle)
-"""
+

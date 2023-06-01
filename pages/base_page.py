@@ -10,6 +10,8 @@ import os
 import time
 from datetime import datetime
 import logging
+import screen_brightness_control as sbc
+import random
 
 from appium.webdriver.common.mobileby import MobileBy
 from appium.webdriver.common.touch_action import TouchAction
@@ -36,6 +38,42 @@ class BasePage:
         self.driver = driver
         logger.info('开始初始化驱动driver......')
         self.driver.implicitly_wait(10)
+        # logger.info(self.driver.get_settings())
+
+    @staticmethod
+    def generate_random(x=758, y=1473):
+        """
+        生成随机数
+        :return:
+        """
+        return random.randint(x, y)
+
+    @staticmethod
+    def get_location(elem):
+        """
+        获取元素elem的x, y坐标轴位置信息
+        :return:
+        """
+        x = elem.location.get('x')
+        y = elem.location.get('y')
+        return x, y
+
+    def find_elements(self, locator):
+        """
+        获取元素list
+        :param locator:
+        :return:
+        """
+        return self.driver.find_elements(*locator)
+
+    @classmethod
+    def get_window_brightness(cls, display=0):
+        """
+        获取当前屏幕亮度
+        :return:
+        """
+        brightness = sbc.get_brightness(display=display)
+        return brightness
 
     @staticmethod
     def get_elem_attribute(locator, text):
@@ -407,4 +445,10 @@ class Element(object):
 
 
 if __name__ == '__main__':
-    pass
+    def generate_random():
+        """
+        生成随机数
+        :return:
+        """
+        return random.randint(758, 1473)
+    print(generate_random())

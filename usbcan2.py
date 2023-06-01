@@ -75,7 +75,6 @@ def receive_can(chn_handle):
                                                                                 range(rcv_msg[i].frame.can_dlc))))
 
 
-"""
 if __name__ == "__main__":
 
     # dll support
@@ -113,4 +112,3 @@ if __name__ == "__main__":
     # Close Device
     zcanlib.close_device(dev_handle)
     print("Finished")
-"""

@@ -10,12 +10,46 @@
 import pytest
 
 from scripts.logger import logger
+from data.btphone_name_data import bt_name_data
+
+from time import sleep
 
 
 class TestBTPhone:
     """
     测试蓝牙电话功能
     """
+
+    @pytest.mark.test_disconnect_device
+    def test_reconnect_device(self, init_btphone):
+        """
+        连接未连接设备失败测试用例
+        :param init_btphone:
+        :return:
+        """
+        btphone_page, connect_page = init_btphone
+        btphone_page.conn_bt_elem.click()
+
+        text = connect_page.bt_button_elem.get_attribute('checked')
+        logger.info('蓝牙开关属性为: {}'.format(text))
+
+        # 确保蓝牙打开
+        if text == 'true':
+            logger.info('蓝牙已打开')
+        else:
+            connect_page.bt_button_elem.click()
+
+        btphone_page.disconnect_elem.click()
+        sleep(10)
+        try:
+            alert_text = btphone_page.connect_failed_elem.text
+            assert alert_text == '配对失败'
+            logger.info('蓝牙连接失败，设备不在通讯范围内')
+        except AssertionError as e:
+            logger.error('蓝牙连接异常')
+            raise e
+        finally:
+            btphone_page.know_elem.click()
 
     @pytest.mark.test_open_bt
     def test_open_bt(self, init_btphone):
@@ -120,6 +154,46 @@ class TestBTPhone:
             logger.info('取消编辑蓝牙名称成功')
         except AssertionError as e:
             logger.error('取消编辑蓝牙名称成功')
+            raise e
+
+    @pytest.mark.test_error_data
+    @pytest.mark.parametrize('bt_data', bt_name_data)
+    def test_error_name(self, bt_data, init_btphone):
+        """
+        异常数据
+        :param bt_data:
+        :param init_btphone:
+        :return:
+        """
+        bt_page, con_page = init_btphone
+        new_name = bt_data[0]
+        bt_page.conn_bt_elem.click()
+        checked = con_page.bt_button_elem.get_attribute('checked')
+        logger.info('蓝牙开关属性为: {}'.format(checked))
+
+        # old_name = bt_page.bt_name_elem.text
+        # if checked == 'false':
+        #     con_page.bt_button_elem.click()
+        bt_page.input_name(new_name)
+
+        # save_enabled = bt_page.save_elem.get_attribute('enabled')
+        # if save_enabled == 'false':
+        #     bt_page.back_elem.click()
+        bt_page.save_elem.click()
+
+        name = bt_page.bt_name_elem.text
+        logger.info('蓝牙名称为: {}'.format(name))
+
+        # if save_enabled == 'false':
+        #     assert name == old_name
+        try:
+            if len(new_name) <= 32:
+                assert name == new_name
+            else:
+                assert name == new_name[0:32]
+            logger.info('修改蓝牙名称为：{} 成功'.format(name))
+        except AssertionError as e:
+            logger.error('修改蓝牙名称为：{} 失败'.format(new_name))
             raise e
 
 

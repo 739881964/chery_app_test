@@ -1,1 +1,0 @@
-INFO     test_case:conftest.py:56 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'noReset': True, 'appActivity': 'com.mega.btphone.ui.BtPhoneActivity', 'appPackage': 'com.mega.btphone'}

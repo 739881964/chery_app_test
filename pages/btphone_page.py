@@ -23,6 +23,33 @@ class BTPhonePage(BasePage):
     save_locator = (By.ID, 'com.mega.carsettings:id/tv_sure')
     bt_name_locator = (By.ID, 'android:id/summary')
     back_locator = (By.ID, 'com.mega.carsettings:id/iv_back')
+    connect_failed_locator = (By.ID, 'com.mega.carsettings:id/tv_title')
+    know_locator = (By.ID, 'com.mega.carsettings:id/tv_sure')
+    disconnect_locator = (By.ID, 'com.mega.carsettings:id/tv_connect_state')
+
+    @property
+    def disconnect_elem(self) -> WebElement:
+        """
+        未连接设备
+        :return:
+        """
+        return self.wait_presence_element(self.disconnect_locator)
+
+    @property
+    def know_elem(self) -> WebElement:
+        """
+        '知道了' alert
+        :return:
+        """
+        return self.wait_presence_element(self.know_locator)
+
+    @property
+    def connect_failed_elem(self) -> WebElement:
+        """
+        配对失败alert
+        :return:
+        """
+        return self.wait_presence_element(self.connect_failed_locator)
 
     @property
     def back_elem(self) -> WebElement:
@@ -74,6 +101,16 @@ class BTPhonePage(BasePage):
         logger.info(e)
         e.send_keys(new_name)
         self.save_elem.click()
+
+    def input_name(self, name):
+        """
+        编辑蓝牙名称不保存
+        :return:
+        """
+        self.edit_bt_name_elem.click()
+        e = self.bt_name_input_elem
+        logger.info(e)
+        e.send_keys(name)
 
     @property
     def bt_name_elem(self) -> WebElement:
