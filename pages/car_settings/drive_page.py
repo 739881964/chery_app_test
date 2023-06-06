@@ -8,16 +8,19 @@
 
 from time import sleep
 from appium.webdriver.common.mobileby import MobileBy as By
-from pages.base_page import BasePage
+from pages.base_page import BasePage, Element
 from appium.webdriver.webelement import WebElement
 
 
-class DrivePage(BasePage):
+class DrivePage(BasePage, Element):
     """
     驾驶
     """
-
+    # locators
     drive_locator = (By.ID, 'com.mega.carsettings:id/menu_drive')
+
+    # elements
+    drive_elem = Element(drive_locator, 'click', desc='驾驶模式选择')
 
     def drive_list_select_elem(self, value) -> WebElement:
         """
@@ -27,9 +30,9 @@ class DrivePage(BasePage):
         """
         return self.wait_click_element((By.XPATH, f'//android.widget.RadioButton[contains(@content-desc, "{value}")]'))
 
-    @property
-    def drive_elem(self):
-        return self.wait_click_element(self.drive_locator)
+    # @property
+    # def drive_elem(self):
+    #     return self.wait_click_element(self.drive_locator)
 
     def select_drive_mode(self, value):
         """
@@ -37,4 +40,4 @@ class DrivePage(BasePage):
         :return:
         """
         self.drive_elem.click()
-        self.drive_list_select_elem(value)
+        self.drive_list_select_elem(value).click()

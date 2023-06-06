@@ -23,7 +23,7 @@ class TestBTPhone:
     @pytest.mark.test_disconnect_device
     def test_reconnect_device(self, init_btphone):
         """
-        连接未连接设备失败测试用例
+        连接设备异常失败测试用例
         :param init_btphone:
         :return:
         """
@@ -41,6 +41,7 @@ class TestBTPhone:
 
         btphone_page.disconnect_elem.click()
         sleep(10)
+
         try:
             alert_text = btphone_page.connect_failed_elem.text
             assert alert_text == '配对失败'
@@ -160,7 +161,7 @@ class TestBTPhone:
     @pytest.mark.parametrize('bt_data', bt_name_data)
     def test_error_name(self, bt_data, init_btphone):
         """
-        异常数据
+        编辑蓝牙名称，命名异常数据
         :param bt_data:
         :param init_btphone:
         :return:

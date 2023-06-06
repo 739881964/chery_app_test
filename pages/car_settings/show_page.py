@@ -8,8 +8,9 @@
 
 from time import sleep
 from appium.webdriver.common.mobileby import MobileBy as By
-from pages.base_page import BasePage
+from pages.base_page import BasePage, Element
 from appium.webdriver.webelement import WebElement
+from scripts.logger import logger
 
 
 class ShowPage(BasePage):
@@ -24,18 +25,21 @@ class ShowPage(BasePage):
     video_limiter_locator = (By.ID, 'android:id/switch_widget')
     control_bright_locator = (By.ID, 'com.mega.carsettings:id/seekbar')
 
-    @property
-    def control_elem(self) -> WebElement:
-        """
-        中控亮度滑动条
-        :return:
-        """
-        return self.wait_presence_element(self.find_elements(self.control_bright_locator)[1])
+    # elements
+    control_elem = Element(control_bright_locator[1], method='presence', desc='中控滑动条', is_elems=True, index=1)
+
+    # @property
+    # def control_elem(self) -> WebElement:
+    #     """
+    #     中控亮度滑动条
+    #     :return:
+    #     """
+    #     return self.wait_presence_element(self.find_elements(self.control_bright_locator)[1])
 
     @property
     def get_value(self):
         """
-        后去中控亮度条的厨师位置x, y
+        获取中控亮度条的初始位置x, y
         :return:
         """
         return self.get_location(self.control_elem)
@@ -47,6 +51,7 @@ class ShowPage(BasePage):
         """
         x = self.generate_random()
         self.swipe_up_and_down(758, 664, x, 664)
+        logger.info('向x轴滑动距离{}, 调节屏幕亮度成功'.format(x))
 
     @property
     def video_limiter_elem(self) -> WebElement:

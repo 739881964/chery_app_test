@@ -1,4 +1,4 @@
-# coding:utf-8
+# coding: utf-8
 # 当前的项目名：chery_app_test-main
 # 当前编辑文件名：test_gallery.py
 # 当前用户的登录名：73988
@@ -8,11 +8,166 @@
 
 import pytest
 
+from time import sleep
+from scripts.logger import logger
+from data.picture_data import no_usb_data
+
 
 class TestGallery:
     """
     图库功能
     """
+
+    @pytest.mark.parametrize('data', no_usb_data)
+    @pytest.mark.random_select_pic
+    def test_random_select_pic_explore(self, data, init_gallery):
+        """
+        本地随机选择图片并分享失败，无usb设备
+        :param data:
+        :param init_gallery:
+        :return:
+        """
+        gallery = init_gallery[0]
+        gallery.local_edit_elem.click()
+        gallery.picture_elem.click()
+        gallery.local_export_elem.click()
+        text = data[0]
+        try:
+            toast = gallery.show_toast(text)
+            logger.info('错误提示为: {}'.format(toast))
+            assert text in toast
+            logger.info('导出失败，无usb设备，测试异常导出图片成功')
+        except AssertionError as e:
+            logger.info(e)
+            raise e
+
+    @pytest.mark.no_select_pic_explore
+    def test_no_select_pic_explore(self, init_gallery):
+        """
+        本地不选择图片并分享
+        :param init_gallery:
+        :return:
+        """
+        gallery = init_gallery[0]
+        gallery.local_edit_elem.click()
+
+        enabled_bool = gallery.local_export_elem.get_attribute('enabled')
+        try:
+            assert enabled_bool == 'false'
+            logger.info('导出按钮置灰: {}，无法分享'.format(enabled_bool))
+        except AssertionError as e:
+            logger.error(e)
+            raise e
+
+    @pytest.mark.skip(reason='功能实现，但调试时不开放，原因是：删除功能不能随便用')
+    @pytest.mark.delete_pic
+    def test_delete_pic(self, init_gallery):
+        """
+        删除图片
+        :param init_gallery:
+        :return:
+        """
+        gallery = init_gallery[0]
+        gallery.picture_elem.click()
+        gallery.delete_elem.click()
+
+    @pytest.mark.set_wallpaper
+    def test_set_wallpaper(self, init_gallery):
+        """
+        设置图片壁纸
+        :param init_gallery:
+        :return:
+        """
+        gallery = init_gallery[0]
+        gallery.picture_elem.click()
+        pic_name = gallery.picture_name_elem.text
+        gallery.set_wallpaper_elem.click()
+        gallery.setting_wallpaper_elem.click()
+
+        set_toast = gallery.show_toast('成功')
+        try:
+            assert '成功' in set_toast
+            logger.info('设置壁纸为 {} 成功'.format(pic_name))
+        except AssertionError as e:
+            logger.error(e)
+            raise e
+
+    @pytest.mark.wallpaper_cancel
+    def test_set_wallpaper_cancel(self, init_gallery):
+        """
+        设置图片壁纸-取消
+        :param init_gallery:
+        :return:
+        """
+        gallery = init_gallery[0]
+        gallery.picture_elem.click()
+        gallery.set_wallpaper_elem.click()
+        gallery.wallpaper_back_elem.click()
+        pic_name = gallery.picture_name_elem.text
+
+        try:
+            assert 'jpg' in pic_name
+            logger.info('取消设置当前 {} 图片为壁纸成功'.format(pic_name))
+        except AssertionError as e:
+            logger.error(e)
+            raise e
+
+    def test_enlarge_pic(self, init_gallery):
+        """
+        放大图片并恢复原图大小
+        :param init_gallery:
+        :return:
+        """
+        gallery = init_gallery[0]
+        gallery.enlarge_pic()
+        pass
+
+    @pytest.mark.parametrize('data', no_usb_data)
+    @pytest.mark.export_pic_no_usb
+    def test_export_pic_no_usb(self, data, init_gallery):
+        """
+        导出图片无usb设备时
+        :param init_gallery:
+        :param data:
+        :return:
+        """
+        gallery = init_gallery[0]
+        gallery.picture_elem.click()
+        gallery.export_elem.click()
+
+        toast_text = data[0]
+        logger.info('测试数据为: {}'.format(toast_text))
+
+        try:
+            # 获取导出无usb设备的toast
+            no_usb_toast = gallery.show_toast(data[0])
+            logger.info('错误提示为: {}'.format(no_usb_toast))
+            assert toast_text in no_usb_toast
+            logger.info('导出失败，无usb设备，测试异常导出图片成功')
+        except AssertionError as e:
+            logger.info(e)
+            raise e
+
+    @pytest.mark.click_picture
+    def test_click_picture(self, init_gallery):
+        """
+        随机查看图片
+        :param init_gallery:
+        :return:
+        """
+        gallery = init_gallery[0]
+        gallery.picture_elem.click()
+        sleep(1)
+
+        try:
+            pic_name = gallery.picture_name_elem.text
+            assert 'jpg' in pic_name
+            logger.info('随机查看图片: {} 成功'.format(pic_name))
+        except AssertionError as e:
+            logger.error('查看图片失败')
+            raise e
+        gallery.back_elem.click()
+        sleep(1)
 
     @pytest.mark.switch_from
     def test_switch_from(self, init_gallery):
@@ -37,8 +192,9 @@ class TestGallery:
         try:
             assert local_mark == new_usb_mark == 'true'
             assert usb_mark == new_local_mark == 'false'
+            logger.info('切换图片来源成功，从 {} -> {}'.format('local', 'usb'))
         except AssertionError as e:
-            print('图库来源切换到usb失败')
+            logger.error('图库来源切换到usb失败')
             raise e
 
 

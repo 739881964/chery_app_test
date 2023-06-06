@@ -6,12 +6,12 @@
 # 当前系统时间：18:23
 # 用于创建文件的IDE的名称: PyCharm
 
-
+import torch
+import tensorflow as tf
 import subprocess
 
 from scripts.device_driver import caps
 from scripts.logger import logger
-
 
 DEVICE_NAME = caps['deviceName']
 
@@ -63,6 +63,8 @@ class ADB:
                 logger.error(e)
                 raise e
 
+        logger.error('{} 设备未连接'.format(self.device_name))
+
     @property
     def get_device_bright(self):
         """
@@ -75,9 +77,11 @@ class ADB:
 
 adb = ADB()
 
-
 if __name__ == '__main__':
-    adb = ADB()
-    res = adb.device_exit()
-    print(res)
-    print(adb.get_device_bright)
+    # model = tf.load_library('../inference.pdmodel')
+    # print(model)
+    # adb = ADB()
+    # res = adb.device_exit()
+    # print(res)
+    # print(adb.get_device_bright)
+    pass

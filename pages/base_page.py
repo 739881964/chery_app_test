@@ -13,11 +13,13 @@ import logging
 import screen_brightness_control as sbc
 import random
 
+from appium.webdriver.common import multi_action
 from appium.webdriver.common.mobileby import MobileBy
 from appium.webdriver.common.touch_action import TouchAction
 # from appium.webdriver.common.multi_action import TouchAction
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from appium.webdriver import Remote
+from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support.wait import WebDriverWait
@@ -58,13 +60,13 @@ class BasePage:
         y = elem.location.get('y')
         return x, y
 
-    def find_elements(self, locator):
-        """
-        获取元素list
-        :param locator:
-        :return:
-        """
-        return self.driver.find_elements(*locator)
+    # def find_elements(self, locator):
+    #     """
+    #     获取元素list
+    #     :param locator:
+    #     :return:
+    #     """
+    #     return self.driver.find_elements(*locator)
 
     @classmethod
     def get_window_brightness(cls, display=0):
@@ -95,12 +97,12 @@ class BasePage:
         """
         try:
             wait = WebDriverWait(self.driver, timeout, poll)
-            logger.info('wait_locator: '.format(wait))
+            logger.info('wait_locator: {}'.format(locator))
             return wait.until(ec.element_to_be_clickable(locator))
 
         except (TimeoutException, NoSuchElementException) as e:
             # 加 logger
-            logger.error('元素没有定位到: '.format(e))
+            logger.error('元素 {} 没有定位到: {}'.format(locator, e))
             # 截图 screen_shot()
             self.screen_shot()
 
@@ -114,12 +116,12 @@ class BasePage:
         """
         try:
             wait = WebDriverWait(self.driver, timeout, poll)
-            logger.info('wait_locator: '.format(wait))
-            return wait.until(ec.element_to_be_clickable(locator))
+            logger.info('wait_locator: {}'.format(locator))
+            return wait.until(ec.presence_of_element_located(locator))
 
         except (TimeoutException, NoSuchElementException) as e:
             # 加 logger
-            logger.error('元素没有定位到: '.format(e))
+            logger.error('元素 {} 没有定位到: {}'.format(locator, e))
             # 截图 screen_shot()
             self.screen_shot()
 
@@ -133,11 +135,11 @@ class BasePage:
         """
         try:
             wait = WebDriverWait(self.driver, timeout, poll)
-            logger.info('wait_locator: '.format(wait))
-            return wait.until(ec.element_to_be_clickable(locator))
+            logger.info('wait_locator: {}'.format(locator))
+            return wait.until(ec.visibility_of_element_located(locator))
 
         except (TimeoutException, NoSuchElementException) as e:
-            logger.error('元素没有定位到: '.format(e))
+            logger.error('元素 {} 没有定位到: {}'.format(locator, e))
             # 截图 screen_shot()
             self.screen_shot()
 
@@ -188,9 +190,28 @@ class BasePage:
             if ctx == context_name:
                 self.driver.switch_to.context(context_name)
 
-    # def find_element(self, locator) -> WebElement:
-    #     # TODO: try...except
-    #     return self.driver.find_element(*locator)
+    def find_element(self, locator) -> WebElement:
+        # 定位某个元素
+        # TODO: try...except
+        try:
+            elem = self.driver.find_element(*locator)
+            logging.info(elem)
+            return elem
+        except (NoSuchElementException, TimeoutException) as e:
+            logger.error('元素 {} 没有定位到: {}'.format(locator, e))
+            self.screen_shot()
+            raise e
+
+    def find_elements(self, locator) -> list:
+        # 定位一组元素 list
+        try:
+            elems = self.driver.find_elements(*locator)
+            logging.info(elems)
+            return elems
+        except (NoSuchElementException, TimeoutException) as e:
+            logger.error('元素 {} 没有定位到: {}'.format(locator, e))
+            self.screen_shot()
+            raise e
 
     @property
     def size(self) -> dict:
@@ -341,15 +362,24 @@ class BasePage:
         """
         # TODO: 要用 presence_locatored, visiblity
         try:
-            self.wait_presence_element((
-                MobileBy.XPATH, f"//*[contains(@text, {toast_text})]"), timeout=20, poll=0.2)
-            logger.info('获取toast成功')
+            toast = self.wait_presence_element((
+                MobileBy.XPATH, f'//*[contains(@text, "{toast_text}")]'), timeout=30, poll=0.1).text
+            logger.info('获取toast成功: {}'.format(toast))
+            return toast
+
         except (TimeoutException, NoSuchElementException) as e:
-            logger.error('获取toast失败: '.format(e))
+            logger.error('获取toast失败: {}'.format(e))
+            self.screen_shot()
             raise e
 
-    def double_click(self):
-        pass
+    def double_click(self, element):
+        """
+        双击某个元素
+        :param element:
+        :return:
+        """
+        action = ActionChains(self.driver).move_to_element(element).double_click()
+        return action
 
     def press(self, x, y, wait_time=6000, el=None):
         """
@@ -357,6 +387,7 @@ class BasePage:
         :param wait_time:
         :param x:
         :param y:
+        :param el:
         :return:
         """
         action = TouchAction(self.driver)
@@ -403,21 +434,48 @@ class BasePage:
         logger.info('action: '.format(action))
         return action.long_press(el=el, x=x, y=y).wait(wait).release().perform()
 
-    def execute_js(self, js=True):
-        # 喜欢ii选哪个javascript
+    def execute_js(self, script=True):
         # 滑动到顶部
-        if not js:
-            js = "var q=document.documentElement.scrollTop=0"
+        if not script:
+            script = "var q=document.documentElement.scrollTop=0"
         # 滑动到底部
         else:
-            js = "var q=document.documentElement.scrollTop=100000"
-        self.driver.execute_script(js)
+            script = "var q=document.documentElement.scrollTop=100000"
+        self.driver.execute_script(script)
 
 
-class Element(object):
-    def __init__(self, locator, desc='元素'):
+class Element:
+    """
+    描述符
+    """
+    Locate_Method = {'click': ec.element_to_be_clickable, 'presence': ec.presence_of_element_located,
+                     'visibility': ec.visibility_of_element_located}
+
+    def __init__(self, locator,
+                 method='click',
+                 desc='元素',
+                 value=None,
+                 is_elems=False,
+                 one_elem=True,
+                 index=int,
+                 ):
+        """
+        元素定位
+        :param locator: 元素定位表达式
+        :param method: 显示等待方法
+        :param desc: 元素描述
+        :param value: xxx
+        :param is_elems: 定位的元素是否是列表
+        :param one_elem: 是否返回单个element对象
+        :param index: 返回多个element指定index索引对象
+        """
         self.locator = locator
+        self.method = method
         self.desc = desc
+        self.value = value
+        self.is_elems = is_elems
+        self.one_elem = one_elem
+        self.index = index
 
     def __get__(self, instance, owner):
         """
@@ -426,16 +484,97 @@ class Element(object):
         :param owner:
         :return:
         """
+        logger.info('元素描述为: {}'.format(self.desc))
+        web_elem = None
+        try:
+            if self.Locate_Method[self.method]:
+                wait = WebDriverWait(instance.driver, timeout=10, poll_frequency=0.2)
+
+                if not self.is_elems:
+                    web_elem = wait.until(self.Locate_Method[self.method](self.locator))
+                    # logger.info('wait_locator: {}'.format(self.locator))
+                else:
+                    if self.one_elem:
+                        elem = instance.driver.find_elemens(*self.locator)[self.index]
+                    else:
+                        elem = instance.driver.find_elemens(*self.locator)
+                    web_elem = wait.until(self.Locate_Method[self.method](elem))
+                logger.info('{} locator: {}'.format(self.desc, self.locator))
+
+            self.web_elem = web_elem
+            return self
+
+        except (NoSuchElementException, TimeoutException) as e:
+            logger.error('元素 {} 的表达式 {} 未定位到: {}'.format(self.desc, self.locator, e))
+            current_time_str = time.strftime('%Y-%m-%d-%H-%M-%S', time.localtime())
+            png_name = os.path.join(IMG_PATH, current_time_str + '.png')
+            logger.info('错误截图为: {}'.format(png_name))
+            return instance.driver.save_screenshot(png_name)
+
         # login_page.driver.find_element(*self.locator)
-        web_elem = instance.driver.find_element(*self.locator)
-        self.web_elem = web_elem
+        # web_elem = instance.driver.find_element(*self.locator)
+        # self.web_elem = web_elem
 
         # app不生效颜色，web可以使用
         # 找到的元素标成红色 # js
         # js_code = 'arguments[0].style.border = "1px solid red"'
         # instance.driver.execute_script(js_code, web_elem)
 
-        return self
+        # return self
+
+    # def show_toast(self, toast_text):
+    #     """
+    #     获取 toast
+    #     :param toast_text:
+    #     :return:
+    #     """
+    #     # TODO: 要用 presence_locatored, visiblity
+    #     try:
+    #         toast = WebDriverWait(self, timeout=20, poll_frequency=0.1).until(ec.presence_of_element_located((
+    #             MobileBy.XPATH, f'//*[contains(@text, "{toast_text}")]'))).text
+    #         logger.info('获取toast成功: {}'.format(toast))
+    #         return toast
+    #
+    #     except (TimeoutException, NoSuchElementException) as e:
+    #         logger.error('获取toast失败: {}'.format(e))
+    #         self.screen_shot()
+    #         raise e
+
+    def get_attribute(self, text):
+        """
+        获取元素属性
+        :param text:
+        :return:
+        """
+        return self.web_elem.get_attribute(text)
+
+    @property
+    def text(self):
+        """
+        获取属性text
+        :return:
+        """
+        return self.web_elem.text
+
+    # def screen_shot(self) -> object:
+    #     """
+    #     截图，保存到指定的位置
+    #     :return:
+    #     """
+    #     current_time_str = time.strftime('%Y-%m-%d-%H-%M-%S', time.localtime())
+    #     png_name = os.path.join(IMG_PATH, current_time_str + '.png')
+    #
+    #     logger.info('错误截图为: {}'.format(png_name))
+    #     return self.web_elem.save_screenshot(png_name)
+
+    def double_click(self, element):
+        """
+        双击某个元素
+        :param element:
+        :return:
+        """
+        action = ActionChains(self.web_elem).move_to_element(element).double_click()
+        return action
 
     def click(self):
         self.web_elem.click()
@@ -451,4 +590,6 @@ if __name__ == '__main__':
         :return:
         """
         return random.randint(758, 1473)
+
+
     print(generate_random())

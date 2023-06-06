@@ -10,7 +10,7 @@ import shutil
 import os
 import logging
 
-from config import IMG_PATH
+from config import IMG_PATH, LOGS_FILE_PATH
 
 
 def remove_dir(a_list: list = 'file_dir'):
@@ -32,7 +32,7 @@ def remove_dir(a_list: list = 'file_dir'):
 if __name__ == '__main__':
     cache_dir = '.pytest_cache'
     allure_reports = 'reports/allure-report'
-    remove_dir([cache_dir, allure_reports, IMG_PATH])
+    remove_dir([cache_dir, allure_reports, LOGS_FILE_PATH])
 
     # run test
     pytest.main([  # './tests/car_settings/test_show.py::TestShow::test_clear_screen',
