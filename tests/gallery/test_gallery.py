@@ -18,6 +18,67 @@ class TestGallery:
     图库功能
     """
 
+    @pytest.mark.select_all_export
+    @pytest.mark.parametrize('data', no_usb_data)
+    def test_all_select_export(self, init_gallery, data):
+        """
+        全选导出照片-无usb，异常用例
+        :param init_gallery:
+        :return:
+        """
+        gallery = init_gallery[0]
+        gallery.local_edit_elem.click()
+        gallery.all_select_elem.click()
+        gallery.export_elem.click()
+        text = data[0]
+        try:
+            toast = gallery.show_toast(text)
+            logger.info('错误提示为: {}'.format(toast))
+            assert text in toast
+            logger.info('导出失败，无usb设备，测试异常导出图片成功')
+        except AssertionError as e:
+            logger.error(e)
+            raise e
+
+    @pytest.mark.skip(reason='功能实现，但调试时不开放，原因是：删除功能不能随便用')
+    @pytest.mark.select_all_delete
+    def test_all_select_delete(self, init_gallery):
+        """
+        全选删除
+        :param init_gallery:
+        :return:
+        """
+        gallery = init_gallery[0]
+        gallery.local_edit_elem.click()
+        gallery.all_select_elem.click()
+        gallery.delete_elem.click()
+        try:
+            pass
+        except AssertionError as e:
+            logger.error(e)
+            raise e
+
+    @pytest.mark.select_all
+    def test_all_select(self, init_gallery):
+        """
+        全选
+        :param init_gallery:
+        :return:
+        """
+        gallery = init_gallery[0]
+        gallery.local_edit_elem.click()
+        d_type = gallery.delete_elem
+        logger.info('before delete property is : {}'.format(d_type))
+        gallery.all_select_elem.click()
+        _d_type = gallery.delete_elem
+        logger.info('after delete property is : {}'.format(_d_type))
+        try:
+            assert d_type != _d_type
+            logger.info('图片已被全部选中')
+        except AssertionError as e:
+            logger.info(e)
+            raise e
+
     @pytest.mark.parametrize('data', no_usb_data)
     @pytest.mark.random_select_pic
     def test_random_select_pic_explore(self, data, init_gallery):
@@ -38,11 +99,11 @@ class TestGallery:
             assert text in toast
             logger.info('导出失败，无usb设备，测试异常导出图片成功')
         except AssertionError as e:
-            logger.info(e)
+            logger.error(e)
             raise e
 
-    @pytest.mark.no_select_pic_explore
-    def test_no_select_pic_explore(self, init_gallery):
+    @pytest.mark.local_no_select_pic_export
+    def test_local_no_select_pic_export(self, init_gallery):
         """
         本地不选择图片并分享
         :param init_gallery:
@@ -112,6 +173,7 @@ class TestGallery:
             logger.error(e)
             raise e
 
+    @pytest.mark.enlarge_pic
     def test_enlarge_pic(self, init_gallery):
         """
         放大图片并恢复原图大小
@@ -145,7 +207,7 @@ class TestGallery:
             assert toast_text in no_usb_toast
             logger.info('导出失败，无usb设备，测试异常导出图片成功')
         except AssertionError as e:
-            logger.info(e)
+            logger.error(e)
             raise e
 
     @pytest.mark.click_picture
@@ -166,6 +228,7 @@ class TestGallery:
         except AssertionError as e:
             logger.error('查看图片失败')
             raise e
+
         gallery.back_elem.click()
         sleep(1)
 

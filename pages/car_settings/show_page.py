@@ -21,20 +21,17 @@ class ShowPage(BasePage):
     show_button_locator = (By.ID, 'com.mega.carsettings:id/menu_display')
     screen_clear_locator = (By.XPATH, '	//android.widget.TextView[@content-desc="清洁屏幕"]')
     theme_locator = (By.XPATH, '//android.widget.TextView[@content-desc="主题设置"]')
-    return_button = (By.ID, 'com.mega.carsettings:id/iv_close')
+    return_button_locator = (By.ID, 'com.mega.carsettings:id/iv_close')
     video_limiter_locator = (By.ID, 'android:id/switch_widget')
     control_bright_locator = (By.ID, 'com.mega.carsettings:id/seekbar')
 
     # elements
     control_elem = Element(control_bright_locator[1], method='presence', desc='中控滑动条', is_elems=True, index=1)
-
-    # @property
-    # def control_elem(self) -> WebElement:
-    #     """
-    #     中控亮度滑动条
-    #     :return:
-    #     """
-    #     return self.wait_presence_element(self.find_elements(self.control_bright_locator)[1])
+    video_limiter_elem = Element(locator=video_limiter_locator, method='click', desc='视频限制开关')
+    screen_clear_elem = Element(locator=screen_clear_locator, method='click', desc='清洁屏幕按钮')
+    show_button_elem = Element(locator=show_button_locator, method='click', desc='显示功能按钮')
+    modify_theme_elem = Element(locator=theme_locator, method='click', desc='主题选择功能按钮')
+    return_elem = Element(locator=return_button_locator, method='click', desc='返回显示页面按钮')
 
     @property
     def get_value(self):
@@ -53,14 +50,6 @@ class ShowPage(BasePage):
         self.swipe_up_and_down(758, 664, x, 664)
         logger.info('向x轴滑动距离{}, 调节屏幕亮度成功'.format(x))
 
-    @property
-    def video_limiter_elem(self) -> WebElement:
-        """
-        视频限制开关
-        :return:
-        """
-        return self.wait_click_element(self.video_limiter_locator)
-
     def show_mode_select_elem(self, mode) -> WebElement:
         """
         选择显示模式
@@ -69,14 +58,6 @@ class ShowPage(BasePage):
         """
         return self.wait_click_element((By.XPATH, f'//android.widget.RadioButton[@content-desc="{mode}"]'))
 
-    @property
-    def return_elem(self) -> WebElement:
-        """
-        返回显示页面按钮
-        :return:
-        """
-        return self.wait_click_element(self.return_button)
-
     # @property
     def choose_theme(self, value) -> WebElement:
         """
@@ -84,22 +65,6 @@ class ShowPage(BasePage):
         :return:
         """
         return self.wait_click_element((By.ID, f'com.mega.carsettings:id/{value}'))
-
-    @property
-    def modify_theme_elem(self) -> WebElement:
-        """
-        设置主题
-        :return:
-        """
-        return self.wait_click_element(self.theme_locator)
-
-    @property
-    def show_button_elem(self):
-        return self.wait_click_element(self.show_button_locator)
-
-    @property
-    def screen_clear_elem(self):
-        return self.wait_click_element(self.screen_clear_locator)
 
     def scroll_to_show(self):
         """

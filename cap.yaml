@@ -1,4 +1,6 @@
 # 获取app包名及对应的activity： adb shell "dumpsys window | grep mCurrentFocus"
+#settings --user 0 put system pointer_location 1
+#settings put system show_touches 1
 
 #gallery_caps:
 platformName: Android
@@ -10,10 +12,12 @@ appActivity:
   gallery: com.mega.chery.gallery.ui.ImageActivity
   car_settings: com.mega.carsettings.CarSettingActivity
   bt_phone: com.mega.btphone.ui.BtPhoneActivity
+  calendar: com.mega.calendar.MainActivity
 appPackage:
   gallery: com.mega.chery.gallery  # 图库
   car_settings: com.mega.carsettings  # 车辆设置
   bt_phone: com.mega.btphone # 蓝牙电话
+  calendar: com.mega.redwoodcalendar
 
 #chromedriverExecutable: /Users/yuxiang/PycharmProjects/chery_app_test/configs/chromedriver_mac_arm64/chromedriver
 

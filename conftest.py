@@ -24,6 +24,7 @@ from pages.gallery.usb_page import UsbPage
 from pages.car_settings.sound_page import SoundPage
 from pages.car_settings.show_page import ShowPage
 from pages.car_settings.drive_page import DrivePage
+from pages.calendar_page import CalendarPage
 
 URL = 'http://127.0.0.1:4723/wd/hub'
 
@@ -57,6 +58,22 @@ def base_driver(app_name='car_settings', url=URL, **kwargs):
     driver = Remote(command_executor=url, desired_capabilities=caps)
 
     return driver
+
+
+@pytest.fixture()
+def init_calendar():
+    """
+    初始化日历驱动driver
+    :return:
+    """
+    driver = base_driver('calendar')
+    logger.info('{} 成功'.format(init_calendar.__doc__))
+    drive_page = CalendarPage(driver)
+    yield drive_page
+    logger.info('正在关闭驱动')
+    # driver.quit()
+    driver.stop_client()
+    logger.info('关闭驱动成功！')
 
 
 @pytest.fixture(scope='class')

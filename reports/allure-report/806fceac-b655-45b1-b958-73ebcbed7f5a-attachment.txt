@@ -1,0 +1,16 @@
+INFO     test_case:conftest.py:56 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'noReset': False, 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:97 
+    初始化车辆设置-显示驱动
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:conftest.py:100 <pages.car_settings.show_page.ShowPage object at 0x1440fc040>
+INFO     test_case:base_page.py:487 元素描述为: 显示功能按钮
+INFO     test_case:base_page.py:502 显示功能按钮 locator: ('id', 'com.mega.carsettings:id/menu_display')
+INFO     test_case:base_page.py:487 元素描述为: 清洁屏幕按钮
+INFO     test_case:base_page.py:502 清洁屏幕按钮 locator: ('xpath', '\t//android.widget.TextView[@content-desc="清洁屏幕"]')
+INFO     test_case:base_page.py:395 action: 
+INFO     test_case:base_page.py:487 元素描述为: 清洁屏幕按钮
+INFO     test_case:base_page.py:502 清洁屏幕按钮 locator: ('xpath', '\t//android.widget.TextView[@content-desc="清洁屏幕"]')
+INFO     test_case:test_show.py:149 清洁屏幕成功
+INFO     test_case:conftest.py:102 正在关闭驱动
+INFO     test_case:conftest.py:104 关闭驱动成功！

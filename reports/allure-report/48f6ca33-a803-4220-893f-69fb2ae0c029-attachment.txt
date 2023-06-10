@@ -1,0 +1,21 @@
+INFO     test_case:conftest.py:56 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'noReset': False, 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:97 
+    初始化车辆设置-显示驱动
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:conftest.py:100 <pages.car_settings.show_page.ShowPage object at 0x144106a90>
+INFO     test_case:base_page.py:487 元素描述为: 显示功能按钮
+INFO     test_case:base_page.py:502 显示功能按钮 locator: ('id', 'com.mega.carsettings:id/menu_display')
+INFO     test_case:base_page.py:487 元素描述为: 主题选择功能按钮
+INFO     test_case:base_page.py:502 主题选择功能按钮 locator: ('xpath', '//android.widget.TextView[@content-desc="主题设置"]')
+INFO     test_case:test_show.py:168 选择的主题为: cb_classic
+INFO     test_case:base_page.py:100 wait_locator: ('id', 'com.mega.carsettings:id/cb_classic')
+INFO     test_case:base_page.py:487 元素描述为: 返回显示页面按钮
+INFO     test_case:base_page.py:502 返回显示页面按钮 locator: ('id', 'com.mega.carsettings:id/iv_close')
+INFO     test_case:base_page.py:487 元素描述为: 主题选择功能按钮
+INFO     test_case:base_page.py:502 主题选择功能按钮 locator: ('xpath', '//android.widget.TextView[@content-desc="主题设置"]')
+INFO     test_case:base_page.py:100 wait_locator: ('id', 'com.mega.carsettings:id/cb_classic')
+INFO     test_case:test_show.py:177 theme_checked: true
+INFO     test_case:test_show.py:180 choose theme success, checked is true
+INFO     test_case:conftest.py:102 正在关闭驱动
+INFO     test_case:conftest.py:104 关闭驱动成功！

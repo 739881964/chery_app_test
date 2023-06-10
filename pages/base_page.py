@@ -42,6 +42,17 @@ class BasePage:
         self.driver.implicitly_wait(10)
         # logger.info(self.driver.get_settings())
 
+    def element_is_exist(self, element):
+        """
+        判断元素是否存在页面中
+        :return:
+        """
+        source = self.driver.page_source
+        logger.info('page_source: {}'.format(source))
+        if element in source:
+            return True
+        return False
+
     @staticmethod
     def generate_random(x=758, y=1473):
         """
@@ -319,6 +330,13 @@ class BasePage:
             action.move_to(**static_point[p - 1]).wait()
         action.release().perform()
 
+    def hide_keyboard(self):
+        """
+        收起键盘
+        :return:
+        """
+        self.driver.hide_keyboard()
+
     def send_keycode(self, key):
         """
         发送物理按键
@@ -326,6 +344,9 @@ class BasePage:
         :return:
         """
         return self.driver.press_keycode(key)
+
+    def back(self):
+        return self.send_keycode(KeyCode.KEYCODE_BACK)
 
     def volume_up(self):
         return self.send_keycode(KeyCode.VOLUME_UP)
@@ -392,7 +413,7 @@ class BasePage:
         """
         action = TouchAction(self.driver)
 
-        logger.info('action: '.format(action))
+        logger.info('action: {}'.format(action))
         return action.press(el=el, x=x, y=y).wait(wait_time).perform()
 
     def move_to(self, x, y):
@@ -403,7 +424,7 @@ class BasePage:
         :return:
         """
         action = TouchAction(self.driver).move_to(x, y).perform()
-        logger.info('action: '.format(action))
+        logger.info('action: {}'.format(action))
         return action
 
     def press_and_move_to(self, x1, y1, x2, y2):
@@ -417,7 +438,7 @@ class BasePage:
         """
         action = TouchAction(self.driver)
 
-        logger.info('action: '.format(action))
+        logger.info('action: {}'.format(action))
         return action.press(x=x1, y=y1).move_to(x=x2, y=y2).release().perform()
 
     def long_press(self, x, y, wait=8000, el=None):
@@ -431,7 +452,7 @@ class BasePage:
         """
         action = TouchAction(self.driver)
 
-        logger.info('action: '.format(action))
+        logger.info('action: {}'.format(action))
         return action.long_press(el=el, x=x, y=y).wait(wait).release().perform()
 
     def execute_js(self, script=True):
@@ -457,7 +478,8 @@ class Element:
                  value=None,
                  is_elems=False,
                  one_elem=True,
-                 index=int,
+                 index=None,
+                 one_from_elems=False
                  ):
         """
         元素定位
@@ -468,6 +490,7 @@ class Element:
         :param is_elems: 定位的元素是否是列表
         :param one_elem: 是否返回单个element对象
         :param index: 返回多个element指定index索引对象
+        :param one_from_elems: 从多个elements返回某个指定的element
         """
         self.locator = locator
         self.method = method
@@ -476,6 +499,7 @@ class Element:
         self.is_elems = is_elems
         self.one_elem = one_elem
         self.index = index
+        self.one_from_elems = one_from_elems
 
     def __get__(self, instance, owner):
         """
@@ -492,17 +516,24 @@ class Element:
 
                 if not self.is_elems:
                     web_elem = wait.until(self.Locate_Method[self.method](self.locator))
-                    # logger.info('wait_locator: {}'.format(self.locator))
+                    logger.info('web_elem: {}'.format(web_elem))
                 else:
                     if self.one_elem:
-                        elem = instance.driver.find_elemens(*self.locator)[self.index]
-                    else:
-                        elem = instance.driver.find_elemens(*self.locator)
-                    web_elem = wait.until(self.Locate_Method[self.method](elem))
-                logger.info('{} locator: {}'.format(self.desc, self.locator))
+                        if self.one_from_elems:
+                            web_elem = instance.driver.find_elements(*self.locator)[self.index]
+                        else:
+                            web_elem = instance.driver.find_element(*self.locator)
 
-            self.web_elem = web_elem
-            return self
+                        # logger.info('elem: {}'.format(web_elem))
+                        # web_elem = wait.until(self.Locate_Method[self.method](elem))
+                        logger.info('web_elem: {}'.format(web_elem))
+
+                logger.info('{} locator: {}'.format(self.desc, self.locator))
+                self.web_elem = web_elem
+                return self
+
+            logger.error('元素等待方式 {} 不存在，请重新再检查'.format(self.method))
+            return
 
         except (NoSuchElementException, TimeoutException) as e:
             logger.error('元素 {} 的表达式 {} 未定位到: {}'.format(self.desc, self.locator, e))
@@ -522,24 +553,6 @@ class Element:
 
         # return self
 
-    # def show_toast(self, toast_text):
-    #     """
-    #     获取 toast
-    #     :param toast_text:
-    #     :return:
-    #     """
-    #     # TODO: 要用 presence_locatored, visiblity
-    #     try:
-    #         toast = WebDriverWait(self, timeout=20, poll_frequency=0.1).until(ec.presence_of_element_located((
-    #             MobileBy.XPATH, f'//*[contains(@text, "{toast_text}")]'))).text
-    #         logger.info('获取toast成功: {}'.format(toast))
-    #         return toast
-    #
-    #     except (TimeoutException, NoSuchElementException) as e:
-    #         logger.error('获取toast失败: {}'.format(e))
-    #         self.screen_shot()
-    #         raise e
-
     def get_attribute(self, text):
         """
         获取元素属性
@@ -555,17 +568,6 @@ class Element:
         :return:
         """
         return self.web_elem.text
-
-    # def screen_shot(self) -> object:
-    #     """
-    #     截图，保存到指定的位置
-    #     :return:
-    #     """
-    #     current_time_str = time.strftime('%Y-%m-%d-%H-%M-%S', time.localtime())
-    #     png_name = os.path.join(IMG_PATH, current_time_str + '.png')
-    #
-    #     logger.info('错误截图为: {}'.format(png_name))
-    #     return self.web_elem.save_screenshot(png_name)
 
     def double_click(self, element):
         """

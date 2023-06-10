@@ -30,8 +30,8 @@ class TestSound:
         sound_page.scroll_to_mute()
         checked = sound_page.media_mute_elem.get_attribute('checked')
         if checked == 'true':
-            for i in range(2):
-                sound_page.media_mute_elem.click()
+            sound_page.media_mute_elem.click()
+            sleep(1)
         sound_page.media_mute_elem.click()
 
         checked = sound_page.media_mute_elem.get_attribute('checked')
@@ -52,8 +52,8 @@ class TestSound:
         sound_page.scroll_to_mute()
         checked = sound_page.media_mute_elem.get_attribute('checked')
         if checked == 'false':
-            for i in range(2):
-                sound_page.media_mute_elem.click()
+            sound_page.media_mute_elem.click()
+            sleep(1)
         sound_page.media_mute_elem.click()
 
         checked = sound_page.media_mute_elem.get_attribute('checked')

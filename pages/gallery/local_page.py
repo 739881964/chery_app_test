@@ -12,7 +12,7 @@ from pages.base_page import BasePage, Element
 from appium.webdriver.webelement import WebElement
 
 
-class LocalPage(BasePage, Element):
+class LocalPage(BasePage):
     """
     图库-本地
     """
@@ -30,6 +30,7 @@ class LocalPage(BasePage, Element):
     wallpaper_back_locator = (By.ID, 'com.mega.chery.gallery:id/cancelSetWallpaperBtn')
     local_edit_locator = (By.ID, 'com.mega.chery.gallery:id/editBtn')
     local_export_locator = (By.ID, 'com.mega.chery.gallery:id/exportBtn')
+    all_select_locator = (By.ID, 'com.mega.chery.gallery:id/selectAllBtn')
 
     # elements
     wallpaper_back_elem = Element(wallpaper_back_locator, method='click', desc='设置壁纸-返回按钮')
@@ -42,70 +43,8 @@ class LocalPage(BasePage, Element):
     back_elem = Element(back_locator, method='click', desc='返回按钮')
     local_edit_elem = Element(local_edit_locator, method='click', desc='本地-编辑')
     export_elem = Element(export_locator, method='click', desc='图片中导出按钮')
-
-    # @property
-    # def wallpaper_back_elem(self) -> WebElement:
-    #     """
-    #     设置壁纸-返回按钮
-    #     :return:
-    #     """
-    #     return self.wait_click_element(self.wallpaper_back_locator)
-
-    # @property
-    # def setting_wallpaper_elem(self) -> WebElement:
-    #     """
-    #     设置壁纸按钮
-    #     :return:
-    #     """
-    #     return self.wait_click_element(self.setting_wallpaper_locator)
-
-    # @property
-    # def auto_broadcast_elem(self) -> WebElement:
-    #     """
-    #     自动播放图片
-    #     :return:
-    #     """
-    #     return self.wait_click_element(self.auto_broadcast_locator)
-
-    # @property
-    # def export_elem(self) -> WebElement:
-    #     """
-    #     导出图片
-    #     :return:
-    #     """
-    #     return self.wait_click_element(self.export_locator)
-
-    # @property
-    # def delete_elem(self) -> WebElement:
-    #     """
-    #     删除图片
-    #     :return:
-    #     """
-    #     return self.wait_click_element(self.delete_locator)
-
-    # @property
-    # def set_wallpaper_elem(self) -> WebElement:
-    #     """
-    #     设置壁纸
-    #     :return:
-    #     """
-    #     return self.wait_click_element(self.set_wallpaper_locator)
-
-    # @property
-    # def picture_name_elem(self) -> WebElement:
-    #     """
-    #     获取图片name
-    #     :return:
-    #     """
-    #     return self.wait_presence_element(self.picture_name_locator)
-
-    # @property
-    # def back_elem(self) -> WebElement:
-    #     """
-    #     返回
-    #     :return:
-    #     """
-    #     return self.wait_click_element(self.back_locator)
+    local_elem = Element(locator=local_locator, method='click', desc='usb按钮')
+    all_select_elem = Element(locator=all_select_locator, method='click', desc='全选')
 
     @property
     def picture_elem(self) -> (WebElement, str):
@@ -117,14 +56,6 @@ class LocalPage(BasePage, Element):
         if picture:
             return self.wait_click_element(picture[self.generate_random(0, len(picture) - 1)])
         return 'not such element'
-
-    @property
-    def local_elem(self) -> WebElement:
-        """
-        usb按钮
-        :return:
-        """
-        return self.wait_click_element(self.local_locator)
 
     def look_picture(self):
         """

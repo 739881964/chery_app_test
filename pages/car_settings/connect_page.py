@@ -8,7 +8,7 @@
 
 from time import sleep
 from appium.webdriver.common.mobileby import MobileBy as By
-from pages.base_page import BasePage
+from pages.base_page import BasePage, Element
 from appium.webdriver.webelement import WebElement
 from pages.btphone_page import BTPhonePage
 
@@ -19,17 +19,4 @@ class ConnectPage(BasePage):
     """
     bt_button_locator = (By.ID, 'android:id/switch_widget')
 
-    @property
-    def bt_button_elem(self) -> WebElement:
-        """
-        蓝牙开关按钮
-        :return:
-        """
-        return self.wait_click_element(self.bt_button_locator)
-
-    def connect_bt(self):
-        """
-        打开/关闭蓝牙操作步骤
-        :return:
-        """
-        pass
+    bt_button_elem = Element(locator=bt_button_locator, method='presence', desc='蓝牙开关按钮')

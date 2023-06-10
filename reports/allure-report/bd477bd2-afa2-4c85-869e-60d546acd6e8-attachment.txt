@@ -1,0 +1,24 @@
+INFO     test_case:conftest.py:56 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'noReset': False, 'appActivity': 'com.mega.btphone.ui.BtPhoneActivity', 'appPackage': 'com.mega.btphone'}
+INFO     test_case:conftest.py:169 
+    初始化蓝牙电话驱动
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:487 元素描述为: 获取连接蓝牙按钮
+INFO     test_case:base_page.py:502 获取连接蓝牙按钮 locator: ('id', 'com.mega.btphone:id/go_setting_in_disconnect')
+INFO     test_case:base_page.py:487 元素描述为: 蓝牙开关按钮
+ERROR    test_case:base_page.py:508 元素 蓝牙开关按钮 的表达式 ('id', 'android:id/switch_widget') 未定位到: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.callee$0$0$ (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)
+    at tryCatch (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at run (/Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/es6.promise.js:75:1)
+    at /Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/es6.promise.js:92:1
+    at flush (/Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/_microtask.js:18:1)
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+INFO     test_case:base_page.py:511 错误截图为: /Users/yuxiang/PycharmProjects/chery_app_test/logs/imgs/2023-06-07-09-38-13.png
+INFO     test_case:conftest.py:172 正在关闭驱动
+INFO     test_case:conftest.py:174 关闭驱动成功！

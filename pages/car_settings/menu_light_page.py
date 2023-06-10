@@ -9,7 +9,7 @@
 
 from time import sleep
 from appium.webdriver.common.mobileby import MobileBy as By
-from pages.base_page import BasePage
+from pages.base_page import BasePage, Element
 
 from appium.webdriver.webelement import WebElement
 
@@ -18,17 +18,11 @@ class MenuLightPage(BasePage):
     """
     外灯控制页面
     """
-    # value = None
+    # locators
     menu_light_locator = (By.ID, 'com.mega.carsettings:id/menu_light')
-    # light_set_locator = (By.XPATH, '//android.widget.RadioButton[contains(@content-desc, "自动")]')
 
-    @property
-    def menu_light_elem(self) -> WebElement:
-        """
-        外灯
-        :return:
-        """
-        return self.wait_click_element(self.menu_light_locator)
+    # elements
+    menu_light_elem = Element(locator=menu_light_locator, method='click', desc='外灯')
 
     # @property
     def light_set_elem(self, value) -> WebElement:

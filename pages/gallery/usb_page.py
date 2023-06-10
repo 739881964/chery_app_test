@@ -8,7 +8,7 @@
 
 from time import sleep
 from appium.webdriver.common.mobileby import MobileBy as By
-from pages.base_page import BasePage
+from pages.base_page import BasePage, Element
 from appium.webdriver.webelement import WebElement
 
 
@@ -16,12 +16,8 @@ class UsbPage(BasePage):
     """
     图库-usb
     """
+    # locators
     usb_locator = (By.XPATH, '//android.widget.LinearLayout[@content-desc="USB"]/android.widget.TextView')
 
-    @property
-    def usb_elem(self) -> WebElement:
-        """
-        usb按钮
-        :return:
-        """
-        return self.wait_click_element(self.usb_locator)
+    # elements
+    usb_elem = Element(usb_locator, method='click', desc='usb按钮')

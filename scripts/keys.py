@@ -14,3 +14,4 @@ class KeyCode:
     VOLUME_UP = 24
     VOLUME_DOWN = 25
     HOME = 3
+    KEYCODE_BACK = 4

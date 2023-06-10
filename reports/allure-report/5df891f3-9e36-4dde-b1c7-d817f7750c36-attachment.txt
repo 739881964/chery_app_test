@@ -1,0 +1,11 @@
+INFO     test_case:test_drive.py:31 选择的驾驶模式为: 个性化
+INFO     test_case:base_page.py:487 元素描述为: 驾驶模式选择
+INFO     test_case:base_page.py:502 驾驶模式选择 locator: ('id', 'com.mega.carsettings:id/menu_drive')
+INFO     test_case:base_page.py:100 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "个性化")]')
+INFO     test_case:base_page.py:100 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "个性化")]')
+INFO     test_case:test_drive.py:37 选择的驾驶模式bool值是: false
+ERROR    test_case:test_drive.py:43 assert 'false' == 'true'
+  - true
+  + false
+INFO     test_case:conftest.py:72 正在关闭驱动
+INFO     test_case:conftest.py:74 关闭驱动成功！

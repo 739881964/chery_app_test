@@ -76,7 +76,7 @@ class TestShow:
             assert checked_result == 'false'
             logger.info('video limiter checked is: {}'.format(checked_result))
         except AssertionError as e:
-            logger.info(e)
+            logger.error(e)
             raise e
 
     @pytest.mark.on_video_limiter
@@ -103,7 +103,7 @@ class TestShow:
             assert checked_result == 'true'
             logger.info('video limiter checked is: {}'.format(checked_result))
         except AssertionError as e:
-            logger.info(e)
+            logger.error(e)
             raise e
 
     @pytest.mark.select_show_mode

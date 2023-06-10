@@ -12,7 +12,7 @@ from pages.base_page import BasePage, Element
 from appium.webdriver.webelement import WebElement
 
 
-class DrivePage(BasePage, Element):
+class DrivePage(BasePage):
     """
     驾驶
     """
@@ -29,10 +29,6 @@ class DrivePage(BasePage, Element):
         :return:
         """
         return self.wait_click_element((By.XPATH, f'//android.widget.RadioButton[contains(@content-desc, "{value}")]'))
-
-    # @property
-    # def drive_elem(self):
-    #     return self.wait_click_element(self.drive_locator)
 
     def select_drive_mode(self, value):
         """

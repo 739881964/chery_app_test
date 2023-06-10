@@ -49,8 +49,7 @@ class TestBTPhone:
         except AssertionError as e:
             logger.error('蓝牙连接异常')
             raise e
-        finally:
-            btphone_page.know_elem.click()
+        btphone_page.know_elem.click()
 
     @pytest.mark.test_open_bt
     def test_open_bt(self, init_btphone):
@@ -119,6 +118,7 @@ class TestBTPhone:
             conn_page.bt_button_elem.click()
         bt_page.new_bt_name(new_name)
 
+        # bt_page.hide_keyboard()
         name = bt_page.bt_name_elem.text
         logger.info('蓝牙名称为: {}'.format(name))
 
@@ -146,7 +146,8 @@ class TestBTPhone:
         b_name = bt_page.bt_name_elem.text
 
         bt_page.edit_bt_name_elem.click()
-        bt_page.back_elem.click()
+        bt_page.hide_keyboard()
+        bt_page.cancel_elem.click()
         a_name = bt_page.bt_name_elem.text
         logger.info('蓝牙名称为: {}'.format(a_name))
 
