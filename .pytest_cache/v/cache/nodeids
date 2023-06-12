@@ -40,6 +40,7 @@
   "tests/test_btphone.py::TestBTPhone::test_error_name[bt_data1]",
   "tests/test_btphone.py::TestBTPhone::test_open_bt",
   "tests/test_btphone.py::TestBTPhone::test_reconnect_device",
+  "tests/test_calendar.py::TestCalendar::test_add_all_day_reminder",
   "tests/test_calendar.py::TestCalendar::test_add_new_plan",
   "tests/test_calendar.py::TestCalendar::test_add_new_plan[data0]",
   "tests/test_calendar.py::TestCalendar::test_add_new_plan[data1]",

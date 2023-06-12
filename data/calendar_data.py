@@ -8,7 +8,7 @@
 
 title_exit_data = [
     ('创建日程标题', '芜湖',),
-    ('test tile long', '北京'),
+    ('test title long', '北京'),
 ]
 
 no_title_data = [

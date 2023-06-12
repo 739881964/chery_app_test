@@ -33,6 +33,7 @@ class CalendarPage(BasePage, Element):
     itinerary_locator = (By.ID, 'com.mega.redwoodcalendar:id/itinerary')
     select_drop_down_locator = (By.ID, 'com.mega.redwoodcalendar:id/drop_down')
     importance_locator = (By.ID, 'com.mega.redwoodcalendar:id/important')
+    reminder_time_locator = (By.ID, 'com.mega.redwoodcalendar:id/schedule_more')
 
     # elements
     add_plan_elem = Element(locator=add_plan_locator, method='click', desc='新增日程')
@@ -54,9 +55,18 @@ class CalendarPage(BasePage, Element):
     itinerary_elem = Element(locator=itinerary_locator, method='presence', desc='行程主动提醒')
     select_drop_down_elem = Element(locator=select_drop_down_locator, method='click', desc='提醒开关下拉选择')
     importance_elem = Element(locator=importance_locator, method='presence', desc='重要节日内容展示')
+    reminder_time_elem = Element(locator=reminder_time_locator, method='presence', desc='提醒时间')
 
     @property
-    def reminders_button_property(self):
+    def reminder_time(self) -> bool:
+        """
+        获取提醒时间开关属性
+        :return: bool
+        """
+        return self.reminder_time_elem.get_attribute('enabled')
+
+    @property
+    def reminders_button_property(self) -> bool:
         """
         获取重要节日提醒开关属性
         :return:
@@ -64,7 +74,7 @@ class CalendarPage(BasePage, Element):
         return self.days_reminders_elem.get_attribute('checked')
 
     @property
-    def itinerary_button_property(self):
+    def itinerary_button_property(self) -> bool:
         """
         获取行程主动提醒开关属性
         :return:

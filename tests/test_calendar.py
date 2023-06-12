@@ -118,7 +118,7 @@ class TestCalendar:
     @pytest.mark.add_plan
     def test_add_new_plan(self, init_calendar, data):
         """
-        新增日程
+        新增日程-非全天提醒
         :return:
         """
         title, location = data[0], data[-1]
@@ -137,6 +137,31 @@ class TestCalendar:
         try:
             assert add_text == data[0]
             logger.info('新增日程 {} 成功'.format(add_text))
+        except AssertionError as e:
+            logger.error(e)
+            raise e
+
+    @pytest.mark.add_all_day_reminder
+    def test_add_all_day_reminder(self, init_calendar):
+        """
+        新增日程-全天提醒
+        :param init_calendar:
+        :return:
+        """
+        data = title_exit_data[0]
+        title, location = data[0], data[1]
+        calendar_page = init_calendar
+        calendar_page.add_plan_elem.click()
+        calendar_page.add_new_plan(title, location)
+        calendar_page.all_day_mark_elem.click()
+        reminder_time_pro = calendar_page.reminder_time
+        calendar_page.save_plan_elem.click()
+        add_text = calendar_page.left_title_elem.text
+        try:
+            assert add_text == data[0]
+            assert reminder_time_pro == 'false'
+            logger.info('新增日程 {} 成功'.format(add_text))
+            logger.info('新增日程：<<{}>> 的醒时间为全天提醒成功'.format(add_text))
         except AssertionError as e:
             logger.error(e)
             raise e

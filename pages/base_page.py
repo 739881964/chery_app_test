@@ -208,6 +208,7 @@ class BasePage:
             elem = self.driver.find_element(*locator)
             logging.info(elem)
             return elem
+
         except (NoSuchElementException, TimeoutException) as e:
             logger.error('元素 {} 没有定位到: {}'.format(locator, e))
             self.screen_shot()

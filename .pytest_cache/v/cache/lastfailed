@@ -12,7 +12,5 @@
   "tests/car_settings/test_menu_light.py::TestMenuLight::test_set_light[data2]": true,
   "tests/car_settings/test_menu_light.py::TestMenuLight::test_set_light[data3]": true,
   "tests/test_calendar.py::TestCalendar::test_add_new_plan": true,
-  "tests/test_calendar.py::TestCalendar::test_add_new_plan[data4]": true,
-  "tests/test_calendar.py::TestCalendar::test_add_new_plan[data0]": true,
-  "tests/test_calendar.py::TestCalendar::test_add_new_plan[data1]": true
+  "tests/test_calendar.py::TestCalendar::test_add_new_plan[data4]": true
 }
