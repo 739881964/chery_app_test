@@ -25,6 +25,7 @@ from pages.car_settings.sound_page import SoundPage
 from pages.car_settings.show_page import ShowPage
 from pages.car_settings.drive_page import DrivePage
 from pages.calendar_page import CalendarPage
+from pages.launcher_page import LauncherPage
 
 URL = 'http://127.0.0.1:4723/wd/hub'
 
@@ -61,6 +62,22 @@ def base_driver(app_name='car_settings', url=URL, **kwargs):
 
 
 @pytest.fixture()
+def init_launcher():
+    """
+    初始化launcher驱动
+    :return:
+    """
+    driver = base_driver('launcher')
+    logger.info('{} 成功'.format(init_launcher.__doc__))
+    drive_page = LauncherPage(driver)
+    yield drive_page
+    logger.info('正在关闭驱动')
+    # driver.quit()
+    driver.stop_client()
+    logger.info('关闭驱动成功！')
+
+
+@pytest.fixture()
 def init_calendar():
     """
     初始化日历驱动driver
@@ -68,7 +85,7 @@ def init_calendar():
     """
     driver = base_driver('calendar')
     logger.info('{} 成功'.format(init_calendar.__doc__))
-    drive_page = CalendarPage(driver)
+    drive_page = LauncherPage(driver)
     yield drive_page
     logger.info('正在关闭驱动')
     # driver.quit()

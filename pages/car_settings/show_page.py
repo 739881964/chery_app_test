@@ -47,7 +47,7 @@ class ShowPage(BasePage):
         :return:
         """
         x = self.generate_random()
-        self.swipe_up_and_down(758, 664, x, 664)
+        self.swipe_up_and_down(758, 695, x, 695)
         logger.info('向x轴滑动距离{}, 调节屏幕亮度成功'.format(x))
 
     def show_mode_select_elem(self, mode) -> WebElement:

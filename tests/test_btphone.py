@@ -181,6 +181,7 @@ class TestBTPhone:
         # save_enabled = bt_page.save_elem.get_attribute('enabled')
         # if save_enabled == 'false':
         #     bt_page.back_elem.click()
+        bt_page.hide_keyboard()
         bt_page.save_elem.click()
 
         name = bt_page.bt_name_elem.text

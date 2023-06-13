@@ -23,7 +23,7 @@ class BTPhonePage(BasePage):
     bt_name_input_locator = (By.ID, 'com.mega.carsettings:id/et_content')
     save_locator = (By.ID, 'com.mega.carsettings:id/tv_sure')
     bt_name_locator = (By.ID, 'android:id/summary')
-    cancel_locator = (By.ID, 'com.mega.carsettings:id/iv_back')
+    cancel_locator = (By.ID, 'com.mega.carsettings:id/tv_cancel')
     connect_failed_locator = (By.ID, 'com.mega.carsettings:id/tv_title')
     know_locator = (By.ID, 'com.mega.carsettings:id/tv_sure')
     disconnect_locator = (By.ID, 'com.mega.carsettings:id/tv_connect_state')

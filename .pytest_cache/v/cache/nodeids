@@ -50,5 +50,9 @@
   "tests/test_calendar.py::TestCalendar::test_close_itinerary",
   "tests/test_calendar.py::TestCalendar::test_close_reminders",
   "tests/test_calendar.py::TestCalendar::test_open_itinerary",
-  "tests/test_calendar.py::TestCalendar::test_open_reminders"
+  "tests/test_calendar.py::TestCalendar::test_open_reminders",
+  "tests/test_launcher.py::TestLauncher::test_control_bar",
+  "tests/test_launcher.py::TestLauncher::test_launcher",
+  "tests/test_launcher.py::TestLauncher::test_launcher_app",
+  "tests/test_launcher.py::TestLauncher::test_swipe_launcher"
 ]

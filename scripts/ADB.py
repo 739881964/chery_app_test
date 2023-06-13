@@ -101,9 +101,9 @@ adb = ADB()
 
 if __name__ == '__main__':
     # print(adb.get_device_model())
-    # print((adb.get_device()))
+    print((adb.get_device()))
     # print(len(adb.get_device()))
     # print(adb.get_device_bright())
     # print(adb.get_pack_3())
-    print(adb.get_cpu_info())
-    print(adb.get_device_cpu())
+    # print(adb.get_cpu_info())
+    # print(adb.get_device_cpu())

@@ -13,11 +13,13 @@ appActivity:
   car_settings: com.mega.carsettings.CarSettingActivity
   bt_phone: com.mega.btphone.ui.BtPhoneActivity
   calendar: com.mega.calendar.MainActivity
+  launcher: com.android.launcher3.activity.AppListActivity
 appPackage:
   gallery: com.mega.chery.gallery  # 图库
   car_settings: com.mega.carsettings  # 车辆设置
   bt_phone: com.mega.btphone # 蓝牙电话
   calendar: com.mega.redwoodcalendar
+  launcher: com.android.launcher3
 
 #chromedriverExecutable: /Users/yuxiang/PycharmProjects/chery_app_test/configs/chromedriver_mac_arm64/chromedriver
 

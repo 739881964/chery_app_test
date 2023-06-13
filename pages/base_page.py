@@ -42,6 +42,20 @@ class BasePage:
         self.driver.implicitly_wait(10)
         # logger.info(self.driver.get_settings())
 
+    def get_system_bar(self):
+        """
+        状态栏
+        :return:
+        """
+        self.driver.get_system_bars()
+
+    def get_page_source(self):
+        """
+        获取页面所有元素
+        :return:
+        """
+        return self.driver.page_source
+
     def element_is_exist(self, element):
         """
         判断元素是否存在页面中

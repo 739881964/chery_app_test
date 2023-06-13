@@ -6,8 +6,8 @@
 # 当前系统时间：18:23
 # 用于创建文件的IDE的名称: PyCharm
 
-import torch
-import tensorflow as tf
+# import torch
+# import tensorflow as tf
 import subprocess
 
 from scripts.device_driver import caps
