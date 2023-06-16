@@ -8,8 +8,5 @@
   "tests/car_settings/test_menu_light.py::TestMenuLight::test_set_light[data1]": true,
   "tests/car_settings/test_menu_light.py::TestMenuLight::test_set_light[data2]": true,
   "tests/car_settings/test_menu_light.py::TestMenuLight::test_set_light[data3]": true,
-  "tests/test_calendar.py::TestCalendar::test_add_new_plan": true,
-  "tests/test_calendar.py::TestCalendar::test_add_new_plan[data4]": true,
-  "tests/test_calendar.py::TestCalendar::test_add_all_day_reminder": true,
-  "tests/car_settings/test_show.py": true
+  "tests/car_settings/test_menu_light.py::TestMenuLight::test_set_light[data0]": true
 }

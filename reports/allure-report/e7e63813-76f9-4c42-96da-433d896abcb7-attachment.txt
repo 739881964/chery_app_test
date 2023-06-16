@@ -1,0 +1,37 @@
+INFO     test_case:conftest.py:55 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'noReset': True, 'appActivity': 'com.mega.btphone.ui.BtPhoneActivity', 'appPackage': 'com.mega.btphone'}
+INFO     test_case:conftest.py:64 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'noReset': True, 'appActivity': 'com.mega.btphone.ui.BtPhoneActivity', 'appPackage': 'com.mega.btphone'}
+INFO     test_case:conftest.py:209 
+    初始化蓝牙电话驱动
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:527 元素描述为: 获取连接蓝牙按钮
+INFO     test_case:base_page.py:535 web_elem: <appium.webdriver.webelement.WebElement (session="3b1b0af4-3366-498b-a025-ae177239bf84", element="9ca5f3ae-07f1-4f24-8658-445b2eb57c9d")>
+INFO     test_case:base_page.py:547 获取连接蓝牙按钮 locator: ('id', 'com.mega.btphone:id/go_setting_in_disconnect')
+INFO     test_case:base_page.py:527 元素描述为: 蓝牙开关按钮
+INFO     test_case:base_page.py:535 web_elem: <appium.webdriver.webelement.WebElement (session="3b1b0af4-3366-498b-a025-ae177239bf84", element="ae51f3ee-3048-41fa-8d8d-eedb686595e2")>
+INFO     test_case:base_page.py:547 蓝牙开关按钮 locator: ('id', 'android:id/switch_widget')
+INFO     test_case:test_btphone.py:34 蓝牙开关属性为: true
+INFO     test_case:test_btphone.py:36 蓝牙已打开
+INFO     test_case:base_page.py:527 元素描述为: 连接设备历史
+INFO     test_case:base_page.py:535 web_elem: <appium.webdriver.webelement.WebElement (session="3b1b0af4-3366-498b-a025-ae177239bf84", element="94435fbd-8530-4856-92f8-cf04377a3c7e")>
+INFO     test_case:base_page.py:547 连接设备历史 locator: ('id', 'com.mega.carsettings:id/iv_arrow')
+INFO     test_case:base_page.py:527 元素描述为: 连接设备id
+INFO     test_case:base_page.py:545 web_elem: <appium.webdriver.webelement.WebElement (session="3b1b0af4-3366-498b-a025-ae177239bf84", element="346810e0-5cd4-4b2d-99a5-1cea12936ee3")>
+INFO     test_case:base_page.py:547 连接设备id locator: ('id', 'android:id/title')
+INFO     test_case:base_page.py:527 元素描述为: 取消按钮
+ERROR    test_case:base_page.py:555 元素 取消按钮 的表达式 ('id', 'com.mega.carsettings:id/tv_cancel') 未定位到: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.callee$0$0$ (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)
+    at tryCatch (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at run (/Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/es6.promise.js:75:1)
+    at /Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/es6.promise.js:92:1
+    at flush (/Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/_microtask.js:18:1)
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+INFO     test_case:base_page.py:558 错误截图为: /Users/yuxiang/PycharmProjects/chery_app_test/logs/imgs/2023-06-15-13-24-30.png
+INFO     test_case:conftest.py:212 正在关闭驱动
+INFO     test_case:conftest.py:214 关闭驱动成功！

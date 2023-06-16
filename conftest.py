@@ -12,11 +12,11 @@ import yaml
 
 from appium.webdriver import Remote
 from scripts.logger import logger
+from config import DEVICE_INFO
 
 import pages.car_settings.sound_page
 from pages.car_settings.car_settings_page import CarSettingPage
 from pages.car_settings.menu_light_page import MenuLightPage
-from config import DEVICE_INFO
 from pages.btphone_page import BTPhonePage
 from pages.car_settings.connect_page import ConnectPage
 from pages.gallery.local_page import LocalPage
@@ -26,6 +26,7 @@ from pages.car_settings.show_page import ShowPage
 from pages.car_settings.drive_page import DrivePage
 from pages.calendar_page import CalendarPage
 from pages.launcher_page import LauncherPage
+from pages.media_page import MediaPage
 
 URL = 'http://127.0.0.1:4723/wd/hub'
 
@@ -41,12 +42,18 @@ def get_device_caps(cap: str) -> dict:
         info = yaml.load(f, Loader=yaml.FullLoader)
         # print(caps)
 
-    app_activity = info['appActivity']
-    app_package = info['appPackage']
+    try:
+        app_activity = info['appActivity']
+        app_package = info['appPackage']
 
-    info['appActivity'] = app_activity[cap]
-    info['appPackage'] = app_package[cap]
+        info['appActivity'] = app_activity[cap]
+        info['appPackage'] = app_package[cap]
 
+    except Exception as e:
+        logger.error(e)
+        raise e
+
+    logger.info('cap info: {}'.format(info))
     return info
 
 
@@ -59,6 +66,21 @@ def base_driver(app_name='car_settings', url=URL, **kwargs):
     driver = Remote(command_executor=url, desired_capabilities=caps)
 
     return driver
+
+
+@pytest.fixture()
+def init_media():
+    """
+    初始化本地畅想音乐
+    :return:
+    """
+    driver = base_driver('media')
+    logger.info('{} 成功'.format(init_media.__doc__))
+    drive_page = MediaPage(driver)
+    yield drive_page
+    logger.info('正在关闭驱动')
+    driver.stop_client()
+    logger.info('关闭驱动成功！')
 
 
 @pytest.fixture()
@@ -77,7 +99,7 @@ def init_launcher():
     logger.info('关闭驱动成功！')
 
 
-@pytest.fixture()
+@pytest.fixture(scope='class')
 def init_calendar():
     """
     初始化日历驱动driver
@@ -85,11 +107,11 @@ def init_calendar():
     """
     driver = base_driver('calendar')
     logger.info('{} 成功'.format(init_calendar.__doc__))
-    drive_page = LauncherPage(driver)
+    drive_page = CalendarPage(driver)
     yield drive_page
     logger.info('正在关闭驱动')
     # driver.quit()
-    driver.stop_client()
+    driver.quit()
     logger.info('关闭驱动成功！')
 
 
@@ -180,7 +202,7 @@ def init_setting():
     logger.info('关闭驱动成功！')
 
 
-@pytest.fixture()
+@pytest.fixture(scope='class')
 def init_menu_light():
     """
     初始化灯光驱动

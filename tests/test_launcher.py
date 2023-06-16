@@ -40,7 +40,7 @@ class TestLauncher:
         launcher_page = init_launcher
         p_source = launcher_page.get_page_source()
         logger.info('p_source: {}'.format(p_source))
-        launcher_page.swipe_up_and_down(1600, 600, 900, 600)
+        launcher_page.swipe_up_and_down(2000, 600, 300, 600)
         source = launcher_page.get_page_source()
         logger.info('source: {}'.format(source))
         try:
@@ -58,5 +58,5 @@ class TestLauncher:
         :return:
         """
         launcher_page = init_launcher
-        launcher_page.get_system_bar()
-        # print(result)
+        result = launcher_page.get_system_bar()
+        print(result)

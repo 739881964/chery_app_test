@@ -20,7 +20,36 @@ class TestBTPhone:
     测试蓝牙电话功能
     """
 
-    @pytest.mark.test_disconnect_device
+    @pytest.mark.test_cancel_conn_device
+    def test_cancel_connect_device(self, init_btphone):
+        """
+        取消连接蓝牙设备
+        :param init_btphone:
+        :return:
+        """
+        btphone_page, connect_page = init_btphone
+        btphone_page.conn_bt_elem.click()
+
+        text = connect_page.bt_button_elem.get_attribute('checked')
+        logger.info('蓝牙开关属性为: {}'.format(text))
+        if text == 'true':
+            logger.info('蓝牙已打开')
+        else:
+            connect_page.bt_button_elem.click()
+
+        btphone_page.iv_arrow_elem.click()
+        sleep(8)
+        btphone_page.device_id_elem.click()
+        btphone_page.cancel_elem.click()
+
+        try:
+            assert btphone_page.element_is_exist('已连接') is False
+            logger.info('取消连接设备成功')
+        except AssertionError as e:
+            logger.error(e)
+            raise e
+
+    @pytest.mark.test_connect_device_failed
     def test_reconnect_device(self, init_btphone):
         """
         连接设备异常失败测试用例
@@ -39,8 +68,12 @@ class TestBTPhone:
         else:
             connect_page.bt_button_elem.click()
 
-        btphone_page.disconnect_elem.click()
-        sleep(10)
+        btphone_page.iv_arrow_elem.click()
+        sleep(8)
+        btphone_page.device_id_elem.click()
+        # btphone_page.disconnect_elem.click()
+        btphone_page.know_elem.click()
+        sleep(20)
 
         try:
             alert_text = btphone_page.connect_failed_elem.text

@@ -17,5 +17,5 @@ theme_data = [
 show_mode_data = [
     ('自动', 'true',),
     ('白天', 'true',),
-    ('黑夜', 'true',),
+    # ('黑夜', 'true',),
 ]

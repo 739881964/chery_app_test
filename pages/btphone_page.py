@@ -27,6 +27,8 @@ class BTPhonePage(BasePage):
     connect_failed_locator = (By.ID, 'com.mega.carsettings:id/tv_title')
     know_locator = (By.ID, 'com.mega.carsettings:id/tv_sure')
     disconnect_locator = (By.ID, 'com.mega.carsettings:id/tv_connect_state')
+    iv_arrow_locator = (By.ID, 'com.mega.carsettings:id/iv_arrow')
+    device_id_locator = (By.ID, 'android:id/title')
 
     # elements
     disconnect_elem = Element(locator=disconnect_locator, method='click', desc='未连接设备')
@@ -38,6 +40,9 @@ class BTPhonePage(BasePage):
     bt_name_input_elem = Element(locator=bt_name_input_locator, method='presence', desc='编辑蓝牙名称输入框')
     save_elem = Element(locator=save_locator, method='click', desc='保存按钮')
     bt_name_elem = Element(locator=bt_name_locator, method='presence', desc='蓝牙名称')
+    iv_arrow_elem = Element(locator=iv_arrow_locator, method='click', desc='连接设备历史')
+    device_id_elem = Element(locator=device_id_locator, method='click', desc='连接设备id', is_elems=True, one_elem=True,
+                             one_from_elems=True, index=-1)
 
     def new_bt_name(self, new_name):
         """

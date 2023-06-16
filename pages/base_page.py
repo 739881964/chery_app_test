@@ -507,6 +507,7 @@ class Element:
         :param index: 返回多个element指定index索引对象
         :param one_from_elems: 从多个elements返回某个指定的element
         """
+        # super().__init__(self.driver)
         self.locator = locator
         self.method = method
         self.desc = desc

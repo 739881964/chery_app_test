@@ -28,8 +28,9 @@ class TestCalendar:
         calendar_page = init_calendar
         if not calendar_page.element_is_exist('dropdown'):
             calendar_page.select_drop_down_elem.click()
+
         type1 = calendar_page.reminders_button_property
-        if not type1:
+        if type1 == 'false':
             calendar_page.days_reminders_elem.click()
         calendar_page.days_reminders_elem.click()
 
@@ -41,6 +42,8 @@ class TestCalendar:
         except AssertionError as e:
             logger.error(e)
             raise e
+        finally:
+            calendar_page.select_drop_down_elem.click()
 
     @pytest.mark.open_reminders
     def test_open_reminders(self, init_calendar):
@@ -52,8 +55,10 @@ class TestCalendar:
         calendar_page = init_calendar
         if not calendar_page.element_is_exist('dropdown'):
             calendar_page.select_drop_down_elem.click()
+
         type1 = calendar_page.reminders_button_property
-        if type1:
+        # print(type1)
+        if type1 == 'true':
             calendar_page.days_reminders_elem.click()
         calendar_page.days_reminders_elem.click()
 
@@ -65,6 +70,8 @@ class TestCalendar:
         except AssertionError as e:
             logger.error(e)
             raise e
+        finally:
+            calendar_page.select_drop_down_elem.click()
 
     @pytest.mark.open_itinerary
     def test_open_itinerary(self, init_calendar):
@@ -76,8 +83,9 @@ class TestCalendar:
         calendar_page = init_calendar
         if not calendar_page.element_is_exist('dropdown'):
             calendar_page.select_drop_down_elem.click()
+
         type1 = calendar_page.itinerary_button_property
-        if type1:
+        if type1 == 'true':
             calendar_page.itinerary_elem.click()
         calendar_page.itinerary_elem.click()
 
@@ -89,6 +97,8 @@ class TestCalendar:
         except AssertionError as e:
             logger.error(e)
             raise e
+        finally:
+            calendar_page.select_drop_down_elem.click()
 
     @pytest.mark.close_itinerary
     def test_close_itinerary(self, init_calendar):
@@ -100,8 +110,9 @@ class TestCalendar:
         calendar_page = init_calendar
         if not calendar_page.element_is_exist('dropdown'):
             calendar_page.select_drop_down_elem.click()
+
         type1 = calendar_page.itinerary_button_property
-        if not type1:
+        if not type1 == 'true':
             calendar_page.itinerary_elem.click()
         calendar_page.itinerary_elem.click()
 
@@ -113,6 +124,8 @@ class TestCalendar:
         except AssertionError as e:
             logger.error(e)
             raise e
+        finally:
+            calendar_page.select_drop_down_elem.click()
 
     @pytest.mark.parametrize('data', title_exit_data)
     @pytest.mark.add_plan

@@ -6,7 +6,6 @@
 # 当前系统时间：10:08
 # 用于创建文件的IDE的名称: PyCharm
 
-
 from pages.base_page import BasePage, Element
 from appium.webdriver.common.mobileby import MobileBy as By
 from appium.webdriver.webelement import WebElement

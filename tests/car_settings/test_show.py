@@ -121,7 +121,7 @@ class TestShow:
 
         change_data = select_data[0]
         show_page.show_mode_select_elem(change_data).click()
-
+        # sleep(1)
         checked = show_page.show_mode_select_elem(change_data).get_attribute('checked')
         logger.info('show mode checked is: {}'.format(checked))
 

@@ -11,12 +11,69 @@ import pytest
 from time import sleep
 from scripts.logger import logger
 from data.picture_data import no_usb_data
+from appium.webdriver.webelement import WebElement
 
 
 class TestGallery:
     """
     图库功能
     """
+
+    @pytest.mark.view_picture
+    def test_choose_view_mode_pic(self, init_gallery):
+        """
+        切换至浏览模式并选择一张图片
+        :param init_gallery:
+        :return:
+        """
+        gallery = init_gallery[0]
+        gallery.type_picture_elem.click()
+        for i in range(2):
+            gallery.picture_elem.click()
+
+        try:
+            assert isinstance(gallery.picture_name_elem.text, str)
+            logger.info('成功切换至浏览模式并选择一张图片,name is: {}'.format(gallery.picture_name_elem.text))
+        except AssertionError as e:
+            logger.error(e)
+            raise e
+
+    @pytest.mark.type_pic
+    def test_switch_pic_type(self, init_gallery):
+        """
+        查看图片分类
+        :param init_gallery:
+        :return:
+        """
+        gallery = init_gallery[0]
+        gallery.type_picture_elem.click()
+        view_mode = gallery.picture_elem
+
+        try:
+            assert isinstance(view_mode, WebElement)
+            logger.info('切换浏览模式成功, view_mode is: {} and type({}) is: {}'.format(view_mode, view_mode, WebElement))
+        except AssertionError as e:
+            logger.error(e)
+            raise e
+
+    @pytest.mark.swipe_picture
+    def test_swipe_picture(self, init_gallery):
+        """
+        随机选择某个图片并滑动至其他图片
+        :param init_gallery:
+        :return:
+        """
+        gallery = init_gallery[0]
+        gallery.picture_elem.click()
+        pic_name = gallery.picture_name_elem.text
+        gallery.swipe_picture()
+        swipe_name = gallery.picture_name_elem.text
+        try:
+            assert pic_name != swipe_name
+            logger.info('滑动图片成功， 滑动前图片name：{}； 滑动后图片的name：{}'.format(pic_name, swipe_name))
+        except AssertionError as e:
+            logger.error(e)
+            raise e
 
     @pytest.mark.select_all_export
     @pytest.mark.parametrize('data', no_usb_data)

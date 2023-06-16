@@ -10,6 +10,7 @@ from time import sleep
 from appium.webdriver.common.mobileby import MobileBy as By
 from pages.base_page import BasePage, Element
 from appium.webdriver.webelement import WebElement
+from selenium.common.exceptions import NoSuchElementException
 
 
 class LocalPage(BasePage):
@@ -31,6 +32,8 @@ class LocalPage(BasePage):
     local_edit_locator = (By.ID, 'com.mega.chery.gallery:id/editBtn')
     local_export_locator = (By.ID, 'com.mega.chery.gallery:id/exportBtn')
     all_select_locator = (By.ID, 'com.mega.chery.gallery:id/selectAllBtn')
+    type_picture_locator = (By.ID, 'com.mega.chery.gallery:id/viewTypeBtn')
+    view_mode_locator = (By.XPATH, '//android.view.ViewGroup[@content-desc="浏览模式"]')
 
     # elements
     wallpaper_back_elem = Element(wallpaper_back_locator, method='click', desc='设置壁纸-返回按钮')
@@ -45,6 +48,8 @@ class LocalPage(BasePage):
     export_elem = Element(export_locator, method='click', desc='图片中导出按钮')
     local_elem = Element(locator=local_locator, method='click', desc='usb按钮')
     all_select_elem = Element(locator=all_select_locator, method='click', desc='全选')
+    type_picture_elem = Element(locator=type_picture_locator, method='click', desc='图片分类')
+    view_mode_elem = Element(locator=view_mode_locator, method='click', desc='浏览模式')
 
     @property
     def picture_elem(self) -> (WebElement, str):
@@ -55,7 +60,14 @@ class LocalPage(BasePage):
         picture = self.find_elements(self.picture_locator)
         if picture:
             return self.wait_click_element(picture[self.generate_random(0, len(picture) - 1)])
-        return 'not such element'
+        return NoSuchElementException
+
+    def swipe_picture(self):
+        """
+        滑动图片
+        :return:
+        """
+        self.swipe_up_and_down(2000, 700, 400, 700)
 
     def look_picture(self):
         """

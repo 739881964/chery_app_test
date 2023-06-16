@@ -1,0 +1,25 @@
+INFO     test_case:conftest.py:55 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'noReset': True, 'appActivity': 'com.mega.calendar.MainActivity', 'appPackage': 'com.mega.redwoodcalendar'}
+INFO     test_case:conftest.py:64 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'noReset': True, 'appActivity': 'com.mega.calendar.MainActivity', 'appPackage': 'com.mega.redwoodcalendar'}
+INFO     test_case:conftest.py:93 
+    初始化日历驱动driver
+    :return:
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:527 元素描述为: 新增日程
+INFO     test_case:base_page.py:535 web_elem: <appium.webdriver.webelement.WebElement (session="9b9b2cfa-4f0a-417d-ad19-8ee06a731365", element="db005804-785f-4ffd-94a4-52b1adac12cb")>
+INFO     test_case:base_page.py:547 新增日程 locator: ('id', 'com.mega.redwoodcalendar:id/add')
+INFO     test_case:base_page.py:527 元素描述为: 标题输入框
+INFO     test_case:base_page.py:535 web_elem: <appium.webdriver.webelement.WebElement (session="9b9b2cfa-4f0a-417d-ad19-8ee06a731365", element="4e3f02da-d615-4d8f-afb0-011f660da9e3")>
+INFO     test_case:base_page.py:547 标题输入框 locator: ('id', 'com.mega.redwoodcalendar:id/title')
+INFO     test_case:base_page.py:527 元素描述为: 二次输入
+INFO     test_case:base_page.py:535 web_elem: <appium.webdriver.webelement.WebElement (session="9b9b2cfa-4f0a-417d-ad19-8ee06a731365", element="e7f75943-e43c-45fb-9959-5d0669bb81fc")>
+INFO     test_case:base_page.py:547 二次输入 locator: ('id', 'com.mega.redwoodcalendar:id/edit_input')
+INFO     test_case:base_page.py:527 元素描述为: 二次保存
+INFO     test_case:base_page.py:535 web_elem: <appium.webdriver.webelement.WebElement (session="9b9b2cfa-4f0a-417d-ad19-8ee06a731365", element="991af12d-9465-4433-971f-c08fa8bf5b84")>
+INFO     test_case:base_page.py:547 二次保存 locator: ('id', 'com.mega.redwoodcalendar:id/input_save')
+INFO     test_case:base_page.py:527 元素描述为: 地址输入框
+INFO     test_case:base_page.py:535 web_elem: <appium.webdriver.webelement.WebElement (session="9b9b2cfa-4f0a-417d-ad19-8ee06a731365", element="044d005a-df28-48b2-96c2-07a49ce7168e")>
+INFO     test_case:base_page.py:547 地址输入框 locator: ('id', 'com.mega.redwoodcalendar:id/add_location')
+INFO     test_case:base_page.py:527 元素描述为: 二次输入
+INFO     test_case:conftest.py:96 正在关闭驱动
+INFO     test_case:conftest.py:99 关闭驱动成功！
