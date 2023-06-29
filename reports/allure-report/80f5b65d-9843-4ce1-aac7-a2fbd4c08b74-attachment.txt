@@ -1,0 +1,17 @@
+INFO     test_case:conftest.py:56 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.btphone.ui.BtPhoneActivity', 'appPackage': 'com.mega.btphone'}
+INFO     test_case:conftest.py:72 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.btphone.ui.BtPhoneActivity', 'appPackage': 'com.mega.btphone'}
+INFO     test_case:conftest.py:244 
+    初始化蓝牙电话驱动
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:535 元素描述为: 获取连接蓝牙按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="aa7dc8f3-be42-47a0-98db-ebc9ed1ea42b", element="1c241eeb-886e-46ce-901d-dd2741b041b8")>
+INFO     test_case:base_page.py:555 获取连接蓝牙按钮 locator: ('id', 'com.mega.btphone:id/go_setting_in_disconnect')
+INFO     test_case:base_page.py:535 元素描述为: 蓝牙开关按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="aa7dc8f3-be42-47a0-98db-ebc9ed1ea42b", element="f8babb25-57bb-4f61-b082-2a3d822d5cb0")>
+INFO     test_case:base_page.py:555 蓝牙开关按钮 locator: ('id', 'android:id/switch_widget')
+INFO     test_case:test_btphone.py:108 蓝牙开关属性为: true
+INFO     test_case:test_btphone.py:112 蓝牙已打开
+INFO     test_case:conftest.py:247 正在关闭驱动
+INFO     test_case:conftest.py:249 关闭驱动成功！

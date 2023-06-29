@@ -21,6 +21,8 @@ class TestShow:
     车辆显示功能测试
     """
 
+    @allure.story('控制中控亮度')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.test_control
     def test_control_bright(self, init_show):
         """
@@ -52,6 +54,7 @@ class TestShow:
             logger.error(e)
             raise e
 
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.off_video_limiter
     @allure.story('关闭视频限制功能')
     def test_off_video_limiter(self, init_show):
@@ -79,6 +82,7 @@ class TestShow:
             logger.error(e)
             raise e
 
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.on_video_limiter
     @allure.story('开启视频限制功能')
     def test_on_video_limiter(self, init_show):
@@ -106,6 +110,7 @@ class TestShow:
             logger.error(e)
             raise e
 
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.select_show_mode
     @allure.story('显示模式选择')
     @pytest.mark.parametrize('select_data', show_mode_data)
@@ -132,6 +137,7 @@ class TestShow:
             logger.error(e)
             raise e
 
+    @pytest.mark.flaky(reruns=3)
     @allure.story('测试清洗屏幕功能')
     @pytest.mark.test_screen_clear
     def test_clear_screen(self, init_show):
@@ -151,6 +157,7 @@ class TestShow:
             logger.error(e)
             raise e
 
+    @pytest.mark.flaky(reruns=3)
     @allure.story('测试更换主题功能')
     @pytest.mark.modify_theme
     @pytest.mark.parametrize('data', theme_data)

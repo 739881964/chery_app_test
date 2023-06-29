@@ -6,17 +6,22 @@
 # 当前系统时间：19:10
 # 用于创建文件的IDE的名称: PyCharm
 
+import allure
 import pytest
+
 from pages.car_settings.sound_page import SoundPage
 from scripts.logger import logger
 from time import sleep
 
 
+@allure.feature('车辆设置-声音')
 class TestSound:
     """
     测试声音功能
     """
 
+    @allure.story('打开媒体静音')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.open_media_mute
     def test_open_media_mute(self, init_sound):
         """
@@ -41,6 +46,8 @@ class TestSound:
             logger.error(e)
             raise e
 
+    @allure.story('关闭媒体静音')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.close_media_mute
     def test_close_media_mute(self, init_sound):
         """

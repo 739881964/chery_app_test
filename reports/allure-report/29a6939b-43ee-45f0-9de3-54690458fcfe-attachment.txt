@@ -1,0 +1,24 @@
+INFO     test_case:conftest.py:56 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.lion.business.home.ui.HomeActivity', 'appPackage': 'com.lion.media'}
+INFO     test_case:conftest.py:72 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.lion.business.home.ui.HomeActivity', 'appPackage': 'com.lion.media'}
+INFO     test_case:conftest.py:99 
+    初始化本地畅想音乐
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:535 元素描述为: 音源切换
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="af0e6ce3-fdce-4b1d-aaac-9d86fa39f6fc", element="68ea44cc-c5ca-42ee-87f1-eec2fbc791b3")>
+INFO     test_case:base_page.py:555 音源切换 locator: ('id', 'com.lion.media:id/logoLl')
+INFO     test_case:base_page.py:535 元素描述为: 本地音乐
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="af0e6ce3-fdce-4b1d-aaac-9d86fa39f6fc", element="afe82721-250e-4ad0-bbe0-4bdcf71c3502")>
+INFO     test_case:base_page.py:555 本地音乐 locator: ('id', 'com.lion.media:id/musicLocalTv')
+INFO     test_case:base_page.py:133 wait_locator: <appium.webdriver.webelement.WebElement (session="af0e6ce3-fdce-4b1d-aaac-9d86fa39f6fc", element="f090eb13-fbd6-4c5c-bf98-2ba180adaf4d")>
+INFO     test_case:test_media.py:83 broadcast music name is : <<烟花易冷>>
+INFO     test_case:base_page.py:535 元素描述为: 当前已播放的时间
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="af0e6ce3-fdce-4b1d-aaac-9d86fa39f6fc", element="85b15cb2-dfa1-4c41-9b7f-330284ff3546")>
+INFO     test_case:base_page.py:555 当前已播放的时间 locator: ('id', 'com.lion.media:id/currentTimeTv')
+INFO     test_case:media_page.py:84 向x轴滑动距离330, 滑动正在播放的歌曲进度条成功
+INFO     test_case:base_page.py:535 元素描述为: 当前已播放的时间
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="af0e6ce3-fdce-4b1d-aaac-9d86fa39f6fc", element="34528722-7482-4fb8-bdc6-36233de5a94d")>
+INFO     test_case:base_page.py:555 当前已播放的时间 locator: ('id', 'com.lion.media:id/currentTimeTv')
+INFO     test_case:test_media.py:90 已把正在播放的音乐 <<烟花易冷>> 播放时间从 00:17 拖动到 00:00 成功
+INFO     test_case:conftest.py:102 正在关闭驱动
+INFO     test_case:conftest.py:104 关闭驱动成功！

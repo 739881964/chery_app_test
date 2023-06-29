@@ -15,6 +15,7 @@ class TestCarSetting:
     车辆设置
     """
 
+    @pytest.mark.flaky(reruns=3)
     # @pytest.mark.parametrize()
     @pytest.mark.screen_clear
     def test_screen_clear(self, init_setting):

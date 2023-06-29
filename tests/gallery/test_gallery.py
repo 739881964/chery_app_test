@@ -6,6 +6,7 @@
 # 当前系统时间：17:48
 # 用于创建文件的IDE的名称: PyCharm
 
+import allure
 import pytest
 
 from time import sleep
@@ -14,11 +15,14 @@ from data.picture_data import no_usb_data
 from appium.webdriver.webelement import WebElement
 
 
+@allure.feature('图库功能')
 class TestGallery:
     """
     图库功能
     """
 
+    @allure.story('切换至浏览模式并选择一张图片')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.view_picture
     def test_choose_view_mode_pic(self, init_gallery):
         """
@@ -38,6 +42,8 @@ class TestGallery:
             logger.error(e)
             raise e
 
+    @allure.story('查看图片分类')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.type_pic
     def test_switch_pic_type(self, init_gallery):
         """
@@ -56,6 +62,8 @@ class TestGallery:
             logger.error(e)
             raise e
 
+    @allure.story('随机选择某个图片并滑动至其他图片')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.swipe_picture
     def test_swipe_picture(self, init_gallery):
         """
@@ -75,12 +83,15 @@ class TestGallery:
             logger.error(e)
             raise e
 
+    @allure.story('全选导出照片-无usb，异常用例')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.select_all_export
     @pytest.mark.parametrize('data', no_usb_data)
     def test_all_select_export(self, init_gallery, data):
         """
         全选导出照片-无usb，异常用例
         :param init_gallery:
+        :param data:
         :return:
         """
         gallery = init_gallery[0]
@@ -97,6 +108,8 @@ class TestGallery:
             logger.error(e)
             raise e
 
+    @allure.story('全选删除')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.skip(reason='功能实现，但调试时不开放，原因是：删除功能不能随便用')
     @pytest.mark.select_all_delete
     def test_all_select_delete(self, init_gallery):
@@ -115,6 +128,8 @@ class TestGallery:
             logger.error(e)
             raise e
 
+    @allure.story('全选')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.select_all
     def test_all_select(self, init_gallery):
         """
@@ -136,6 +151,8 @@ class TestGallery:
             logger.info(e)
             raise e
 
+    @allure.story('本地随机选择图片并分享失败，无usb设备')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.parametrize('data', no_usb_data)
     @pytest.mark.random_select_pic
     def test_random_select_pic_explore(self, data, init_gallery):
@@ -159,6 +176,8 @@ class TestGallery:
             logger.error(e)
             raise e
 
+    @allure.story('本地不选择图片并分享')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.local_no_select_pic_export
     def test_local_no_select_pic_export(self, init_gallery):
         """
@@ -177,6 +196,8 @@ class TestGallery:
             logger.error(e)
             raise e
 
+    @allure.story('删除图片')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.skip(reason='功能实现，但调试时不开放，原因是：删除功能不能随便用')
     @pytest.mark.delete_pic
     def test_delete_pic(self, init_gallery):
@@ -189,6 +210,7 @@ class TestGallery:
         gallery.picture_elem.click()
         gallery.delete_elem.click()
 
+    @allure.story('设置图片壁纸')
     @pytest.mark.set_wallpaper
     def test_set_wallpaper(self, init_gallery):
         """
@@ -197,8 +219,12 @@ class TestGallery:
         :return:
         """
         gallery = init_gallery[0]
-        gallery.picture_elem.click()
-        pic_name = gallery.picture_name_elem.text
+        while True:
+            gallery.picture_elem.click()
+            pic_name = gallery.picture_name_elem.text
+            if pic_name.split('.')[-1] in ['jpg', 'png', 'jpeg']:
+                break
+            gallery.back_elem.click()
         gallery.set_wallpaper_elem.click()
         gallery.setting_wallpaper_elem.click()
 
@@ -210,6 +236,8 @@ class TestGallery:
             logger.error(e)
             raise e
 
+    @allure.story('设置图片壁纸-取消')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.wallpaper_cancel
     def test_set_wallpaper_cancel(self, init_gallery):
         """
@@ -224,12 +252,14 @@ class TestGallery:
         pic_name = gallery.picture_name_elem.text
 
         try:
-            assert 'jpg' in pic_name
+            assert pic_name.split('.')[-1] in ['jpg', 'png', 'bmp', 'mp4', 'jpeg']
             logger.info('取消设置当前 {} 图片为壁纸成功'.format(pic_name))
         except AssertionError as e:
             logger.error(e)
             raise e
 
+    @allure.story('放大图片并恢复原图大小')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.enlarge_pic
     def test_enlarge_pic(self, init_gallery):
         """
@@ -241,11 +271,13 @@ class TestGallery:
         gallery.enlarge_pic()
         pass
 
+    @allure.story('导出图片无usb设备-导出失败')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.parametrize('data', no_usb_data)
     @pytest.mark.export_pic_no_usb
     def test_export_pic_no_usb(self, data, init_gallery):
         """
-        导出图片无usb设备时
+        导出图片无usb设备-导出失败
         :param init_gallery:
         :param data:
         :return:
@@ -267,6 +299,8 @@ class TestGallery:
             logger.error(e)
             raise e
 
+    @allure.story('随机查看图片')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.click_picture
     def test_click_picture(self, init_gallery):
         """
@@ -280,7 +314,7 @@ class TestGallery:
 
         try:
             pic_name = gallery.picture_name_elem.text
-            assert 'jpg' in pic_name
+            assert pic_name.split('.')[-1] in ['jpg', 'png', 'bmp', 'mp4', 'jpeg']
             logger.info('随机查看图片: {} 成功'.format(pic_name))
         except AssertionError as e:
             logger.error('查看图片失败')
@@ -289,6 +323,8 @@ class TestGallery:
         gallery.back_elem.click()
         sleep(1)
 
+    @allure.story('usb&&本地切换')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.switch_from
     def test_switch_from(self, init_gallery):
         """

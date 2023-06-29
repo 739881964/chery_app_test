@@ -1,0 +1,37 @@
+INFO     test_case:base_page.py:535 元素描述为: 新增日程
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="b61d31c1-86ec-4118-814b-24b27727243c", element="997fccdd-9eef-499c-9882-664bd9b92da7")>
+INFO     test_case:base_page.py:555 新增日程 locator: ('id', 'com.mega.redwoodcalendar:id/add')
+INFO     test_case:base_page.py:535 元素描述为: 标题输入框
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="b61d31c1-86ec-4118-814b-24b27727243c", element="b7b84c7d-8712-44af-9542-d88852bcdc12")>
+INFO     test_case:base_page.py:555 标题输入框 locator: ('id', 'com.mega.redwoodcalendar:id/title')
+INFO     test_case:base_page.py:535 元素描述为: 二次输入
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="b61d31c1-86ec-4118-814b-24b27727243c", element="cd2bee51-519f-4bd2-a94d-a529ed98e094")>
+INFO     test_case:base_page.py:555 二次输入 locator: ('id', 'com.mega.redwoodcalendar:id/edit_input')
+INFO     test_case:base_page.py:535 元素描述为: 二次保存
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="b61d31c1-86ec-4118-814b-24b27727243c", element="559cbd3d-824d-4a79-81db-d28b272becd1")>
+INFO     test_case:base_page.py:555 二次保存 locator: ('id', 'com.mega.redwoodcalendar:id/input_save')
+INFO     test_case:base_page.py:535 元素描述为: 地址输入框
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="b61d31c1-86ec-4118-814b-24b27727243c", element="08ead535-fbff-4e3d-ab36-8876589ca9c3")>
+INFO     test_case:base_page.py:555 地址输入框 locator: ('id', 'com.mega.redwoodcalendar:id/add_location')
+INFO     test_case:base_page.py:535 元素描述为: 二次输入
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="b61d31c1-86ec-4118-814b-24b27727243c", element="603c696a-95da-4c6b-90d4-61a6bed31997")>
+INFO     test_case:base_page.py:555 二次输入 locator: ('id', 'com.mega.redwoodcalendar:id/edit_input')
+INFO     test_case:base_page.py:535 元素描述为: 二次保存
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="b61d31c1-86ec-4118-814b-24b27727243c", element="493a197c-9a42-4c2b-bad5-643fc3dd48b1")>
+INFO     test_case:base_page.py:555 二次保存 locator: ('id', 'com.mega.redwoodcalendar:id/input_save')
+INFO     test_case:base_page.py:535 元素描述为: 全天切换按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="b61d31c1-86ec-4118-814b-24b27727243c", element="4181dc6c-f850-46f9-9c67-5d1202dc587e")>
+INFO     test_case:base_page.py:555 全天切换按钮 locator: ('id', 'com.mega.redwoodcalendar:id/day_switch')
+INFO     test_case:base_page.py:535 元素描述为: 提醒时间
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="b61d31c1-86ec-4118-814b-24b27727243c", element="ef82e677-a711-4ea2-a80c-51f3be735a77")>
+INFO     test_case:base_page.py:555 提醒时间 locator: ('id', 'com.mega.redwoodcalendar:id/schedule_more')
+INFO     test_case:base_page.py:535 元素描述为: 保存
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="b61d31c1-86ec-4118-814b-24b27727243c", element="c540d3f3-2a9c-47a3-855e-1709281d57f6")>
+INFO     test_case:base_page.py:555 保存 locator: ('id', 'com.mega.redwoodcalendar:id/save')
+INFO     test_case:base_page.py:535 元素描述为: 新增日程列表title
+INFO     test_case:base_page.py:553 web_elem: <appium.webdriver.webelement.WebElement (session="b61d31c1-86ec-4118-814b-24b27727243c", element="af715fe7-a116-474f-ba3e-f73f7b4605f4")>
+INFO     test_case:base_page.py:555 新增日程列表title locator: ('id', 'com.mega.redwoodcalendar:id/left_title')
+INFO     test_case:test_calendar.py:182 新增日程 创建日程标题 成功
+INFO     test_case:test_calendar.py:183 新增日程：<<创建日程标题>> 的醒时间为全天提醒成功
+INFO     test_case:conftest.py:131 正在关闭驱动
+INFO     test_case:conftest.py:134 关闭驱动成功！

@@ -1,0 +1,20 @@
+INFO     test_case:conftest.py:56 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:72 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:172 
+    初始化车辆设置-显示驱动
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:conftest.py:175 <pages.car_settings.show_page.ShowPage object at 0x1048f5220>
+INFO     test_case:base_page.py:535 元素描述为: 显示功能按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="fa11deb7-01f9-43a3-bf96-e1ce0700c5c6", element="dfbe8c6f-92d8-419b-aa4c-5dbee761eb82")>
+INFO     test_case:base_page.py:555 显示功能按钮 locator: ('id', 'com.mega.carsettings:id/menu_display')
+INFO     test_case:base_page.py:535 元素描述为: 清洁屏幕按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="fa11deb7-01f9-43a3-bf96-e1ce0700c5c6", element="7ce11c5e-8170-4736-a984-548248ee697c")>
+INFO     test_case:base_page.py:555 清洁屏幕按钮 locator: ('xpath', '\t//android.widget.TextView[@content-desc="清洁屏幕"]')
+INFO     test_case:base_page.py:439 action: <appium.webdriver.common.touch_action.TouchAction object at 0x1048c9bb0>
+INFO     test_case:base_page.py:535 元素描述为: 清洁屏幕按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="fa11deb7-01f9-43a3-bf96-e1ce0700c5c6", element="fb976da3-742b-4a99-a6b4-1cc31a6b529f")>
+INFO     test_case:base_page.py:555 清洁屏幕按钮 locator: ('xpath', '\t//android.widget.TextView[@content-desc="清洁屏幕"]')
+INFO     test_case:test_show.py:154 清洁屏幕成功
+INFO     test_case:conftest.py:177 正在关闭驱动
+INFO     test_case:conftest.py:179 关闭驱动成功！

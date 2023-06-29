@@ -33,7 +33,7 @@ class BTPhonePage(BasePage):
     # elements
     disconnect_elem = Element(locator=disconnect_locator, method='click', desc='未连接设备')
     know_elem = Element(locator=know_locator, method='presence', desc="'知道了' alert")
-    connect_failed_elem = Element(locator=connect_failed_locator, method='presence', desc='配对失败alert')
+    connect_failed_elem = Element(locator=connect_failed_locator, method='visibility', desc='配对失败alert')
     cancel_elem = Element(locator=cancel_locator, method='click', desc='取消按钮')
     conn_bt_elem = Element(locator=conn_bt_locator, method='click', desc='获取连接蓝牙按钮')
     edit_bt_name_elem = Element(locator=edit_bt_name_locator, method='click', desc='编辑蓝牙名称按钮')
@@ -43,6 +43,13 @@ class BTPhonePage(BasePage):
     iv_arrow_elem = Element(locator=iv_arrow_locator, method='click', desc='连接设备历史')
     device_id_elem = Element(locator=device_id_locator, method='click', desc='连接设备id', is_elems=True, one_elem=True,
                              one_from_elems=True, index=-1)
+
+    def tap_bt_screen(self):
+        """
+        点击屏幕空白处，关闭蓝牙配对历史弹出框
+        :return:
+        """
+        self.tap_screen(2200, 400)
 
     def new_bt_name(self, new_name):
         """

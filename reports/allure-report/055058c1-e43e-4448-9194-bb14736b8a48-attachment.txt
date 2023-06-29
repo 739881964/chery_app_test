@@ -1,0 +1,20 @@
+INFO     test_case:conftest.py:56 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.chery.gallery.ui.ImageActivity', 'appPackage': 'com.mega.chery.gallery'}
+INFO     test_case:conftest.py:72 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.chery.gallery.ui.ImageActivity', 'appPackage': 'com.mega.chery.gallery'}
+INFO     test_case:conftest.py:188 
+    初始化图库驱动
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:133 wait_locator: <appium.webdriver.webelement.WebElement (session="cde1f7b1-8dab-4b49-9437-b8f4b0b1f59a", element="4fd6d98d-237e-435e-9e04-0c483611df2f")>
+INFO     test_case:base_page.py:535 元素描述为: 设置壁纸
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="cde1f7b1-8dab-4b49-9437-b8f4b0b1f59a", element="a3e67965-6d72-432e-a342-ea7ce6fc4802")>
+INFO     test_case:base_page.py:555 设置壁纸 locator: ('id', 'com.mega.chery.gallery:id/wallpaperBtn')
+INFO     test_case:base_page.py:535 元素描述为: 设置壁纸-返回按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="cde1f7b1-8dab-4b49-9437-b8f4b0b1f59a", element="8518995d-6b6f-42a0-85ab-38ab7cf98082")>
+INFO     test_case:base_page.py:555 设置壁纸-返回按钮 locator: ('id', 'com.mega.chery.gallery:id/cancelSetWallpaperBtn')
+INFO     test_case:base_page.py:535 元素描述为: 获取图片名称
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="cde1f7b1-8dab-4b49-9437-b8f4b0b1f59a", element="1afc4506-ac8a-4daa-baa0-63eacd7cffdc")>
+INFO     test_case:base_page.py:555 获取图片名称 locator: ('id', 'com.mega.chery.gallery:id/title')
+INFO     test_case:test_gallery.py:242 取消设置当前 a9337d80bd748069c7904316acb7ba58.jpeg 图片为壁纸成功
+INFO     test_case:conftest.py:191 正在关闭驱动
+INFO     test_case:conftest.py:193 关闭驱动成功！

@@ -6,6 +6,7 @@
 # 当前系统时间：16:30
 # 用于创建文件的IDE的名称: PyCharm
 
+import allure
 import pytest
 
 from data.drive_data import drive_data
@@ -13,11 +14,14 @@ from scripts.logger import logger
 from time import sleep
 
 
+@allure.feature('测试驾驶功能')
 class TestDrive:
     """
     测试驾驶功能
     """
 
+    @allure.story('选择不同的驾驶模式')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.parametrize('data', drive_data)
     @pytest.mark.select_drive_1
     def test_select_drive(self, init_drive, data):

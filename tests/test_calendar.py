@@ -6,6 +6,7 @@
 # 当前系统时间：12:20
 # 用于创建文件的IDE的名称: PyCharm
 
+import allure
 import pytest
 
 from time import sleep
@@ -13,11 +14,14 @@ from data.calendar_data import title_exit_data, no_title_data
 from scripts.logger import logger
 
 
+@allure.feature('日历app测试')
 class TestCalendar:
     """
     日历
     """
 
+    @allure.feature('关闭重要节日提醒')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.close_reminders
     def test_close_reminders(self, init_calendar):
         """
@@ -45,6 +49,8 @@ class TestCalendar:
         finally:
             calendar_page.select_drop_down_elem.click()
 
+    @allure.feature('打开重要节日提醒')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.open_reminders
     def test_open_reminders(self, init_calendar):
         """
@@ -73,6 +79,8 @@ class TestCalendar:
         finally:
             calendar_page.select_drop_down_elem.click()
 
+    @allure.feature('打开行程主动提醒')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.open_itinerary
     def test_open_itinerary(self, init_calendar):
         """
@@ -100,6 +108,8 @@ class TestCalendar:
         finally:
             calendar_page.select_drop_down_elem.click()
 
+    @allure.feature('关闭行程主动提醒')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.close_itinerary
     def test_close_itinerary(self, init_calendar):
         """
@@ -127,6 +137,8 @@ class TestCalendar:
         finally:
             calendar_page.select_drop_down_elem.click()
 
+    @allure.feature('新增日程-非全天提醒')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.parametrize('data', title_exit_data)
     @pytest.mark.add_plan
     def test_add_new_plan(self, init_calendar, data):
@@ -154,6 +166,8 @@ class TestCalendar:
             logger.error(e)
             raise e
 
+    @allure.feature('新增日程-全天提醒')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.add_all_day_reminder
     def test_add_all_day_reminder(self, init_calendar):
         """

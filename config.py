@@ -12,6 +12,9 @@ import os
 # 项目的路径
 ROOT_PATH = os.path.dirname(os.path.abspath(__file__))
 
+# appium log
+Appium_Log = os.path.join(ROOT_PATH, 'Appium.log')
+
 # 设备信息路径
 DEVICE_INFO = os.path.join(ROOT_PATH, 'cap.yaml')
 # print(DEVICE_INFO)

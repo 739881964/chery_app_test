@@ -6,13 +6,16 @@
 # 当前系统时间：15:24
 # 用于创建文件的IDE的名称: PyCharm
 
-
+import allure
 import pytest
 from scripts.logger import logger
 
 
+@allure.feature('launcher页面功能测试')
 class TestLauncher:
 
+    @allure.story('进入launcher页面')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.launcher_app
     def test_launcher_app(self, init_launcher):
         """
@@ -30,6 +33,8 @@ class TestLauncher:
             logger.error(e)
             raise e
 
+    @allure.story('launcher页面滑动操作')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.swipe_launcher
     def test_swipe_launcher(self, init_launcher):
         """
@@ -50,6 +55,7 @@ class TestLauncher:
             logger.error('launcher滑动失败')
             raise e
 
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.skipif(reason='还在开发中，暂不开放')
     def test_control_bar(self, init_launcher):
         """

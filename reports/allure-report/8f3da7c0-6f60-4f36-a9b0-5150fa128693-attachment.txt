@@ -1,0 +1,20 @@
+INFO     test_case:conftest.py:56 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:72 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:158 
+    初始化声音驱动
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:535 元素描述为: 声音按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="c2af7e70-43b1-408e-bc09-1f9a3de19610", element="21d3a56d-1204-47bb-8f2b-c66b339537cc")>
+INFO     test_case:base_page.py:555 声音按钮 locator: ('id', 'com.mega.carsettings:id/menu_sound')
+INFO     test_case:base_page.py:535 元素描述为: 媒体静音按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="c2af7e70-43b1-408e-bc09-1f9a3de19610", element="f90ea8d5-8746-4240-9b2d-a8257e20316a")>
+INFO     test_case:base_page.py:555 媒体静音按钮 locator: ('id', 'android:id/switch_widget')
+INFO     test_case:base_page.py:535 元素描述为: 媒体静音按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="c2af7e70-43b1-408e-bc09-1f9a3de19610", element="fa0bb502-50ca-4d46-b54e-f6beacd5f945")>
+INFO     test_case:base_page.py:555 媒体静音按钮 locator: ('id', 'android:id/switch_widget')
+INFO     test_case:base_page.py:535 元素描述为: 媒体静音按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="c2af7e70-43b1-408e-bc09-1f9a3de19610", element="5b169c65-75c7-46f7-9cdf-a8171ac623c7")>
+INFO     test_case:base_page.py:555 媒体静音按钮 locator: ('id', 'android:id/switch_widget')
+INFO     test_case:conftest.py:161 正在关闭驱动
+INFO     test_case:conftest.py:163 关闭驱动成功！

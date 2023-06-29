@@ -6,7 +6,7 @@
 # 当前系统时间：18:34
 # 用于创建文件的IDE的名称: PyCharm
 
-
+import allure
 import pytest
 
 from scripts.logger import logger
@@ -15,11 +15,14 @@ from data.btphone_name_data import bt_name_data
 from time import sleep
 
 
+@allure.feature('蓝牙电话功能')
 class TestBTPhone:
     """
     测试蓝牙电话功能
     """
 
+    @allure.story('取消连接蓝牙设备')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.test_cancel_conn_device
     def test_cancel_connect_device(self, init_btphone):
         """
@@ -48,7 +51,11 @@ class TestBTPhone:
         except AssertionError as e:
             logger.error(e)
             raise e
+        finally:
+            btphone_page.tap_bt_screen()
 
+    @allure.story('连接设备异常失败测试用例')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.test_connect_device_failed
     def test_reconnect_device(self, init_btphone):
         """
@@ -82,8 +89,17 @@ class TestBTPhone:
         except AssertionError as e:
             logger.error('蓝牙连接异常')
             raise e
-        btphone_page.know_elem.click()
+        finally:
+            try:
+                btphone_page.know_elem.click()
+                btphone_page.tap_bt_screen()
+            except Exception as error:
+                btphone_page.tap_bt_screen()
+                logger.error(error)
+                raise error
 
+    @allure.story('打开蓝牙')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.test_open_bt
     def test_open_bt(self, init_btphone):
         """
@@ -108,6 +124,8 @@ class TestBTPhone:
                 logger.error('打开蓝牙失败')
                 raise e
 
+    @allure.story('关闭蓝牙')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.test_close_bt
     def test_close_bt(self, init_btphone):
         """
@@ -134,6 +152,8 @@ class TestBTPhone:
                 logger.error('关闭蓝牙失败')
                 raise e
 
+    @allure.story('编辑蓝牙名称功能')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.save_bt_name
     def test_edit_bt_name(self, init_btphone):
         """
@@ -162,6 +182,8 @@ class TestBTPhone:
             logger.error('修改蓝牙名称为：{} 失败'.format(new_name))
             raise e
 
+    @allure.story('取消重命名')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.cancel_edit
     def test_cancel_edit(self, init_btphone):
         """
@@ -191,6 +213,8 @@ class TestBTPhone:
             logger.error('取消编辑蓝牙名称成功')
             raise e
 
+    @allure.story('编辑蓝牙名称，命名异常数据')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.test_error_data
     @pytest.mark.parametrize('bt_data', bt_name_data)
     def test_error_name(self, bt_data, init_btphone):

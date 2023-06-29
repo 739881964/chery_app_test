@@ -42,6 +42,14 @@ class BasePage:
         self.driver.implicitly_wait(10)
         # logger.info(self.driver.get_settings())
 
+    def tap_screen(self, x, y):
+        """
+        点击屏幕操作
+        :return:
+        """
+        touch = TouchAction(self.driver)
+        return touch.tap(x=x, y=y).perform()
+
     def get_system_bar(self):
         """
         状态栏

@@ -1,0 +1,24 @@
+INFO     test_case:conftest.py:56 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.btphone.ui.BtPhoneActivity', 'appPackage': 'com.mega.btphone'}
+INFO     test_case:conftest.py:72 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.btphone.ui.BtPhoneActivity', 'appPackage': 'com.mega.btphone'}
+INFO     test_case:conftest.py:244 
+    初始化蓝牙电话驱动
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:535 元素描述为: 获取连接蓝牙按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="169f11bd-682c-4bd5-848e-8ec49f847580", element="08193aeb-0d27-4da0-abb9-d1b0bf4744bd")>
+INFO     test_case:base_page.py:555 获取连接蓝牙按钮 locator: ('id', 'com.mega.btphone:id/go_setting_in_disconnect')
+INFO     test_case:base_page.py:535 元素描述为: 蓝牙开关按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="169f11bd-682c-4bd5-848e-8ec49f847580", element="2e96fac5-ae4a-41e5-a89e-4c71eb21e9fd")>
+INFO     test_case:base_page.py:555 蓝牙开关按钮 locator: ('id', 'android:id/switch_widget')
+INFO     test_case:test_btphone.py:133 蓝牙开关属性为: true
+INFO     test_case:base_page.py:535 元素描述为: 蓝牙开关按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="169f11bd-682c-4bd5-848e-8ec49f847580", element="93a156bb-7510-474c-8776-2df5f915346e")>
+INFO     test_case:base_page.py:555 蓝牙开关按钮 locator: ('id', 'android:id/switch_widget')
+INFO     test_case:base_page.py:535 元素描述为: 蓝牙开关按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="169f11bd-682c-4bd5-848e-8ec49f847580", element="07ebe191-ce53-47fc-b2a1-02d104fc2b18")>
+INFO     test_case:base_page.py:555 蓝牙开关按钮 locator: ('id', 'android:id/switch_widget')
+INFO     test_case:test_btphone.py:141 蓝牙开关属性为: false
+INFO     test_case:test_btphone.py:145 蓝牙关闭成功
+INFO     test_case:conftest.py:247 正在关闭驱动
+INFO     test_case:conftest.py:249 关闭驱动成功！

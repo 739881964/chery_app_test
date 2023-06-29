@@ -57,9 +57,18 @@
   "tests/test_media.py::TestMedia::test_broadcast_local_music",
   "tests/test_media.py::TestMedia::test_change_progress_seek_bar",
   "tests/test_media.py::TestMedia::test_pause_music",
-  "tests/test_media.py::TestMedia::test_return_local_and_last",
   "tests/test_media.py::TestMedia::test_return_local_and_next",
   "tests/test_media.py::TestMedia::test_return_local_and_pause",
-  "tests/test_media.py::TestMedia::test_switch_last_song",
-  "tests/test_media.py::TestMedia::test_switch_next_song"
+  "tests/test_media.py::TestMedia::test_return_local_and_previous",
+  "tests/test_media.py::TestMedia::test_switch_broadcast_song_mode[data0]",
+  "tests/test_media.py::TestMedia::test_switch_broadcast_song_mode[data1]",
+  "tests/test_media.py::TestMedia::test_switch_broadcast_song_mode[data2]",
+  "tests/test_media.py::TestMedia::test_switch_next_song",
+  "tests/test_media.py::TestMedia::test_switch_previous_song",
+  "tests/test_weather.py::TestWeather::test_add_city[city_name0]",
+  "tests/test_weather.py::TestWeather::test_add_city[city_name1]",
+  "tests/test_wifi.py::TestWiFi::test_connect_error_passwd[error_passwd0]",
+  "tests/test_wifi.py::TestWiFi::test_connect_error_passwd_01[error_passwd0]",
+  "tests/test_wifi.py::TestWiFi::test_connect_wifi_success_02[success_name0]",
+  "tests/test_wifi.py::TestWiFi::test_reconnect_wifi_success_with_no_password_03[no_password0]"
 ]

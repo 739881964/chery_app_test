@@ -1,5 +1,4 @@
 {
-  "tests/test_btphone.py::TestBTPhone::test_reconnect_device": true,
   "tests/car_settings/test_drive.py::TestDrive::test_select_drive[data0]": true,
   "tests/car_settings/test_drive.py::TestDrive::test_select_drive[data2]": true,
   "tests/car_settings/test_drive.py::TestDrive::test_select_drive[data3]": true,
@@ -8,5 +7,9 @@
   "tests/car_settings/test_menu_light.py::TestMenuLight::test_set_light[data1]": true,
   "tests/car_settings/test_menu_light.py::TestMenuLight::test_set_light[data2]": true,
   "tests/car_settings/test_menu_light.py::TestMenuLight::test_set_light[data3]": true,
-  "tests/car_settings/test_menu_light.py::TestMenuLight::test_set_light[data0]": true
+  "tests/car_settings/test_show.py::TestShow::test_modify_theme[data0]": true,
+  "tests/car_settings/test_show.py::TestShow::test_modify_theme[data1]": true,
+  "tests/car_settings/test_show.py::TestShow::test_modify_theme[data2]": true,
+  "tests/test_weather.py::TestWeather::test_add_city[city_name1]": true,
+  "tests/test_btphone.py::TestBTPhone::test_cancel_edit": true
 }

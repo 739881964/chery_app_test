@@ -1,0 +1,33 @@
+INFO     test_case:conftest.py:56 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:72 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:84 
+    初始化wifi驱动
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:535 元素描述为: 连接按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="71b3d082-7258-4669-8cd0-5440b457ee37", element="d8c45bca-c87b-49fd-8521-fcb50ac29f12")>
+INFO     test_case:base_page.py:555 连接按钮 locator: ('id', 'com.mega.carsettings:id/menu_connect')
+INFO     test_case:base_page.py:535 元素描述为: WIFI开关
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="71b3d082-7258-4669-8cd0-5440b457ee37", element="73a40b3a-6c5f-48ad-abcb-92e75824fc8b")>
+INFO     test_case:base_page.py:555 WIFI开关 locator: ('id', 'android:id/switch_widget')
+INFO     test_case:base_page.py:535 元素描述为: 进去wifi连接按钮
+INFO     test_case:base_page.py:553 web_elem: <appium.webdriver.webelement.WebElement (session="71b3d082-7258-4669-8cd0-5440b457ee37", element="f6f00eed-e221-45fc-8d64-5b36ef5862c3")>
+INFO     test_case:base_page.py:555 进去wifi连接按钮 locator: ('id', 'com.mega.carsettings:id/iv_arrow')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.TextView[contains(@text, "AAAAA")]')
+INFO     test_case:base_page.py:535 元素描述为: 确认连接/断开按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="71b3d082-7258-4669-8cd0-5440b457ee37", element="c6fca997-bc64-43e1-a920-4eea1b3198c0")>
+INFO     test_case:base_page.py:555 确认连接/断开按钮 locator: ('id', 'com.mega.carsettings:id/tv_sure')
+INFO     test_case:base_page.py:535 元素描述为: 已连接提示
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="71b3d082-7258-4669-8cd0-5440b457ee37", element="315da669-98de-4372-a010-f09acac8636b")>
+INFO     test_case:base_page.py:555 已连接提示 locator: ('id', 'com.mega.carsettings:id/tv_connect_state')
+INFO     test_case:test_wifi.py:114 连接wifi：<<AAAAA>> 成功
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.TextView[contains(@text, "AAAAA")]')
+INFO     test_case:base_page.py:535 元素描述为: 断开连接按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="71b3d082-7258-4669-8cd0-5440b457ee37", element="67f1a400-24db-4ef3-9c5a-31374853773d")>
+INFO     test_case:base_page.py:555 断开连接按钮 locator: ('id', 'com.mega.carsettings:id/tv_sure')
+INFO     test_case:base_page.py:535 元素描述为: wifi删除按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="71b3d082-7258-4669-8cd0-5440b457ee37", element="be0518f1-b683-403b-aa01-f7a2352fbd9a")>
+INFO     test_case:base_page.py:555 wifi删除按钮 locator: ('id', 'com.mega.carsettings:id/iv_action_delete')
+INFO     test_case:conftest.py:88 正在关闭驱动
+INFO     test_case:conftest.py:90 关闭驱动成功！

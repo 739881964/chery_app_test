@@ -1,0 +1,30 @@
+INFO     test_case:test_drive.py:32 选择的驾驶模式为: 个性化
+INFO     test_case:base_page.py:535 元素描述为: 驾驶模式选择
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="73f29a31-f86e-4fa1-9220-6743327446e8", element="557e6dad-4f7c-45b6-9fa1-77b8fddb7c53")>
+INFO     test_case:base_page.py:555 驾驶模式选择 locator: ('id', 'com.mega.carsettings:id/menu_drive')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "个性化")]')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "个性化")]')
+INFO     test_case:test_drive.py:38 选择的驾驶模式bool值是: false
+ERROR    test_case:test_drive.py:44 assert 'false' == 'true'
+  - true
+  + false
+INFO     test_case:test_drive.py:32 选择的驾驶模式为: 个性化
+INFO     test_case:base_page.py:535 元素描述为: 驾驶模式选择
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="73f29a31-f86e-4fa1-9220-6743327446e8", element="68ccda08-0264-435e-88de-9be0e4be326b")>
+INFO     test_case:base_page.py:555 驾驶模式选择 locator: ('id', 'com.mega.carsettings:id/menu_drive')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "个性化")]')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "个性化")]')
+INFO     test_case:test_drive.py:38 选择的驾驶模式bool值是: false
+ERROR    test_case:test_drive.py:44 assert 'false' == 'true'
+  - true
+  + false
+INFO     test_case:test_drive.py:32 选择的驾驶模式为: 个性化
+INFO     test_case:base_page.py:535 元素描述为: 驾驶模式选择
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="73f29a31-f86e-4fa1-9220-6743327446e8", element="d74c8a62-852b-484b-b534-3bf3be93fae4")>
+INFO     test_case:base_page.py:555 驾驶模式选择 locator: ('id', 'com.mega.carsettings:id/menu_drive')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "个性化")]')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "个性化")]')
+INFO     test_case:test_drive.py:38 选择的驾驶模式bool值是: false
+ERROR    test_case:test_drive.py:44 assert 'false' == 'true'
+  - true
+  + false

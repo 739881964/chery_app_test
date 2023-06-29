@@ -6,13 +6,18 @@
 # 当前系统时间：00:54
 # 用于创建文件的IDE的名称: PyCharm
 
-
+import os
+import time
 import pytest
 import yaml
+import subprocess
 
 from appium.webdriver import Remote
 from scripts.logger import logger
 from config import DEVICE_INFO
+from time import sleep
+
+from scripts.logger import logger
 
 import pages.car_settings.sound_page
 from pages.car_settings.car_settings_page import CarSettingPage
@@ -27,8 +32,24 @@ from pages.car_settings.drive_page import DrivePage
 from pages.calendar_page import CalendarPage
 from pages.launcher_page import LauncherPage
 from pages.media_page import MediaPage
+from pages.wifi_page import WiFiPage
+from pages.weather_page import WeatherPage
+
+from scripts.appium_server import AppiumServer
 
 URL = 'http://127.0.0.1:4723/wd/hub'
+
+
+# @pytest.fixture(scope='session', autouse=True)
+def start_appium_server():
+    """
+    启动appium服务，用例执行结束后关闭服务
+    :return:
+    """
+    app_server = AppiumServer()
+    app_server.start_appium()
+    yield
+    app_server.kill_appium_server()
 
 
 # 获取设备信息cap
@@ -36,7 +57,7 @@ def get_device_caps(cap: str) -> dict:
     """
     获取不同app对应的caps配置信息
     :param cap:
-    :return:
+    :return: info
     """
     with open(DEVICE_INFO, 'r', encoding='utf8') as f:
         info = yaml.load(f, Loader=yaml.FullLoader)
@@ -48,7 +69,6 @@ def get_device_caps(cap: str) -> dict:
 
         info['appActivity'] = app_activity[cap]
         info['appPackage'] = app_package[cap]
-
     except Exception as e:
         logger.error(e)
         raise e
@@ -58,6 +78,13 @@ def get_device_caps(cap: str) -> dict:
 
 
 def base_driver(app_name='car_settings', url=URL, **kwargs):
+    """
+    启动app driver
+    :param app_name:
+    :param url:
+    :param kwargs:
+    :return:  driver
+    """
     caps = get_device_caps(app_name)
     for k, v in kwargs.items():
         caps[k] = v
@@ -69,10 +96,46 @@ def base_driver(app_name='car_settings', url=URL, **kwargs):
 
 
 @pytest.fixture()
+def init_weather():
+    """
+    初始化天气app
+    :return:
+    """
+    driver = base_driver('weather')
+    logger.info('{} 成功'.format(init_weather.__doc__))
+    weather_page = WeatherPage(driver)
+    sleep(10)
+    # 若有预警弹出框，先关闭
+    try:
+        if weather_page.gain_warning_attribute:
+            weather_page.alert_close_elem.click()
+    except Exception as e:
+        logger.warning(e)
+    yield weather_page
+    logger.info('正在关闭驱动')
+    driver.quit()
+    logger.info('关闭驱动成功！')
+
+
+@pytest.fixture()
+def init_wifi():
+    """
+    初始化wifi驱动
+    """
+    driver = base_driver('car_settings')
+    logger.info('{} 成功'.format(init_wifi.__doc__))
+    wifi_page = WiFiPage(driver)
+    ConnectPage(driver).swipe_to_connect()
+    yield wifi_page
+    logger.info('正在关闭驱动')
+    driver.quit()
+    logger.info('关闭驱动成功！')
+
+
+@pytest.fixture()
 def init_media():
     """
     初始化本地畅想音乐
-    :return:
     """
     driver = base_driver('media')
     logger.info('{} 成功'.format(init_media.__doc__))
@@ -87,7 +150,6 @@ def init_media():
 def init_launcher():
     """
     初始化launcher驱动
-    :return:
     """
     driver = base_driver('launcher')
     logger.info('{} 成功'.format(init_launcher.__doc__))
@@ -103,7 +165,6 @@ def init_launcher():
 def init_calendar():
     """
     初始化日历驱动driver
-    :return:
     """
     driver = base_driver('calendar')
     logger.info('{} 成功'.format(init_calendar.__doc__))

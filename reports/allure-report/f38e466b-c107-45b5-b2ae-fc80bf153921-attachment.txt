@@ -1,0 +1,18 @@
+INFO     test_case:base_page.py:535 元素描述为: 外灯
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="169a14ed-aa93-43e2-9630-d24c25771ede", element="92a0bd89-f6de-4c15-a749-ec84ca35fbad")>
+INFO     test_case:base_page.py:555 外灯 locator: ('id', 'com.mega.carsettings:id/menu_light')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "近光灯")]')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "近光灯")]')
+ERROR    test_case:test_menu_light.py:44 result !=  true
+INFO     test_case:base_page.py:535 元素描述为: 外灯
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="169a14ed-aa93-43e2-9630-d24c25771ede", element="79354bca-7485-4df5-8796-3add8472a7b3")>
+INFO     test_case:base_page.py:555 外灯 locator: ('id', 'com.mega.carsettings:id/menu_light')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "近光灯")]')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "近光灯")]')
+ERROR    test_case:test_menu_light.py:44 result !=  true
+INFO     test_case:base_page.py:535 元素描述为: 外灯
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="169a14ed-aa93-43e2-9630-d24c25771ede", element="03af6a84-d16a-4e72-aa0f-643c2da4b31f")>
+INFO     test_case:base_page.py:555 外灯 locator: ('id', 'com.mega.carsettings:id/menu_light')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "近光灯")]')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "近光灯")]')
+ERROR    test_case:test_menu_light.py:44 result !=  true

@@ -1,0 +1,76 @@
+INFO     test_case:conftest.py:56 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.btphone.ui.BtPhoneActivity', 'appPackage': 'com.mega.btphone'}
+INFO     test_case:conftest.py:72 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.btphone.ui.BtPhoneActivity', 'appPackage': 'com.mega.btphone'}
+INFO     test_case:conftest.py:244 
+    初始化蓝牙电话驱动
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:535 元素描述为: 获取连接蓝牙按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="b64e08bd-0be9-4265-9b1d-fb680463caae", element="0fa5a150-bc6c-40cc-9001-37668f7062b4")>
+INFO     test_case:base_page.py:555 获取连接蓝牙按钮 locator: ('id', 'com.mega.btphone:id/go_setting_in_disconnect')
+INFO     test_case:base_page.py:535 元素描述为: 蓝牙开关按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="b64e08bd-0be9-4265-9b1d-fb680463caae", element="620a7712-cb3a-48c5-ac25-c580e73f8b46")>
+INFO     test_case:base_page.py:555 蓝牙开关按钮 locator: ('id', 'android:id/switch_widget')
+INFO     test_case:test_btphone.py:67 蓝牙开关属性为: true
+INFO     test_case:test_btphone.py:71 蓝牙已打开
+INFO     test_case:base_page.py:535 元素描述为: 连接设备历史
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="b64e08bd-0be9-4265-9b1d-fb680463caae", element="20db8040-63d7-4418-aaa3-49db243ac377")>
+INFO     test_case:base_page.py:555 连接设备历史 locator: ('id', 'com.mega.carsettings:id/iv_arrow')
+INFO     test_case:base_page.py:535 元素描述为: 连接设备id
+INFO     test_case:conftest.py:247 正在关闭驱动
+INFO     test_case:conftest.py:249 关闭驱动成功！
+INFO     test_case:conftest.py:56 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.btphone.ui.BtPhoneActivity', 'appPackage': 'com.mega.btphone'}
+INFO     test_case:conftest.py:72 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.btphone.ui.BtPhoneActivity', 'appPackage': 'com.mega.btphone'}
+INFO     test_case:conftest.py:244 
+    初始化蓝牙电话驱动
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:535 元素描述为: 获取连接蓝牙按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="d55971c9-b075-4fa9-891a-d7ac74685f71", element="ec85449d-5204-4af3-9c61-83c982a90638")>
+INFO     test_case:base_page.py:555 获取连接蓝牙按钮 locator: ('id', 'com.mega.btphone:id/go_setting_in_disconnect')
+INFO     test_case:base_page.py:535 元素描述为: 蓝牙开关按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="d55971c9-b075-4fa9-891a-d7ac74685f71", element="e9e61935-34ae-4de2-8c93-4b65890680ba")>
+INFO     test_case:base_page.py:555 蓝牙开关按钮 locator: ('id', 'android:id/switch_widget')
+INFO     test_case:test_btphone.py:67 蓝牙开关属性为: true
+INFO     test_case:test_btphone.py:71 蓝牙已打开
+INFO     test_case:base_page.py:535 元素描述为: 连接设备历史
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="d55971c9-b075-4fa9-891a-d7ac74685f71", element="b22c1fe6-4320-4a88-ba48-d88613ba0396")>
+INFO     test_case:base_page.py:555 连接设备历史 locator: ('id', 'com.mega.carsettings:id/iv_arrow')
+INFO     test_case:base_page.py:535 元素描述为: 连接设备id
+INFO     test_case:base_page.py:553 web_elem: <appium.webdriver.webelement.WebElement (session="d55971c9-b075-4fa9-891a-d7ac74685f71", element="0181d30b-92d2-42ea-a3d8-eb106d42fca4")>
+INFO     test_case:base_page.py:555 连接设备id locator: ('id', 'android:id/title')
+INFO     test_case:base_page.py:535 元素描述为: '知道了' alert
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="d55971c9-b075-4fa9-891a-d7ac74685f71", element="5ee3fb81-3ee2-4fe2-8cbb-837fb8ad1f32")>
+INFO     test_case:base_page.py:555 '知道了' alert locator: ('id', 'com.mega.carsettings:id/tv_sure')
+INFO     test_case:base_page.py:535 元素描述为: 配对失败alert
+ERROR    test_case:base_page.py:563 元素 配对失败alert 的表达式 ('id', 'com.mega.carsettings:id/tv_title') 未定位到: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.callee$0$0$ (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)
+    at tryCatch (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at run (/Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/es6.promise.js:75:1)
+    at /Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/es6.promise.js:92:1
+    at flush (/Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/_microtask.js:18:1)
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+INFO     test_case:base_page.py:566 错误截图为: /Users/yuxiang/PycharmProjects/chery_app_test/logs/imgs/2023-06-28-10-26-28.png
+INFO     test_case:base_page.py:535 元素描述为: '知道了' alert
+ERROR    test_case:base_page.py:563 元素 '知道了' alert 的表达式 ('id', 'com.mega.carsettings:id/tv_sure') 未定位到: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.callee$0$0$ (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)
+    at tryCatch (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at run (/Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/es6.promise.js:75:1)
+    at /Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/es6.promise.js:92:1
+    at flush (/Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/_microtask.js:18:1)
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+INFO     test_case:base_page.py:566 错误截图为: /Users/yuxiang/PycharmProjects/chery_app_test/logs/imgs/2023-06-28-10-26-40.png
+ERROR    test_case:test_btphone.py:95 'bool' object has no attribute 'click'
+INFO     test_case:conftest.py:247 正在关闭驱动
+INFO     test_case:conftest.py:249 关闭驱动成功！

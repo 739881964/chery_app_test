@@ -1,0 +1,22 @@
+INFO     test_case:conftest.py:56 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:72 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:158 
+    初始化声音驱动
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:535 元素描述为: 声音按钮
+ERROR    test_case:base_page.py:563 元素 声音按钮 的表达式 ('id', 'com.mega.carsettings:id/menu_sound') 未定位到: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.callee$0$0$ (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)
+    at tryCatch (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at run (/Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/es6.promise.js:75:1)
+    at /Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/es6.promise.js:92:1
+    at flush (/Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/_microtask.js:18:1)
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+INFO     test_case:base_page.py:566 错误截图为: /Users/yuxiang/PycharmProjects/chery_app_test/logs/imgs/2023-06-28-10-51-05.png
+INFO     test_case:conftest.py:161 正在关闭驱动
+INFO     test_case:conftest.py:163 关闭驱动成功！

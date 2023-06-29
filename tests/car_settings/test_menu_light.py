@@ -6,6 +6,7 @@
 # 当前系统时间：10:47
 # 用于创建文件的IDE的名称: PyCharm
 
+import allure
 import logging
 import pytest
 
@@ -13,11 +14,14 @@ from data.meun_light_data import light_value_data
 from scripts.logger import logger
 
 
+@allure.feature('车辆设置-外灯')
 class TestMenuLight:
     """
     外灯
     """
 
+    @allure.story('大灯调节操作')
+    @pytest.mark.flaky(reruns=3)
     @pytest.mark.set_light_case
     @pytest.mark.parametrize('data', light_value_data)
     def test_set_light(self, data, init_menu_light):
