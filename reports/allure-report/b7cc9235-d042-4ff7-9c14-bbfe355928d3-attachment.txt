@@ -1,0 +1,14 @@
+INFO     test_case:base_page.py:133 wait_locator: ('id', 'com.mega.carsettings:id/sw_rearview_mirror')
+INFO     test_case:base_page.py:133 wait_locator: ('id', 'com.mega.carsettings:id/sw_rearview_mirror')
+INFO     test_case:base_page.py:133 wait_locator: ('id', 'com.mega.carsettings:id/sw_rearview_mirror')
+INFO     test_case:base_page.py:133 wait_locator: ('id', 'com.mega.carsettings:id/sw_rearview_mirror')
+INFO     test_case:base_page.py:133 wait_locator: ('id', 'com.mega.carsettings:id/sw_rearview_mirror')
+ERROR    test_case:test_common_used.py:48 assert 'false' != 'false'
+INFO     test_case:base_page.py:133 wait_locator: ('id', 'com.mega.carsettings:id/sw_rearview_mirror')
+INFO     test_case:base_page.py:133 wait_locator: ('id', 'com.mega.carsettings:id/sw_rearview_mirror')
+INFO     test_case:base_page.py:133 wait_locator: ('id', 'com.mega.carsettings:id/sw_rearview_mirror')
+INFO     test_case:base_page.py:133 wait_locator: ('id', 'com.mega.carsettings:id/sw_rearview_mirror')
+INFO     test_case:base_page.py:133 wait_locator: ('id', 'com.mega.carsettings:id/sw_rearview_mirror')
+ERROR    test_case:test_common_used.py:48 assert 'false' != 'false'
+INFO     test_case:conftest.py:109 正在关闭驱动
+INFO     test_case:conftest.py:111 关闭驱动成功！

@@ -1,0 +1,12 @@
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "位置灯")]')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "位置灯")]')
+ERROR    test_case:test_menu_light.py:94 result !=  true
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "位置灯")]')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "位置灯")]')
+ERROR    test_case:test_menu_light.py:94 result !=  true
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "位置灯")]')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "位置灯")]')
+ERROR    test_case:test_menu_light.py:94 result !=  true
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "位置灯")]')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "位置灯")]')
+ERROR    test_case:test_menu_light.py:94 result !=  true

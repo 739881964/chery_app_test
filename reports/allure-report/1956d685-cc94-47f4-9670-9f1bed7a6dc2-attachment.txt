@@ -1,0 +1,25 @@
+INFO     test_case:conftest.py:76 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.chery.gallery.ui.ImageActivity', 'appPackage': 'com.mega.chery.gallery'}
+INFO     test_case:conftest.py:92 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.chery.gallery.ui.ImageActivity', 'appPackage': 'com.mega.chery.gallery'}
+INFO     test_case:conftest.py:248 
+    初始化图库驱动
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:535 元素描述为: 本地-编辑
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="846f269d-6ccd-4aa4-820e-cb5cd54d87d6", element="10134843-bb62-4acf-a687-9763aaf23388")>
+INFO     test_case:base_page.py:555 本地-编辑 locator: ('id', 'com.mega.chery.gallery:id/editBtn')
+INFO     test_case:base_page.py:535 元素描述为: 删除按钮
+ERROR    test_case:base_page.py:563 元素 删除按钮 的表达式 ('id', 'com.mega.chery.gallery:id/deleteBtn') 未定位到: Message: 
+
+INFO     test_case:base_page.py:566 错误截图为: /Users/yuxiang/PycharmProjects/chery_app_test/logs/imgs/2023-07-06-10-09-01.png
+INFO     test_case:test_gallery.py:143 before delete property is : True
+INFO     test_case:base_page.py:535 元素描述为: 全选
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="846f269d-6ccd-4aa4-820e-cb5cd54d87d6", element="5924547d-7649-4311-bac9-a5ce4c24ab57")>
+INFO     test_case:base_page.py:555 全选 locator: ('id', 'com.mega.chery.gallery:id/selectAllBtn')
+INFO     test_case:base_page.py:535 元素描述为: 删除按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="846f269d-6ccd-4aa4-820e-cb5cd54d87d6", element="b43752ba-cad4-4bc7-88e7-472f9f32e6e5")>
+INFO     test_case:base_page.py:555 删除按钮 locator: ('id', 'com.mega.chery.gallery:id/deleteBtn')
+INFO     test_case:test_gallery.py:146 after delete property is : <pages.base_page.Element object at 0x105b585e0>
+INFO     test_case:test_gallery.py:149 图片已被全部选中
+INFO     test_case:conftest.py:251 正在关闭驱动
+INFO     test_case:conftest.py:253 关闭驱动成功！

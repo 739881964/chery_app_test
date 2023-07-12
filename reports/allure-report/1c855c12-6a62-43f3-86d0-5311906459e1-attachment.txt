@@ -1,0 +1,31 @@
+INFO     test_case:conftest.py:76 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:92 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:202 
+    初始化驾驶驱动
+    :return:
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:535 元素描述为: 驾驶模式选择
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="fa07e03d-b6d9-4809-8c6f-52b9d28c5888", element="a221d6c6-6e8f-46e3-ba11-8b13bd8f8fe1")>
+INFO     test_case:base_page.py:555 驾驶模式选择 locator: ('id', 'com.mega.carsettings:id/menu_drive')
+INFO     test_case:test_drive.py:39 选择的能量回收的等级为: 关闭
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[@content-desc="关闭"]')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[@content-desc="关闭"]')
+ERROR    test_case:test_drive.py:50 True
+assert 'true' == 'false'
+  - false
+  + true
+INFO     test_case:test_drive.py:39 选择的能量回收的等级为: 关闭
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[@content-desc="关闭"]')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[@content-desc="关闭"]')
+ERROR    test_case:test_drive.py:50 True
+assert 'true' == 'false'
+  - false
+  + true
+INFO     test_case:test_drive.py:39 选择的能量回收的等级为: 关闭
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[@content-desc="关闭"]')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[@content-desc="关闭"]')
+ERROR    test_case:test_drive.py:50 True
+assert 'true' == 'false'
+  - false
+  + true

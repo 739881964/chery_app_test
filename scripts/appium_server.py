@@ -6,7 +6,6 @@
 # 当前系统时间：13:11
 # 用于创建文件的IDE的名称: PyCharm
 
-
 import subprocess
 import time
 import os
@@ -18,7 +17,7 @@ from config import Appium_Log
 
 class AppiumServer:
     """
-    运行脚本前，启动appium服务，结束后，关闭appium服务
+    启动appium服务，关闭appium服务
     """
 
     def __init__(self, port=4723):
@@ -42,15 +41,15 @@ class AppiumServer:
     def start_appium(self):
         bp = int(self.port) + 1
         self.kill_appium_server(self.port)
-        # self.kill_appium_server(port=bp)
+        self.kill_appium_server(port=bp)
         # appium_log = os.path.join(DirPath.Logs, 'Appium_' + name + '.log')
         # 后台执行
-        cmd = "appium -p " + str(self.port) + " -g " + Appium_Log + " -a 127.0.0.1"
-        # cmd = "appium -p " + str(self.port) + " -bp " + str(
-        #     bp) + " -g " + Appium_Log + " --session-override -a 127.0.0.1 --command-timeout 300"
+        # cmd = "appium -p " + str(self.port) + " -g " + Appium_Log + " -a 127.0.0.1"
+        cmd = "appium -p " + str(self.port) + " -bp " + str(
+            bp) + " -g " + Appium_Log + " --session-override -a 127.0.0.1 --command-timeout 300"
         logger.info(cmd)
         self.send_cmd(cmd)
-        time.sleep(3)
+        time.sleep(5)
 
     def kill_appium_server(self, port=4723):
         try:
@@ -79,5 +78,5 @@ class AppiumServer:
 
 if __name__ == '__main__':
     appium_server = AppiumServer()
-    appium_server.start_appium()
-    # appium_server.kill_appium_server()
+    # appium_server.start_appium()
+    appium_server.kill_appium_server()

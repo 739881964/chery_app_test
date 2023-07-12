@@ -24,23 +24,58 @@ class MenuLightPage(BasePage):
     # elements
     menu_light_elem = Element(locator=menu_light_locator, method='click', desc='外灯')
 
+    def light_delay_elem(self, value):
+        """
+        大灯延时元素
+        :param value:
+        :return:
+        """
+        return self.wait_click_element((By.XPATH, f'//android.widget.RadioButton[@content-desc="{value}"]'))
+
+    def set_light_delay(self, value):
+        """
+        设置大灯延时操作
+        :param value:
+        :return:
+        """
+        self.light_delay_elem(value).click()
+        sleep(3)
+
     # @property
     def light_set_elem(self, value) -> WebElement:
         """
-        大灯调节
+        大灯调节元素
         :return:
         """
         # f'//android.widget.RadioButton[@content-desc="{value}"]'
         return self.wait_click_element((By.XPATH, f'//android.widget.RadioButton[contains(@content-desc, "{value}")]'))
 
-    def set_light(self, value):
+    def light_high_control(self, value):
         """
-        设置大灯模式
+        大灯高度调节元素
+        :param value:
         :return:
         """
-        self.menu_light_elem.click()
+        return self.wait_click_element((By.XPATH, f'//android.widget.TextView[@content-desc="{value}"]'))
+
+    def set_light_high(self, value):
+        """
+        设置大灯高度调节操作
+        :param value:
+        :return:
+        """
+        # self.menu_light_elem.click()
+        self.light_high_control(value).click()
+        sleep(3)
+
+    def set_light(self, value):
+        """
+        设置大灯调节操作
+        :return:
+        """
+        # self.menu_light_elem.click()
         self.light_set_elem(value).click()
-        sleep(4)
+        sleep(3)
 
 
 if __name__ == '__main__':

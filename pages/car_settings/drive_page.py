@@ -22,6 +22,30 @@ class DrivePage(BasePage):
     # elements
     drive_elem = Element(drive_locator, 'click', desc='驾驶模式选择')
 
+    def swipe_to_energy(self):
+        """
+        滑动至能量回收位置
+        :return:
+        """
+        self.swipe_up_and_down(1800, 900, 1800, 400)
+
+    def energy_recovery_level_select(self, level) -> WebElement:
+        """
+        选择能量回收等级
+        :param level:
+        :return:
+        """
+        return self.wait_click_element((By.XPATH, f'//android.widget.RadioButton[@content-desc="{level}"]'))
+
+    def select_energy(self, name):
+        """
+        选择能量回收模式步骤
+        :param name:
+        :return:
+        """
+        # self.drive_elem.click()
+        self.energy_recovery_level_select(name).click()
+
     def drive_list_select_elem(self, value) -> WebElement:
         """
         不同的驾驶模式选择
@@ -33,6 +57,7 @@ class DrivePage(BasePage):
     def select_drive_mode(self, value):
         """
         选择驾驶模式操作
+        :param value:
         :return:
         """
         self.drive_elem.click()

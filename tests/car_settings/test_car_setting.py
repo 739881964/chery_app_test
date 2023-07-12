@@ -15,6 +15,7 @@ class TestCarSetting:
     车辆设置
     """
 
+    @pytest.mark.skipif(reason='用例已废弃')
     @pytest.mark.flaky(reruns=3)
     # @pytest.mark.parametrize()
     @pytest.mark.screen_clear

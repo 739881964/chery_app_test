@@ -1,1 +1,0 @@
-{"uuid": "67390238-41f4-44bd-b609-579f6c7b33a4", "children": ["aa0413f2-59ff-4f42-b1c5-5b1b9a84bf44"], "befores": [{"name": "init_wifi", "status": "passed", "start": 1687919872319, "stop": 1687919887713}], "afters": [{"name": "init_wifi::0", "status": "passed", "start": 1687919902315, "stop": 1687919902607}], "start": 1687919872319, "stop": 1687919902608}

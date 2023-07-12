@@ -1,0 +1,66 @@
+INFO     test_case:conftest.py:76 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.lion.business.home.ui.HomeActivity', 'appPackage': 'com.lion.media'}
+INFO     test_case:conftest.py:92 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.lion.business.home.ui.HomeActivity', 'appPackage': 'com.lion.media'}
+INFO     test_case:conftest.py:157 
+    初始化本地畅想音乐
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:535 元素描述为: 音源切换
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="c55a8d4d-1a6e-4226-9c57-6437576c4e42", element="51a14afe-c4e3-4ac5-b5a0-70b7f3cedd66")>
+INFO     test_case:base_page.py:555 音源切换 locator: ('id', 'com.lion.media:id/logoLl')
+INFO     test_case:base_page.py:535 元素描述为: 本地音乐
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="c55a8d4d-1a6e-4226-9c57-6437576c4e42", element="aef1140f-20f6-4b44-a6bd-3fdd10f8c334")>
+INFO     test_case:base_page.py:555 本地音乐 locator: ('id', 'com.lion.media:id/musicLocalTv')
+INFO     test_case:base_page.py:133 wait_locator: <appium.webdriver.webelement.WebElement (session="c55a8d4d-1a6e-4226-9c57-6437576c4e42", element="58c0db61-09ca-4b53-b082-57a7a00e91fc")>
+INFO     test_case:test_media.py:41 broadcast music name is : <<以父之名>>
+INFO     test_case:base_page.py:535 元素描述为: 正在播放的音乐名称
+INFO     test_case:conftest.py:160 正在关闭驱动
+INFO     test_case:conftest.py:162 关闭驱动成功！
+INFO     test_case:conftest.py:76 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.lion.business.home.ui.HomeActivity', 'appPackage': 'com.lion.media'}
+INFO     test_case:conftest.py:92 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.lion.business.home.ui.HomeActivity', 'appPackage': 'com.lion.media'}
+INFO     test_case:conftest.py:157 
+    初始化本地畅想音乐
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:535 元素描述为: 音源切换
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="3ed07ae0-3a4b-4e62-a85d-a6adc2aaa0d7", element="5197b5d7-fcab-4206-98fc-8c2f2d1d66d6")>
+INFO     test_case:base_page.py:555 音源切换 locator: ('id', 'com.lion.media:id/logoLl')
+INFO     test_case:base_page.py:535 元素描述为: 本地音乐
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="3ed07ae0-3a4b-4e62-a85d-a6adc2aaa0d7", element="9b801723-ee9a-4b59-ade4-325314a47667")>
+INFO     test_case:base_page.py:555 本地音乐 locator: ('id', 'com.lion.media:id/musicLocalTv')
+INFO     test_case:base_page.py:133 wait_locator: <appium.webdriver.webelement.WebElement (session="3ed07ae0-3a4b-4e62-a85d-a6adc2aaa0d7", element="3c3968bc-0e0e-4c46-b755-a8a9afd7c10d")>
+INFO     test_case:test_media.py:41 broadcast music name is : <<以父之名>>
+INFO     test_case:base_page.py:535 元素描述为: 正在播放的音乐名称
+INFO     test_case:conftest.py:160 正在关闭驱动
+INFO     test_case:conftest.py:162 关闭驱动成功！
+INFO     test_case:conftest.py:76 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.lion.business.home.ui.HomeActivity', 'appPackage': 'com.lion.media'}
+INFO     test_case:conftest.py:92 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.lion.business.home.ui.HomeActivity', 'appPackage': 'com.lion.media'}
+INFO     test_case:conftest.py:157 
+    初始化本地畅想音乐
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:535 元素描述为: 音源切换
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="8beb4397-13ca-4b6f-ad20-cc73f27a9cae", element="e98b6f15-9f7b-4cf0-a0e0-0b58a7d7fc65")>
+INFO     test_case:base_page.py:555 音源切换 locator: ('id', 'com.lion.media:id/logoLl')
+INFO     test_case:base_page.py:535 元素描述为: 本地音乐
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="8beb4397-13ca-4b6f-ad20-cc73f27a9cae", element="38d8d712-8ea6-44bc-a0a7-769e47b16661")>
+INFO     test_case:base_page.py:555 本地音乐 locator: ('id', 'com.lion.media:id/musicLocalTv')
+INFO     test_case:base_page.py:133 wait_locator: <appium.webdriver.webelement.WebElement (session="8beb4397-13ca-4b6f-ad20-cc73f27a9cae", element="556282ea-94f7-49fb-b146-d79d4059bf9c")>
+INFO     test_case:test_media.py:41 broadcast music name is : <<夜曲>>
+INFO     test_case:base_page.py:535 元素描述为: 正在播放的音乐名称
+INFO     test_case:base_page.py:553 web_elem: <appium.webdriver.webelement.WebElement (session="8beb4397-13ca-4b6f-ad20-cc73f27a9cae", element="23cb9137-dfc9-4663-99b2-5257a4a522f9")>
+INFO     test_case:base_page.py:555 正在播放的音乐名称 locator: ('id', 'com.lion.media:id/nameTv')
+INFO     test_case:base_page.py:535 元素描述为: 循环模式
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="8beb4397-13ca-4b6f-ad20-cc73f27a9cae", element="7f94fa81-4149-4594-ad21-729c26024ee9")>
+INFO     test_case:base_page.py:555 循环模式 locator: ('id', 'com.lion.media:id/playModelIv')
+INFO     test_case:base_page.py:535 元素描述为: 循环模式
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="8beb4397-13ca-4b6f-ad20-cc73f27a9cae", element="3c696b29-4cde-4a77-8887-e9c6718b496e")>
+INFO     test_case:base_page.py:555 循环模式 locator: ('id', 'com.lion.media:id/playModelIv')
+INFO     test_case:base_page.py:535 元素描述为: 循环模式
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="8beb4397-13ca-4b6f-ad20-cc73f27a9cae", element="8bc5e61e-654e-49dd-a1e8-bf92e42b9002")>
+INFO     test_case:base_page.py:555 循环模式 locator: ('id', 'com.lion.media:id/playModelIv')
+INFO     test_case:base_page.py:535 元素描述为: 正在播放的音乐名称
+INFO     test_case:base_page.py:553 web_elem: <appium.webdriver.webelement.WebElement (session="8beb4397-13ca-4b6f-ad20-cc73f27a9cae", element="bba847a2-463f-4692-ad48-b4ab442a2f64")>
+INFO     test_case:base_page.py:555 正在播放的音乐名称 locator: ('id', 'com.lion.media:id/nameTv')
+INFO     test_case:test_media.py:64 切换 <顺序播放> 播放模式成功, 当前播放的歌曲 <<夜的第七章>> 与列表第五首歌曲 <<夜的第七章>> 保持一致
+INFO     test_case:conftest.py:160 正在关闭驱动
+INFO     test_case:conftest.py:162 关闭驱动成功！

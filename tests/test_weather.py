@@ -23,7 +23,7 @@ class TestWeather:
     @allure.story('新增城市测试')
     @pytest.mark.parametrize('city_name', new_city)
     @pytest.mark.flaky(rerun=3)
-    @pytest.mark.add_city
+    @pytest.mark.add_city_function
     def test_add_city(self, init_weather, city_name):
         """
         新增城市功能

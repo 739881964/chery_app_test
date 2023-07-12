@@ -1,0 +1,23 @@
+INFO     test_case:conftest.py:76 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:92 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:232 
+    初始化车辆设置-显示驱动
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:conftest.py:235 <pages.car_settings.show_page.ShowPage object at 0x105d9d8e0>
+INFO     test_case:base_page.py:535 元素描述为: 显示功能按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="1a5760a0-ac91-4941-8afd-e8f334ce5aff", element="c4b7ca24-564e-4ed1-a5d7-53b10960b0b3")>
+INFO     test_case:base_page.py:555 显示功能按钮 locator: ('id', 'com.mega.carsettings:id/menu_display')
+INFO     test_case:base_page.py:535 元素描述为: 视频限制开关
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="1a5760a0-ac91-4941-8afd-e8f334ce5aff", element="8b07cb3b-16be-493c-9217-959c9a86fc5c")>
+INFO     test_case:base_page.py:555 视频限制开关 locator: ('id', 'android:id/switch_widget')
+INFO     test_case:base_page.py:535 元素描述为: 视频限制开关
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="1a5760a0-ac91-4941-8afd-e8f334ce5aff", element="25e2cefa-9df8-4254-8182-068958a36df3")>
+INFO     test_case:base_page.py:555 视频限制开关 locator: ('id', 'android:id/switch_widget')
+INFO     test_case:base_page.py:535 元素描述为: 视频限制开关
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="1a5760a0-ac91-4941-8afd-e8f334ce5aff", element="1a69a7ef-396b-4759-9611-2d4511e2377b")>
+INFO     test_case:base_page.py:555 视频限制开关 locator: ('id', 'android:id/switch_widget')
+INFO     test_case:test_show.py:105 video limiter checked is: false
+INFO     test_case:test_show.py:108 video limiter checked is: true
+INFO     test_case:conftest.py:237 正在关闭驱动
+INFO     test_case:conftest.py:239 关闭驱动成功！

@@ -1,0 +1,120 @@
+INFO     test_case:conftest.py:76 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:92 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:232 
+    初始化车辆设置-显示驱动
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:conftest.py:235 <pages.car_settings.show_page.ShowPage object at 0x106020880>
+INFO     test_case:base_page.py:535 元素描述为: 显示功能按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="34633cfd-4db7-4015-99d7-63c116550ff6", element="44913b13-17a7-4e52-b4c8-6408bd9faa0e")>
+INFO     test_case:base_page.py:555 显示功能按钮 locator: ('id', 'com.mega.carsettings:id/menu_display')
+INFO     test_case:base_page.py:535 元素描述为: 主题选择功能按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="34633cfd-4db7-4015-99d7-63c116550ff6", element="0d5a280e-3705-4437-8ce5-c7b26e3b20a1")>
+INFO     test_case:base_page.py:555 主题选择功能按钮 locator: ('xpath', '//android.widget.TextView[@content-desc="主题设置"]')
+INFO     test_case:test_show.py:175 选择的主题为: cb_fashion
+INFO     test_case:base_page.py:133 wait_locator: ('id', 'com.mega.carsettings:id/cb_fashion')
+ERROR    test_case:base_page.py:138 元素 ('id', 'com.mega.carsettings:id/cb_fashion') 没有定位到: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.callee$0$0$ (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)
+    at tryCatch (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at run (/Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/es6.promise.js:75:1)
+    at /Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/es6.promise.js:92:1
+    at flush (/Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/_microtask.js:18:1)
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+INFO     test_case:base_page.py:187 错误截图为: /Users/yuxiang/PycharmProjects/chery_app_test/logs/imgs/2023-07-06-10-00-21.png
+INFO     test_case:conftest.py:237 正在关闭驱动
+INFO     test_case:conftest.py:239 关闭驱动成功！
+INFO     test_case:conftest.py:76 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:92 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:232 
+    初始化车辆设置-显示驱动
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:conftest.py:235 <pages.car_settings.show_page.ShowPage object at 0x1060203d0>
+INFO     test_case:base_page.py:535 元素描述为: 显示功能按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="aacb374f-0980-4d4f-9aee-dfc4bb151cbe", element="acd42cbc-4f20-43ae-8dd4-d602b5377d5a")>
+INFO     test_case:base_page.py:555 显示功能按钮 locator: ('id', 'com.mega.carsettings:id/menu_display')
+INFO     test_case:base_page.py:535 元素描述为: 主题选择功能按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="aacb374f-0980-4d4f-9aee-dfc4bb151cbe", element="25188c18-8053-462c-b102-1f85f18ff103")>
+INFO     test_case:base_page.py:555 主题选择功能按钮 locator: ('xpath', '//android.widget.TextView[@content-desc="主题设置"]')
+INFO     test_case:test_show.py:175 选择的主题为: cb_fashion
+INFO     test_case:base_page.py:133 wait_locator: ('id', 'com.mega.carsettings:id/cb_fashion')
+ERROR    test_case:base_page.py:138 元素 ('id', 'com.mega.carsettings:id/cb_fashion') 没有定位到: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.callee$0$0$ (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)
+    at tryCatch (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at run (/Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/es6.promise.js:75:1)
+    at /Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/es6.promise.js:92:1
+    at flush (/Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/_microtask.js:18:1)
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+INFO     test_case:base_page.py:187 错误截图为: /Users/yuxiang/PycharmProjects/chery_app_test/logs/imgs/2023-07-06-10-00-49.png
+INFO     test_case:conftest.py:237 正在关闭驱动
+INFO     test_case:conftest.py:239 关闭驱动成功！
+INFO     test_case:conftest.py:76 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:92 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:232 
+    初始化车辆设置-显示驱动
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:conftest.py:235 <pages.car_settings.show_page.ShowPage object at 0x10603f820>
+INFO     test_case:base_page.py:535 元素描述为: 显示功能按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="579f32a6-a0fe-4e82-8dc4-1834ef4aaca7", element="571eaf7b-a28c-4729-b13e-f87e06a3d19b")>
+INFO     test_case:base_page.py:555 显示功能按钮 locator: ('id', 'com.mega.carsettings:id/menu_display')
+INFO     test_case:base_page.py:535 元素描述为: 主题选择功能按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="579f32a6-a0fe-4e82-8dc4-1834ef4aaca7", element="c68973e1-7dd0-4c1a-9707-9e54ab2a8c6c")>
+INFO     test_case:base_page.py:555 主题选择功能按钮 locator: ('xpath', '//android.widget.TextView[@content-desc="主题设置"]')
+INFO     test_case:test_show.py:175 选择的主题为: cb_fashion
+INFO     test_case:base_page.py:133 wait_locator: ('id', 'com.mega.carsettings:id/cb_fashion')
+ERROR    test_case:base_page.py:138 元素 ('id', 'com.mega.carsettings:id/cb_fashion') 没有定位到: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.callee$0$0$ (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)
+    at tryCatch (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at run (/Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/es6.promise.js:75:1)
+    at /Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/es6.promise.js:92:1
+    at flush (/Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/_microtask.js:18:1)
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+INFO     test_case:base_page.py:187 错误截图为: /Users/yuxiang/PycharmProjects/chery_app_test/logs/imgs/2023-07-06-10-01-19.png
+INFO     test_case:conftest.py:237 正在关闭驱动
+INFO     test_case:conftest.py:239 关闭驱动成功！
+INFO     test_case:conftest.py:76 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:92 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:232 
+    初始化车辆设置-显示驱动
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:conftest.py:235 <pages.car_settings.show_page.ShowPage object at 0x1060f02b0>
+INFO     test_case:base_page.py:535 元素描述为: 显示功能按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="7ea08439-8be4-4f25-bdfa-ba6a41efc704", element="c841d71b-9599-4881-aede-abcb408a3fa8")>
+INFO     test_case:base_page.py:555 显示功能按钮 locator: ('id', 'com.mega.carsettings:id/menu_display')
+INFO     test_case:base_page.py:535 元素描述为: 主题选择功能按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="7ea08439-8be4-4f25-bdfa-ba6a41efc704", element="52b585af-351f-46dc-8927-a41eecf938d9")>
+INFO     test_case:base_page.py:555 主题选择功能按钮 locator: ('xpath', '//android.widget.TextView[@content-desc="主题设置"]')
+INFO     test_case:test_show.py:175 选择的主题为: cb_fashion
+INFO     test_case:base_page.py:133 wait_locator: ('id', 'com.mega.carsettings:id/cb_fashion')
+ERROR    test_case:base_page.py:138 元素 ('id', 'com.mega.carsettings:id/cb_fashion') 没有定位到: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.callee$0$0$ (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)
+    at tryCatch (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at run (/Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/es6.promise.js:75:1)
+    at /Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/es6.promise.js:92:1
+    at flush (/Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/_microtask.js:18:1)
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+INFO     test_case:base_page.py:187 错误截图为: /Users/yuxiang/PycharmProjects/chery_app_test/logs/imgs/2023-07-06-10-01-48.png
+INFO     test_case:conftest.py:237 正在关闭驱动
+INFO     test_case:conftest.py:239 关闭驱动成功！

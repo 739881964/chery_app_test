@@ -69,9 +69,12 @@ class WiFiPage(BasePage, Element):
         是否连接
         :return:
         """
-        if self.connect_already_elem:
-            return True
-        return False
+        try:
+            if self.connect_already_elem:
+                return True
+        except Exception as e:
+            logger.warning(e)
+            return False
 
     @property
     def wifi_button_property(self) -> bool:

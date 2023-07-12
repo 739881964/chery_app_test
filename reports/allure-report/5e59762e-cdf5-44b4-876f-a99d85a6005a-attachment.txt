@@ -1,0 +1,16 @@
+INFO     test_case:conftest.py:76 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:92 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:105 
+    初始化'常用'驱动
+    :return:
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:535 元素描述为: 常用按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="481ccb28-fa87-4f89-8856-2579f8594e91", element="c58e91f9-b5f8-4830-8835-04bd074584c0")>
+INFO     test_case:base_page.py:555 常用按钮 locator: ('id', 'com.mega.carsettings:id/menu_common_used')
+INFO     test_case:base_page.py:133 wait_locator: ('id', 'com.mega.carsettings:id/sw_left_child_lock')
+INFO     test_case:base_page.py:133 wait_locator: ('id', 'com.mega.carsettings:id/sw_left_child_lock')
+INFO     test_case:base_page.py:133 wait_locator: ('id', 'com.mega.carsettings:id/sw_left_child_lock')
+INFO     test_case:base_page.py:133 wait_locator: ('id', 'com.mega.carsettings:id/sw_left_child_lock')
+INFO     test_case:base_page.py:133 wait_locator: ('id', 'com.mega.carsettings:id/sw_left_child_lock')
+ERROR    test_case:test_common_used.py:48 assert 'false' != 'false'

@@ -1,0 +1,22 @@
+INFO     test_case:conftest.py:76 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.chery.gallery.ui.ImageActivity', 'appPackage': 'com.mega.chery.gallery'}
+INFO     test_case:conftest.py:92 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.chery.gallery.ui.ImageActivity', 'appPackage': 'com.mega.chery.gallery'}
+INFO     test_case:conftest.py:248 
+    初始化图库驱动
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:535 元素描述为: 本地-编辑
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="9a4a5cbe-4f71-40a3-8c3f-d8ecf1aefa5c", element="9060135f-1dca-4da2-99d6-0f52e17a8471")>
+INFO     test_case:base_page.py:555 本地-编辑 locator: ('id', 'com.mega.chery.gallery:id/editBtn')
+INFO     test_case:base_page.py:535 元素描述为: 全选
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="9a4a5cbe-4f71-40a3-8c3f-d8ecf1aefa5c", element="45edb3a7-dd87-4cb2-aca1-a0fc7f9e9055")>
+INFO     test_case:base_page.py:555 全选 locator: ('id', 'com.mega.chery.gallery:id/selectAllBtn')
+INFO     test_case:base_page.py:535 元素描述为: 图片中导出按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="9a4a5cbe-4f71-40a3-8c3f-d8ecf1aefa5c", element="9b5dd9d2-5f75-485c-be7e-34a00107d7c1")>
+INFO     test_case:base_page.py:555 图片中导出按钮 locator: ('id', 'com.mega.chery.gallery:id/exportBtn')
+INFO     test_case:base_page.py:152 wait_locator: ('xpath', '//*[contains(@text, "未识别到")]')
+INFO     test_case:base_page.py:411 获取toast成功: 未识别到可导出USB设备
+INFO     test_case:test_gallery.py:104 错误提示为: 未识别到可导出USB设备
+INFO     test_case:test_gallery.py:106 导出失败，无usb设备，测试异常导出图片成功
+INFO     test_case:conftest.py:251 正在关闭驱动
+INFO     test_case:conftest.py:253 关闭驱动成功！

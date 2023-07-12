@@ -1,0 +1,18 @@
+INFO     test_case:conftest.py:76 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.chery.gallery.ui.ImageActivity', 'appPackage': 'com.mega.chery.gallery'}
+INFO     test_case:conftest.py:92 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.chery.gallery.ui.ImageActivity', 'appPackage': 'com.mega.chery.gallery'}
+INFO     test_case:conftest.py:248 
+    初始化图库驱动
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:133 wait_locator: <appium.webdriver.webelement.WebElement (session="2ef5ffaf-0a73-47e7-a7cb-6378e07564e3", element="cb9faab0-d663-42cd-9552-4f1ed29a90c2")>
+INFO     test_case:base_page.py:535 元素描述为: 图片中导出按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="2ef5ffaf-0a73-47e7-a7cb-6378e07564e3", element="6443fba8-253f-47d7-a82a-e869475e4576")>
+INFO     test_case:base_page.py:555 图片中导出按钮 locator: ('id', 'com.mega.chery.gallery:id/exportBtn')
+INFO     test_case:test_gallery.py:290 测试数据为: 未识别到
+INFO     test_case:base_page.py:152 wait_locator: ('xpath', '//*[contains(@text, "未识别到")]')
+INFO     test_case:base_page.py:411 获取toast成功: 未识别到可导出USB设备
+INFO     test_case:test_gallery.py:295 错误提示为: 未识别到可导出USB设备
+INFO     test_case:test_gallery.py:297 导出失败，无usb设备，测试异常导出图片成功
+INFO     test_case:conftest.py:251 正在关闭驱动
+INFO     test_case:conftest.py:253 关闭驱动成功！

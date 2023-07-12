@@ -74,14 +74,60 @@ class ADB:
         bright = self.get_adb_result('adb shell "settings get system screen_brightness"')
         return bright
 
+    def run_monkey_enter(self,
+                         seed: '随机种子数: int' = 1000,
+                         log_level: '日志级别: str' = '-v -v -v',
+                         throttle: '事件结束间隔时间: int' = 100,
+                         touch: '触摸事件: int' = 30,
+                         motion: '滑动事件: int' = 30,
+                         times: '执行多少次: int' = 10000,
+                         white_file=False,
+                         black_file=False,
+                         appoint_package=None,
+                         log_path='/Users/yuxiang/PycharmProjects/chery_app_test/monkey_log.txt',
+                         ):
+        """
+        monkey 稳定性测试
+        :param seed:
+        :param log_level:
+        :param throttle:
+        :param touch:
+        :param motion:
+        :param times:
+        :param white_file:
+        :param black_file:
+        :param appoint_package:
+        :param log_path:
+        :return:
+        """
+        if white_file:
+            monkey_cmd = f'adb shell monkey --pkg-whitelist-file /data/whitelist.txt --pct-touch {touch} ' \
+                         f'--pct-motion {motion} --ignore-crashes --ignore-timeouts --throttle {throttle}' \
+                         f' -s {seed} {log_level} {times} > {log_path}'
+        elif black_file:
+            monkey_cmd = f'adb shell monkey --pkg-blacklist-file /data/blacklist.txt --pct-touch {touch} ' \
+                         f'--pct-motion {motion} --ignore-crashes --ignore-timeouts --throttle {throttle} ' \
+                         f'-s {seed} {log_level} {times} > {log_path}'
+        elif appoint_package:
+            monkey_cmd = f'adb shell monkey -p {appoint_package} --pct-touch {touch}  --pct-motion {motion} ' \
+                         f'--ignore-crashes --ignore-timeouts --throttle {throttle} -s {seed} {log_level} {times} ' \
+                         f'> {log_path}'
+        else:
+            monkey_cmd = f'adb shell monkey --pct-touch {touch} --pct-motion {motion} --ignore-crashes ' \
+                         f'--ignore-timeouts --throttle {throttle} -s {seed} {log_level} {times} > {log_path}'
+
+        logger.info(monkey_cmd)
+        self.run(monkey_cmd)
+
 
 adb = ADB()
 
 if __name__ == '__main__':
-    # model = tf.load_library('../inference.pdmodel')
-    # print(model)
-    # adb = ADB()
-    # res = adb.device_exit()
-    # print(res)
-    # print(adb.get_device_bright)
-    pass
+    ADB().run_monkey_enter(seed=200,
+                           log_level='-v -v -v',
+                           touch=30,
+                           motion=30,
+                           throttle=300,
+                           times=100,
+                           black_file=True,
+                           )

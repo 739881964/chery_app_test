@@ -1,0 +1,14 @@
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "近光灯")]')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "近光灯")]')
+ERROR    test_case:test_menu_light.py:94 result !=  true
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "近光灯")]')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "近光灯")]')
+ERROR    test_case:test_menu_light.py:94 result !=  true
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "近光灯")]')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "近光灯")]')
+ERROR    test_case:test_menu_light.py:94 result !=  true
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "近光灯")]')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "近光灯")]')
+ERROR    test_case:test_menu_light.py:94 result !=  true
+INFO     test_case:conftest.py:294 正在关闭驱动
+INFO     test_case:conftest.py:296 关闭驱动成功！

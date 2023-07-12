@@ -1,0 +1,25 @@
+INFO     test_case:conftest.py:76 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.chery.gallery.ui.ImageActivity', 'appPackage': 'com.mega.chery.gallery'}
+INFO     test_case:conftest.py:92 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.chery.gallery.ui.ImageActivity', 'appPackage': 'com.mega.chery.gallery'}
+INFO     test_case:conftest.py:248 
+    初始化图库驱动
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:535 元素描述为: usb按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="25985e3b-e8c7-4924-8361-e577c39fe321", element="d967aeef-9756-4f22-bcc7-3301a1a37009")>
+INFO     test_case:base_page.py:555 usb按钮 locator: ('xpath', '//android.widget.LinearLayout[@content-desc="本地"]/android.widget.TextView')
+INFO     test_case:base_page.py:535 元素描述为: usb按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="25985e3b-e8c7-4924-8361-e577c39fe321", element="b7dad37d-c0fc-482b-a0b7-c7f7b4ccd7b0")>
+INFO     test_case:base_page.py:555 usb按钮 locator: ('xpath', '//android.widget.LinearLayout[@content-desc="USB"]/android.widget.TextView')
+INFO     test_case:base_page.py:535 元素描述为: usb按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="25985e3b-e8c7-4924-8361-e577c39fe321", element="6c2e1b73-6440-422e-b6ec-3cc3e40dfa2b")>
+INFO     test_case:base_page.py:555 usb按钮 locator: ('xpath', '//android.widget.LinearLayout[@content-desc="USB"]/android.widget.TextView')
+INFO     test_case:base_page.py:535 元素描述为: usb按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="25985e3b-e8c7-4924-8361-e577c39fe321", element="cee8b056-4a6e-4456-ae05-7186f30acfc1")>
+INFO     test_case:base_page.py:555 usb按钮 locator: ('xpath', '//android.widget.LinearLayout[@content-desc="本地"]/android.widget.TextView')
+INFO     test_case:base_page.py:535 元素描述为: usb按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="25985e3b-e8c7-4924-8361-e577c39fe321", element="11e8e643-0a39-40ea-8c9a-478c9348387e")>
+INFO     test_case:base_page.py:555 usb按钮 locator: ('xpath', '//android.widget.LinearLayout[@content-desc="USB"]/android.widget.TextView')
+INFO     test_case:test_gallery.py:351 切换图片来源成功，从 local -> usb
+INFO     test_case:conftest.py:251 正在关闭驱动
+INFO     test_case:conftest.py:253 关闭驱动成功！

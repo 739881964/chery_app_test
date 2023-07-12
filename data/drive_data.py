@@ -15,3 +15,9 @@ drive_data = [
     ('越野', 'true'),
     ('个性化', 'true'),
 ]
+
+energy_level_data = [
+    ('关闭', 'true'),
+    ('舒适', 'true'),
+    ('标准', 'true'),
+]

@@ -31,7 +31,6 @@ from scripts.logger import logger
 
 
 class BasePage:
-
     def __init__(self, driver: Remote):
         """
         初始化驱动

@@ -1,0 +1,15 @@
+INFO     test_case:conftest.py:76 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:92 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:290 
+    初始化灯光驱动
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:535 元素描述为: 外灯
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="af794dd2-9a19-436a-a153-add40f44f799", element="0beb9acd-34a7-457c-810d-5d2e77057101")>
+INFO     test_case:base_page.py:555 外灯 locator: ('id', 'com.mega.carsettings:id/menu_light')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[@content-desc="零秒"]')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[@content-desc="零秒"]')
+ERROR    test_case:test_menu_light.py:44 result !=  true
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[@content-desc="零秒"]')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[@content-desc="零秒"]')
+ERROR    test_case:test_menu_light.py:44 result !=  true

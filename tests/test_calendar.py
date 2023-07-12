@@ -20,6 +20,7 @@ class TestCalendar:
     日历
     """
 
+    @pytest.mark.run(order=6)
     @allure.feature('关闭重要节日提醒')
     @pytest.mark.flaky(reruns=3)
     @pytest.mark.close_reminders
@@ -49,6 +50,7 @@ class TestCalendar:
         finally:
             calendar_page.select_drop_down_elem.click()
 
+    @pytest.mark.run(order=5)
     @allure.feature('打开重要节日提醒')
     @pytest.mark.flaky(reruns=3)
     @pytest.mark.open_reminders
@@ -79,6 +81,7 @@ class TestCalendar:
         finally:
             calendar_page.select_drop_down_elem.click()
 
+    @pytest.mark.run(order=4)
     @allure.feature('打开行程主动提醒')
     @pytest.mark.flaky(reruns=3)
     @pytest.mark.open_itinerary
@@ -108,6 +111,7 @@ class TestCalendar:
         finally:
             calendar_page.select_drop_down_elem.click()
 
+    @pytest.mark.run(order=3)
     @allure.feature('关闭行程主动提醒')
     @pytest.mark.flaky(reruns=3)
     @pytest.mark.close_itinerary
@@ -137,6 +141,7 @@ class TestCalendar:
         finally:
             calendar_page.select_drop_down_elem.click()
 
+    @pytest.mark.run(order=2)
     @allure.feature('新增日程-非全天提醒')
     @pytest.mark.flaky(reruns=3)
     @pytest.mark.parametrize('data', title_exit_data)
@@ -166,6 +171,7 @@ class TestCalendar:
             logger.error(e)
             raise e
 
+    @pytest.mark.run(order=1)
     @allure.feature('新增日程-全天提醒')
     @pytest.mark.flaky(reruns=3)
     @pytest.mark.add_all_day_reminder

@@ -1,0 +1,16 @@
+INFO     test_case:conftest.py:76 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:92 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:232 
+    初始化车辆设置-显示驱动
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:conftest.py:235 <pages.car_settings.show_page.ShowPage object at 0x106053460>
+INFO     test_case:base_page.py:535 元素描述为: 显示功能按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="9a0b9c51-f1c5-4151-888b-a07046842e27", element="c223572d-5e35-4676-be98-9e499ececed8")>
+INFO     test_case:base_page.py:555 显示功能按钮 locator: ('id', 'com.mega.carsettings:id/menu_display')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[@content-desc="白天"]')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[@content-desc="白天"]')
+INFO     test_case:test_show.py:131 show mode checked is: true
+INFO     test_case:test_show.py:135 切换显示模式为 [白天] 成功
+INFO     test_case:conftest.py:237 正在关闭驱动
+INFO     test_case:conftest.py:239 关闭驱动成功！

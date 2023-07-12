@@ -1,0 +1,21 @@
+INFO     test_case:conftest.py:76 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.chery.gallery.ui.ImageActivity', 'appPackage': 'com.mega.chery.gallery'}
+INFO     test_case:conftest.py:92 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.chery.gallery.ui.ImageActivity', 'appPackage': 'com.mega.chery.gallery'}
+INFO     test_case:conftest.py:248 
+    初始化图库驱动
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:535 元素描述为: 图片分类
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="dfc61347-d5f2-43c0-8752-303e1a5ab9a3", element="9505eaf9-0e74-47a0-b63f-c3137892119c")>
+INFO     test_case:base_page.py:555 图片分类 locator: ('id', 'com.mega.chery.gallery:id/viewTypeBtn')
+INFO     test_case:base_page.py:133 wait_locator: <appium.webdriver.webelement.WebElement (session="dfc61347-d5f2-43c0-8752-303e1a5ab9a3", element="f0e9c14f-a886-4c08-ad91-4fd2b0f7465c")>
+INFO     test_case:base_page.py:133 wait_locator: <appium.webdriver.webelement.WebElement (session="dfc61347-d5f2-43c0-8752-303e1a5ab9a3", element="2ceb17b7-c9b8-4139-8cce-b119f975cded")>
+INFO     test_case:base_page.py:535 元素描述为: 获取图片名称
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="dfc61347-d5f2-43c0-8752-303e1a5ab9a3", element="32367a57-0bb3-4a0a-bf76-3b85d6b268cf")>
+INFO     test_case:base_page.py:555 获取图片名称 locator: ('id', 'com.mega.chery.gallery:id/title')
+INFO     test_case:base_page.py:535 元素描述为: 获取图片名称
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="dfc61347-d5f2-43c0-8752-303e1a5ab9a3", element="3b4aae42-5628-4e13-9801-f74e972bb8c8")>
+INFO     test_case:base_page.py:555 获取图片名称 locator: ('id', 'com.mega.chery.gallery:id/title')
+INFO     test_case:test_gallery.py:40 成功切换至浏览模式并选择一张图片,name is: Screenshot_20230101-221543.png
+INFO     test_case:conftest.py:251 正在关闭驱动
+INFO     test_case:conftest.py:253 关闭驱动成功！

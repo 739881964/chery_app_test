@@ -1,0 +1,16 @@
+INFO     test_case:conftest.py:76 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.chery.gallery.ui.ImageActivity', 'appPackage': 'com.mega.chery.gallery'}
+INFO     test_case:conftest.py:92 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.chery.gallery.ui.ImageActivity', 'appPackage': 'com.mega.chery.gallery'}
+INFO     test_case:conftest.py:248 
+    初始化图库驱动
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:535 元素描述为: 本地-编辑
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="4b056c16-ce7b-49c4-a904-2a0a18dc3103", element="f56d2299-ce00-43cf-b413-52787f72cf61")>
+INFO     test_case:base_page.py:555 本地-编辑 locator: ('id', 'com.mega.chery.gallery:id/editBtn')
+INFO     test_case:base_page.py:535 元素描述为: 本地导出按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="4b056c16-ce7b-49c4-a904-2a0a18dc3103", element="6b64b636-b82a-47f5-a033-5afdc9e13e06")>
+INFO     test_case:base_page.py:555 本地导出按钮 locator: ('id', 'com.mega.chery.gallery:id/exportBtn')
+INFO     test_case:test_gallery.py:194 导出按钮置灰: false，无法分享
+INFO     test_case:conftest.py:251 正在关闭驱动
+INFO     test_case:conftest.py:253 关闭驱动成功！

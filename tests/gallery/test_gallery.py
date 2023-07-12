@@ -323,6 +323,7 @@ class TestGallery:
         gallery.back_elem.click()
         sleep(1)
 
+    @pytest.mark.flaky(rerun=3)
     @allure.story('usb&&本地切换')
     @pytest.mark.flaky(reruns=3)
     @pytest.mark.switch_from

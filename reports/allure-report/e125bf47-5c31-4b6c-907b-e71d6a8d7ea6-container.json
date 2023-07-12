@@ -1,0 +1,1 @@
+{"uuid": "7a90fb23-b203-41b0-a6a0-76d71899a6cd", "children": ["4de65acd-c8a0-4537-86a8-bd9b14980a2f"], "befores": [{"name": "init_weather", "status": "passed", "start": 1688608257679, "stop": 1688608277250}], "afters": [{"name": "init_weather::0", "status": "passed", "start": 1688608284728, "stop": 1688608285135}], "start": 1688608257679, "stop": 1688608285135}

@@ -9,7 +9,7 @@
 import allure
 import pytest
 
-from data.drive_data import drive_data
+from data.drive_data import drive_data, energy_level_data
 from scripts.logger import logger
 from time import sleep
 
@@ -20,6 +20,37 @@ class TestDrive:
     测试驾驶功能
     """
 
+    @pytest.mark.parametrize('recovery_data', energy_level_data)
+    @pytest.mark.flaky(reruns=3)
+    @allure.story('选择能量回收等级')
+    @pytest.mark.test_energy_recovery
+    def test_select_energy_recovery_level(self, init_drive, recovery_data):
+        """
+        选择能量回收等级
+        :param init_drive:
+        :param recovery_data:
+        :return:
+        """
+        drive_page = init_drive
+        # drive_page.swipe_to_energy()
+
+        level_name = recovery_data[0]
+        excepted_result = recovery_data[1]
+        logger.info('选择的能量回收的等级为: {}'.format(level_name))
+
+        drive_page.select_energy(level_name)
+        sleep(3)
+
+        checked = drive_page.energy_recovery_level_select(level_name).get_attribute('checked')
+
+        try:
+            assert excepted_result == checked, True
+            logger.info('energy recovery level checked is: {}'.format(checked))
+        except AssertionError as e:
+            logger.error(e)
+            raise e
+
+    @pytest.mark.skipif(reason='功能优化，暂时无法使用')
     @allure.story('选择不同的驾驶模式')
     @pytest.mark.flaky(reruns=3)
     @pytest.mark.parametrize('data', drive_data)

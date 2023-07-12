@@ -16,7 +16,6 @@ from appium.webdriver import Remote
 from scripts.logger import logger
 from config import DEVICE_INFO
 from time import sleep
-
 from scripts.logger import logger
 
 import pages.car_settings.sound_page
@@ -34,6 +33,7 @@ from pages.launcher_page import LauncherPage
 from pages.media_page import MediaPage
 from pages.wifi_page import WiFiPage
 from pages.weather_page import WeatherPage
+from pages.car_settings.common_used.common_used_page import CommonUsed
 
 from scripts.appium_server import AppiumServer
 
@@ -93,6 +93,22 @@ def base_driver(app_name='car_settings', url=URL, **kwargs):
     driver = Remote(command_executor=url, desired_capabilities=caps)
 
     return driver
+
+
+@pytest.fixture(scope='class')
+def init_common():
+    """
+    初始化'常用'驱动
+    :return:
+    """
+    driver = base_driver()
+    logger.info('{} 成功'.format(init_common.__doc__))
+    common_page = CommonUsed(driver)
+    common_page.menu_common_used_elem.click()
+    yield common_page
+    logger.info('正在关闭驱动')
+    driver.quit()
+    logger.info('关闭驱动成功！')
 
 
 @pytest.fixture()
@@ -161,7 +177,7 @@ def init_launcher():
     logger.info('关闭驱动成功！')
 
 
-@pytest.fixture(scope='class')
+@pytest.fixture()
 def init_calendar():
     """
     初始化日历驱动driver
@@ -183,8 +199,10 @@ def init_drive():
     :return:
     """
     driver = base_driver()
-    logger.info('{} 成功'.format(init_sound.__doc__))
+    logger.info('{} 成功'.format(init_drive.__doc__))
     drive_page = DrivePage(driver)
+    drive_page.drive_elem.click()
+    drive_page.swipe_to_energy()
     yield drive_page
     logger.info('正在关闭驱动')
     driver.quit()
@@ -214,6 +232,7 @@ def init_show():
     logger.info('{} 成功'.format(init_show.__doc__))
     # logger.info('初始化车辆设置-显示驱动driver成功')
     show_page = ShowPage(driver)
+    show_page.scroll_to_show()
     logger.info(show_page)
     yield show_page
     logger.info('正在关闭驱动')
@@ -271,6 +290,7 @@ def init_menu_light():
     driver = base_driver('car_settings')
     logger.info('{} 成功'.format(init_menu_light.__doc__))
     page = MenuLightPage(driver)
+    page.menu_light_elem.click()
     yield page
     logger.info('正在关闭驱动')
     driver.quit()

@@ -1,0 +1,2 @@
+INFO     test_case:conftest.py:207 正在关闭驱动
+INFO     test_case:conftest.py:209 关闭驱动成功！

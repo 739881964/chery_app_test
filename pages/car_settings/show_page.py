@@ -86,7 +86,7 @@ class ShowPage(BasePage):
         清洁屏幕操作
         :return:
         """
-        self.scroll_to_show()
+        # self.scroll_to_show()
         self.scroll_to_last()
         self.screen_clear_elem.click()
         sleep(1)

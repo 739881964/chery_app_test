@@ -1,0 +1,17 @@
+INFO     test_case:conftest.py:76 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.chery.gallery.ui.ImageActivity', 'appPackage': 'com.mega.chery.gallery'}
+INFO     test_case:conftest.py:92 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.chery.gallery.ui.ImageActivity', 'appPackage': 'com.mega.chery.gallery'}
+INFO     test_case:conftest.py:248 
+    初始化图库驱动
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:133 wait_locator: <appium.webdriver.webelement.WebElement (session="4bde4537-9e0e-4ed9-80a7-9a0ee6eb1c7d", element="2d88fc83-50cd-4338-bf80-f9f6ab6db523")>
+INFO     test_case:base_page.py:535 元素描述为: 获取图片名称
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="4bde4537-9e0e-4ed9-80a7-9a0ee6eb1c7d", element="dc384df8-34ef-4ca7-904e-0b24e408d88d")>
+INFO     test_case:base_page.py:555 获取图片名称 locator: ('id', 'com.mega.chery.gallery:id/title')
+INFO     test_case:test_gallery.py:318 随机查看图片: Screenshot_20230101-230523.png 成功
+INFO     test_case:base_page.py:535 元素描述为: 返回按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="4bde4537-9e0e-4ed9-80a7-9a0ee6eb1c7d", element="02293093-9079-4733-ac9f-39fb9ef756a3")>
+INFO     test_case:base_page.py:555 返回按钮 locator: ('id', 'com.mega.chery.gallery:id/backBtn')
+INFO     test_case:conftest.py:251 正在关闭驱动
+INFO     test_case:conftest.py:253 关闭驱动成功！

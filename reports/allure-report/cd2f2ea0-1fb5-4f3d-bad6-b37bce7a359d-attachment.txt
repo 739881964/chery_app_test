@@ -1,0 +1,24 @@
+INFO     test_case:conftest.py:76 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.lion.business.home.ui.HomeActivity', 'appPackage': 'com.lion.media'}
+INFO     test_case:conftest.py:92 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.lion.business.home.ui.HomeActivity', 'appPackage': 'com.lion.media'}
+INFO     test_case:conftest.py:157 
+    初始化本地畅想音乐
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:535 元素描述为: 音源切换
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="acd5c6d4-4b47-419e-af1e-3b8d19bb1efb", element="a0510ab6-573f-4d0b-9168-6eab53b9ed30")>
+INFO     test_case:base_page.py:555 音源切换 locator: ('id', 'com.lion.media:id/logoLl')
+INFO     test_case:base_page.py:535 元素描述为: 本地音乐
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="acd5c6d4-4b47-419e-af1e-3b8d19bb1efb", element="3f8474d0-51f8-4715-b422-befc7c9943a2")>
+INFO     test_case:base_page.py:555 本地音乐 locator: ('id', 'com.lion.media:id/musicLocalTv')
+INFO     test_case:base_page.py:133 wait_locator: <appium.webdriver.webelement.WebElement (session="acd5c6d4-4b47-419e-af1e-3b8d19bb1efb", element="03238b89-91a0-4ec6-8c7b-05b3ff4b9613")>
+INFO     test_case:test_media.py:84 broadcast music name is : <<夜的第七章>>
+INFO     test_case:base_page.py:535 元素描述为: 当前已播放的时间
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="acd5c6d4-4b47-419e-af1e-3b8d19bb1efb", element="dee0eb3d-1998-4441-803d-9ab2b5686b57")>
+INFO     test_case:base_page.py:555 当前已播放的时间 locator: ('id', 'com.lion.media:id/currentTimeTv')
+INFO     test_case:media_page.py:84 向x轴滑动距离330, 滑动正在播放的歌曲进度条成功
+INFO     test_case:base_page.py:535 元素描述为: 当前已播放的时间
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="acd5c6d4-4b47-419e-af1e-3b8d19bb1efb", element="240c3874-ff67-4b59-8dfd-2e0000c2924d")>
+INFO     test_case:base_page.py:555 当前已播放的时间 locator: ('id', 'com.lion.media:id/currentTimeTv')
+INFO     test_case:test_media.py:91 已把正在播放的音乐 <<夜的第七章>> 播放时间从 00:17 拖动到 01:56 成功
+INFO     test_case:conftest.py:160 正在关闭驱动
+INFO     test_case:conftest.py:162 关闭驱动成功！

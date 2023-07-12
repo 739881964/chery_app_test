@@ -1,0 +1,28 @@
+INFO     test_case:conftest.py:76 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.lion.weather.MainActivity', 'appPackage': 'com.lion.weather'}
+INFO     test_case:conftest.py:92 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.lion.weather.MainActivity', 'appPackage': 'com.lion.weather'}
+INFO     test_case:conftest.py:121 
+    初始化天气app
+    :return:
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:535 元素描述为: 预警弹窗
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="47c7c0b8-e08e-41c3-8262-c90defdf8672", element="75e80e8d-e7eb-4cdc-b341-8369529ce91c")>
+INFO     test_case:base_page.py:555 预警弹窗 locator: ('id', 'com.lion.weather:id/alert_title')
+INFO     test_case:base_page.py:535 元素描述为: 关闭
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="47c7c0b8-e08e-41c3-8262-c90defdf8672", element="c3566ede-9c52-46ed-8e08-ad2fee3efd8d")>
+INFO     test_case:base_page.py:555 关闭 locator: ('id', 'com.lion.weather:id/close')
+INFO     test_case:base_page.py:535 元素描述为: 首页更多按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="47c7c0b8-e08e-41c3-8262-c90defdf8672", element="9d82a665-b96b-4e4e-95c1-904e76d67988")>
+INFO     test_case:base_page.py:555 首页更多按钮 locator: ('id', 'com.lion.weather:id/more_action')
+INFO     test_case:base_page.py:535 元素描述为: 添加城市按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="47c7c0b8-e08e-41c3-8262-c90defdf8672", element="d86fd886-65b4-4b6f-8734-0f11bb133e05")>
+INFO     test_case:base_page.py:555 添加城市按钮 locator: ('id', 'com.lion.weather:id/add_city')
+INFO     test_case:base_page.py:535 元素描述为: 查找城市输入框
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="47c7c0b8-e08e-41c3-8262-c90defdf8672", element="bbcb165f-bcd3-4808-8270-f1f8a39a7ea0")>
+INFO     test_case:base_page.py:555 查找城市输入框 locator: ('id', 'com.lion.weather:id/search_input')
+INFO     test_case:base_page.py:535 元素描述为: 查找成功按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="47c7c0b8-e08e-41c3-8262-c90defdf8672", element="da282c7c-66a3-4050-bb13-7088696b6461")>
+INFO     test_case:base_page.py:555 查找成功按钮 locator: ('id', 'com.lion.weather:id/search')
+INFO     test_case:base_page.py:535 元素描述为: 添加城市
+INFO     test_case:conftest.py:131 正在关闭驱动
+INFO     test_case:conftest.py:133 关闭驱动成功！

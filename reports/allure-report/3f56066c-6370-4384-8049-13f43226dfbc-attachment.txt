@@ -1,0 +1,23 @@
+INFO     test_case:conftest.py:76 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:92 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.carsettings.CarSettingActivity', 'appPackage': 'com.mega.carsettings'}
+INFO     test_case:conftest.py:218 
+    初始化声音驱动
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:535 元素描述为: 声音按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="8821c96a-014e-423f-8899-b1fbe09926f8", element="fe1576b9-75e2-4934-8189-c2d243bb2275")>
+INFO     test_case:base_page.py:555 声音按钮 locator: ('id', 'com.mega.carsettings:id/menu_sound')
+INFO     test_case:base_page.py:535 元素描述为: 媒体静音按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="8821c96a-014e-423f-8899-b1fbe09926f8", element="6e4a6ad1-41b9-406b-98d7-6b42bd06b78b")>
+INFO     test_case:base_page.py:555 媒体静音按钮 locator: ('id', 'android:id/switch_widget')
+INFO     test_case:base_page.py:535 元素描述为: 媒体静音按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="8821c96a-014e-423f-8899-b1fbe09926f8", element="2dc2e590-09b3-49f2-92ab-fc389310f292")>
+INFO     test_case:base_page.py:555 媒体静音按钮 locator: ('id', 'android:id/switch_widget')
+INFO     test_case:base_page.py:535 元素描述为: 媒体静音按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="8821c96a-014e-423f-8899-b1fbe09926f8", element="216d430a-6407-4bb5-8bb3-78c2812b0328")>
+INFO     test_case:base_page.py:555 媒体静音按钮 locator: ('id', 'android:id/switch_widget')
+INFO     test_case:base_page.py:535 元素描述为: 媒体静音按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="8821c96a-014e-423f-8899-b1fbe09926f8", element="8d0eace1-0f35-42ba-8791-def091414247")>
+INFO     test_case:base_page.py:555 媒体静音按钮 locator: ('id', 'android:id/switch_widget')
+INFO     test_case:conftest.py:221 正在关闭驱动
+INFO     test_case:conftest.py:223 关闭驱动成功！

@@ -1,0 +1,24 @@
+INFO     test_case:conftest.py:76 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.lion.business.home.ui.HomeActivity', 'appPackage': 'com.lion.media'}
+INFO     test_case:conftest.py:92 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.lion.business.home.ui.HomeActivity', 'appPackage': 'com.lion.media'}
+INFO     test_case:conftest.py:157 
+    初始化本地畅想音乐
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:535 元素描述为: 音源切换
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="97dd2c6a-f48c-48f8-8c4b-4a9c8042ef2c", element="3ca4e148-b3ab-4f50-8b03-a116a6ce1af6")>
+INFO     test_case:base_page.py:555 音源切换 locator: ('id', 'com.lion.media:id/logoLl')
+INFO     test_case:base_page.py:535 元素描述为: 本地音乐
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="97dd2c6a-f48c-48f8-8c4b-4a9c8042ef2c", element="cae4a6dd-5277-4ec4-9e15-7f7da8ffe6df")>
+INFO     test_case:base_page.py:555 本地音乐 locator: ('id', 'com.lion.media:id/musicLocalTv')
+INFO     test_case:base_page.py:133 wait_locator: <appium.webdriver.webelement.WebElement (session="97dd2c6a-f48c-48f8-8c4b-4a9c8042ef2c", element="71b40b19-72bc-4847-a2bf-745bdd67661a")>
+INFO     test_case:test_media.py:237 broadcast music name is : <<夜的第七章>>
+INFO     test_case:base_page.py:535 元素描述为: 上一曲
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="97dd2c6a-f48c-48f8-8c4b-4a9c8042ef2c", element="9ea6a914-f607-474d-8bc3-b12abf7a8682")>
+INFO     test_case:base_page.py:555 上一曲 locator: ('id', 'com.lion.media:id/preIv')
+INFO     test_case:base_page.py:535 元素描述为: 正在播放的音乐名称
+INFO     test_case:base_page.py:553 web_elem: <appium.webdriver.webelement.WebElement (session="97dd2c6a-f48c-48f8-8c4b-4a9c8042ef2c", element="6642f961-7e94-448a-a575-43bb71c0be91")>
+INFO     test_case:base_page.py:555 正在播放的音乐名称 locator: ('id', 'com.lion.media:id/nameTv')
+INFO     test_case:test_media.py:241 broadcast music name is : <<夜曲>>
+INFO     test_case:test_media.py:245 把正在播放的音乐 <<夜的第七章>> 切换到上一曲 <<夜曲>> 成功
+INFO     test_case:conftest.py:160 正在关闭驱动
+INFO     test_case:conftest.py:162 关闭驱动成功！

@@ -80,7 +80,7 @@ class TestBTPhone:
         btphone_page.device_id_elem.click()
         # btphone_page.disconnect_elem.click()
         btphone_page.know_elem.click()
-        sleep(20)
+        sleep(25)
 
         try:
             alert_text = btphone_page.connect_failed_elem.text

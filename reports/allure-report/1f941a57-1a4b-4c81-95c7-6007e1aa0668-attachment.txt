@@ -1,0 +1,21 @@
+INFO     test_case:test_drive.py:39 选择的能量回收的等级为: 标准
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[@content-desc="标准"]')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[@content-desc="标准"]')
+ERROR    test_case:test_drive.py:50 True
+assert 'true' == 'false'
+  - false
+  + true
+INFO     test_case:test_drive.py:39 选择的能量回收的等级为: 标准
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[@content-desc="标准"]')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[@content-desc="标准"]')
+ERROR    test_case:test_drive.py:50 True
+assert 'true' == 'false'
+  - false
+  + true
+INFO     test_case:test_drive.py:39 选择的能量回收的等级为: 标准
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[@content-desc="标准"]')
+INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[@content-desc="标准"]')
+ERROR    test_case:test_drive.py:50 True
+assert 'true' == 'false'
+  - false
+  + true

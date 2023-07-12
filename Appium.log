@@ -1,6 +1,0 @@
-2023-06-29 07:08:41:500 [Appium] Welcome to Appium v1.21.0
-2023-06-29 07:08:41:501 [Appium] Non-default server args:
-2023-06-29 07:08:41:501 [Appium]   address: 127.0.0.1
-2023-06-29 07:08:41:501 [Appium]   logFile: /Users/yuxiang/PycharmProjects/chery_app_test/Appium.log
-2023-06-29 07:08:41:512 [Appium] Appium REST http interface listener started on 127.0.0.1:4723
-2023-06-29 07:08:44:233 [Appium] Received SIGINT - shutting down

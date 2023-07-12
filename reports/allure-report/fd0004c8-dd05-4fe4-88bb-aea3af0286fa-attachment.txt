@@ -1,0 +1,13 @@
+INFO     test_case:conftest.py:76 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.chery.gallery.ui.ImageActivity', 'appPackage': 'com.mega.chery.gallery'}
+INFO     test_case:conftest.py:92 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.chery.gallery.ui.ImageActivity', 'appPackage': 'com.mega.chery.gallery'}
+INFO     test_case:conftest.py:248 
+    初始化图库驱动
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:133 wait_locator: <appium.webdriver.webelement.WebElement (session="39998339-2938-4696-bdfe-c6200b7c0ced", element="4a098523-985e-4781-a9f7-ad3407bebffe")>
+INFO     test_case:base_page.py:535 元素描述为: 返回按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="39998339-2938-4696-bdfe-c6200b7c0ced", element="5191d045-c4ea-430b-b6a5-b2aa92871705")>
+INFO     test_case:base_page.py:555 返回按钮 locator: ('id', 'com.mega.chery.gallery:id/backBtn')
+INFO     test_case:conftest.py:251 正在关闭驱动
+INFO     test_case:conftest.py:253 关闭驱动成功！

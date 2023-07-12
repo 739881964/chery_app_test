@@ -12,3 +12,18 @@ light_value_data = [
     ('位置灯', 'true'),
     ('近光灯', 'true'),
 ]
+
+light_high_data = [
+    (0, 'true'),
+    (1, 'true'),
+    (2, 'true'),
+    (3, 'true'),
+]
+
+light_delay_data = [
+    ('零秒', 'true'),
+    ('十秒', 'true'),
+    ('二十秒', 'true'),
+    ('三十秒', 'true'),
+    ('六十秒', 'true'),
+]

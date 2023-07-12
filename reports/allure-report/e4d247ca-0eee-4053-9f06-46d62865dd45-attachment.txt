@@ -1,0 +1,71 @@
+INFO     test_case:conftest.py:76 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.lion.weather.MainActivity', 'appPackage': 'com.lion.weather'}
+INFO     test_case:conftest.py:92 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.lion.weather.MainActivity', 'appPackage': 'com.lion.weather'}
+INFO     test_case:conftest.py:121 
+    初始化天气app
+    :return:
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:535 元素描述为: 预警弹窗
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="2ba0b74b-4b65-4ef8-b594-831088008ccc", element="94fcc586-2684-4d2b-9f67-af239db33cf3")>
+INFO     test_case:base_page.py:555 预警弹窗 locator: ('id', 'com.lion.weather:id/alert_title')
+INFO     test_case:base_page.py:535 元素描述为: 关闭
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="2ba0b74b-4b65-4ef8-b594-831088008ccc", element="2dd7f076-e134-42e5-a38e-b1fd99ce3f4d")>
+INFO     test_case:base_page.py:555 关闭 locator: ('id', 'com.lion.weather:id/close')
+INFO     test_case:base_page.py:535 元素描述为: 首页更多按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="2ba0b74b-4b65-4ef8-b594-831088008ccc", element="5672a2b9-ab5b-410c-92e8-f4e12180e601")>
+INFO     test_case:base_page.py:555 首页更多按钮 locator: ('id', 'com.lion.weather:id/more_action')
+INFO     test_case:base_page.py:535 元素描述为: 添加城市按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="2ba0b74b-4b65-4ef8-b594-831088008ccc", element="09ee1a3c-dcae-44d2-a6d7-c7828a4416c8")>
+INFO     test_case:base_page.py:555 添加城市按钮 locator: ('id', 'com.lion.weather:id/add_city')
+INFO     test_case:base_page.py:535 元素描述为: 查找城市输入框
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="2ba0b74b-4b65-4ef8-b594-831088008ccc", element="802cdc9e-f810-4c3d-9ef8-8d700d92c184")>
+INFO     test_case:base_page.py:555 查找城市输入框 locator: ('id', 'com.lion.weather:id/search_input')
+INFO     test_case:base_page.py:535 元素描述为: 查找成功按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="2ba0b74b-4b65-4ef8-b594-831088008ccc", element="dd5911b2-f2f4-4a0e-bbfa-627a62658f94")>
+INFO     test_case:base_page.py:555 查找成功按钮 locator: ('id', 'com.lion.weather:id/search')
+INFO     test_case:conftest.py:131 正在关闭驱动
+INFO     test_case:conftest.py:133 关闭驱动成功！
+INFO     test_case:conftest.py:76 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.lion.weather.MainActivity', 'appPackage': 'com.lion.weather'}
+INFO     test_case:conftest.py:92 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.lion.weather.MainActivity', 'appPackage': 'com.lion.weather'}
+INFO     test_case:conftest.py:121 
+    初始化天气app
+    :return:
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:535 元素描述为: 预警弹窗
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="1449dc95-74d7-4087-a5c2-da209a25b121", element="ff612c56-8679-42d6-9e23-49a6a0b3b45b")>
+INFO     test_case:base_page.py:555 预警弹窗 locator: ('id', 'com.lion.weather:id/alert_title')
+INFO     test_case:base_page.py:535 元素描述为: 关闭
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="1449dc95-74d7-4087-a5c2-da209a25b121", element="f51edc6f-ddab-4c2d-8115-b534d552aebc")>
+INFO     test_case:base_page.py:555 关闭 locator: ('id', 'com.lion.weather:id/close')
+INFO     test_case:base_page.py:535 元素描述为: 首页更多按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="1449dc95-74d7-4087-a5c2-da209a25b121", element="de8bef50-9ca7-44dd-915d-0ada15853e99")>
+INFO     test_case:base_page.py:555 首页更多按钮 locator: ('id', 'com.lion.weather:id/more_action')
+INFO     test_case:base_page.py:535 元素描述为: 添加城市按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="1449dc95-74d7-4087-a5c2-da209a25b121", element="a5e12b04-d166-49dc-920f-d5a48e006944")>
+INFO     test_case:base_page.py:555 添加城市按钮 locator: ('id', 'com.lion.weather:id/add_city')
+INFO     test_case:base_page.py:535 元素描述为: 查找城市输入框
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="1449dc95-74d7-4087-a5c2-da209a25b121", element="ebdee3dc-d076-4d67-8497-2ba3f84579fd")>
+INFO     test_case:base_page.py:555 查找城市输入框 locator: ('id', 'com.lion.weather:id/search_input')
+INFO     test_case:base_page.py:535 元素描述为: 查找成功按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="1449dc95-74d7-4087-a5c2-da209a25b121", element="01e9af9a-032e-419c-b176-32ab253b50d4")>
+INFO     test_case:base_page.py:555 查找成功按钮 locator: ('id', 'com.lion.weather:id/search')
+INFO     test_case:base_page.py:535 元素描述为: 添加城市
+INFO     test_case:base_page.py:553 web_elem: <appium.webdriver.webelement.WebElement (session="1449dc95-74d7-4087-a5c2-da209a25b121", element="11a1eea9-1fe3-4992-83c9-3b56dfc6ef8d")>
+INFO     test_case:base_page.py:555 添加城市 locator: ('id', 'com.lion.weather:id/add_city')
+INFO     test_case:base_page.py:535 元素描述为: 预警弹窗
+WARNING  test_case:weather_page.py:76 Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
+    at JWProxy.command$ (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:238:13)
+    at tryCatch (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at run (/Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/es6.promise.js:75:1)
+    at /Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/es6.promise.js:92:1
+    at flush (/Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/_microtask.js:18:1)
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+INFO     test_case:base_page.py:535 元素描述为: 主页城市名称
+INFO     test_case:conftest.py:131 正在关闭驱动
+INFO     test_case:conftest.py:133 关闭驱动成功！

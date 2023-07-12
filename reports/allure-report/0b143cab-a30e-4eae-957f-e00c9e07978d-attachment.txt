@@ -1,6 +1,0 @@
-INFO     test_case:base_page.py:535 元素描述为: 外灯
-INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="169a14ed-aa93-43e2-9630-d24c25771ede", element="78e0aefa-73e1-4f60-96a8-1fce20cb9d78")>
-INFO     test_case:base_page.py:555 外灯 locator: ('id', 'com.mega.carsettings:id/menu_light')
-INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "位置灯")]')
-INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "位置灯")]')
-ERROR    test_case:test_menu_light.py:44 result !=  true

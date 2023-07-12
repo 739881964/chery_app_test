@@ -1,0 +1,31 @@
+INFO     test_case:conftest.py:76 cap info: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.btphone.ui.BtPhoneActivity', 'appPackage': 'com.mega.btphone'}
+INFO     test_case:conftest.py:92 启动app参数为: {'platformName': 'Android', 'automationName': 'UiAutomator2', 'platformVersion': '11', 'deviceName': 'c543cf80', 'appActivity': 'com.mega.btphone.ui.BtPhoneActivity', 'appPackage': 'com.mega.btphone'}
+INFO     test_case:conftest.py:305 
+    初始化蓝牙电话驱动
+     成功
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:41 开始初始化驱动driver......
+INFO     test_case:base_page.py:535 元素描述为: 获取连接蓝牙按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="71ff2c28-3ba2-4de5-bea3-468d9aa42d9e", element="cdccd125-fa96-4110-a105-c77341637709")>
+INFO     test_case:base_page.py:555 获取连接蓝牙按钮 locator: ('id', 'com.mega.btphone:id/go_setting_in_disconnect')
+INFO     test_case:base_page.py:535 元素描述为: 蓝牙开关按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="71ff2c28-3ba2-4de5-bea3-468d9aa42d9e", element="90625cd5-ae90-4d06-83e6-c08353dd9657")>
+INFO     test_case:base_page.py:555 蓝牙开关按钮 locator: ('id', 'android:id/switch_widget')
+INFO     test_case:test_btphone.py:231 蓝牙开关属性为: true
+INFO     test_case:base_page.py:535 元素描述为: 编辑蓝牙名称按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="71ff2c28-3ba2-4de5-bea3-468d9aa42d9e", element="2c8b9b0a-5ff3-4512-8873-715496ad404f")>
+INFO     test_case:base_page.py:555 编辑蓝牙名称按钮 locator: ('xpath', '//android.widget.TextView[@content-desc="蓝牙名称"]')
+INFO     test_case:base_page.py:535 元素描述为: 编辑蓝牙名称输入框
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="71ff2c28-3ba2-4de5-bea3-468d9aa42d9e", element="4cf5eea7-8262-4d23-a7a1-e33f537461bb")>
+INFO     test_case:base_page.py:555 编辑蓝牙名称输入框 locator: ('id', 'com.mega.carsettings:id/et_content')
+INFO     test_case:btphone_page.py:74 <pages.base_page.Element object at 0x105b58ca0>
+INFO     test_case:base_page.py:535 元素描述为: 保存按钮
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="71ff2c28-3ba2-4de5-bea3-468d9aa42d9e", element="fcb28c5a-e19c-4e03-a3de-a434e7a70567")>
+INFO     test_case:base_page.py:555 保存按钮 locator: ('id', 'com.mega.carsettings:id/tv_sure')
+INFO     test_case:base_page.py:535 元素描述为: 蓝牙名称
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="71ff2c28-3ba2-4de5-bea3-468d9aa42d9e", element="0e91a2dc-bc43-4a74-86e5-8d151e2af442")>
+INFO     test_case:base_page.py:555 蓝牙名称 locator: ('id', 'android:id/summary')
+INFO     test_case:test_btphone.py:245 蓝牙名称为: 12345678909876541232222222222222
+INFO     test_case:test_btphone.py:254 修改蓝牙名称为：12345678909876541232222222222222 成功
+INFO     test_case:conftest.py:308 正在关闭驱动
+INFO     test_case:conftest.py:310 关闭驱动成功！

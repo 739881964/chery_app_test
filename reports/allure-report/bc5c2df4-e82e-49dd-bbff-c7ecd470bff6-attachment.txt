@@ -1,8 +1,0 @@
-INFO     test_case:test_drive.py:32 选择的驾驶模式为: 舒适
-INFO     test_case:base_page.py:535 元素描述为: 驾驶模式选择
-INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="73f29a31-f86e-4fa1-9220-6743327446e8", element="05ce0595-1c18-4a7e-98fc-e448769915b1")>
-INFO     test_case:base_page.py:555 驾驶模式选择 locator: ('id', 'com.mega.carsettings:id/menu_drive')
-INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "舒适")]')
-INFO     test_case:base_page.py:133 wait_locator: ('xpath', '//android.widget.RadioButton[contains(@content-desc, "舒适")]')
-INFO     test_case:test_drive.py:38 选择的驾驶模式bool值是: true
-INFO     test_case:test_drive.py:42 drive mode checked is: true

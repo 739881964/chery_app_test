@@ -1,0 +1,6 @@
+INFO     test_case:base_page.py:133 wait_locator: ('id', 'com.mega.carsettings:id/sw_central_lock')
+INFO     test_case:base_page.py:133 wait_locator: ('id', 'com.mega.carsettings:id/sw_central_lock')
+INFO     test_case:base_page.py:133 wait_locator: ('id', 'com.mega.carsettings:id/sw_central_lock')
+INFO     test_case:base_page.py:133 wait_locator: ('id', 'com.mega.carsettings:id/sw_central_lock')
+INFO     test_case:base_page.py:133 wait_locator: ('id', 'com.mega.carsettings:id/sw_central_lock')
+ERROR    test_case:test_common_used.py:48 assert 'false' != 'false'

@@ -1,0 +1,26 @@
+INFO     test_case:base_page.py:535 元素描述为: 新增日程
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="40b2d3c3-137e-4afb-ad35-7ced7cdeae3c", element="ae714bcd-60ab-4b44-a380-cc2d9eee35b1")>
+INFO     test_case:base_page.py:555 新增日程 locator: ('id', 'com.mega.redwoodcalendar:id/add')
+INFO     test_case:base_page.py:535 元素描述为: 标题输入框
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="40b2d3c3-137e-4afb-ad35-7ced7cdeae3c", element="e59f3422-bba2-4aba-afe3-02969557f38a")>
+INFO     test_case:base_page.py:555 标题输入框 locator: ('id', 'com.mega.redwoodcalendar:id/title')
+INFO     test_case:base_page.py:535 元素描述为: 二次输入
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="40b2d3c3-137e-4afb-ad35-7ced7cdeae3c", element="e046bcba-4651-4a37-bb75-15af6bf0ff7d")>
+INFO     test_case:base_page.py:555 二次输入 locator: ('id', 'com.mega.redwoodcalendar:id/edit_input')
+INFO     test_case:base_page.py:535 元素描述为: 二次保存
+INFO     test_case:base_page.py:543 web_elem: <appium.webdriver.webelement.WebElement (session="40b2d3c3-137e-4afb-ad35-7ced7cdeae3c", element="f13c8b32-4989-4369-9f2c-9f34b6399679")>
+INFO     test_case:base_page.py:555 二次保存 locator: ('id', 'com.mega.redwoodcalendar:id/input_save')
+INFO     test_case:base_page.py:535 元素描述为: 地址输入框
+ERROR    test_case:base_page.py:563 元素 地址输入框 的表达式 ('id', 'com.mega.redwoodcalendar:id/add_location') 未定位到: Message: 
+Stacktrace:
+NoSuchElementError: An element could not be located on the page using the given search parameters.
+    at AndroidUiautomator2Driver.callee$0$0$ (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)
+    at tryCatch (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:67:40)
+    at GeneratorFunctionPrototype.invoke [as _invoke] (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:315:22)
+    at GeneratorFunctionPrototype.prototype.(anonymous function) [as throw] (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:100:21)
+    at GeneratorFunctionPrototype.invoke (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/babel-runtime/regenerator/runtime.js:136:37)
+    at run (/Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/es6.promise.js:75:1)
+    at /Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/es6.promise.js:92:1
+    at flush (/Applications/Appium.app/Contents/Resources/app/webpack:/~/babel-polyfill/~/core-js/modules/_microtask.js:18:1)
+    at process._tickCallback (internal/process/next_tick.js:61:11)
+INFO     test_case:base_page.py:566 错误截图为: /Users/yuxiang/PycharmProjects/chery_app_test/logs/imgs/2023-07-06-09-43-08.png
